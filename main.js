@@ -1,9 +1,65 @@
 document.addEventListener('DOMContentLoaded', () => {
+  initHeroCanvas();
   initMobileMenu();
   initScrollReveal();
-  initVideoModal();
   initContactForm();
 });
+
+function initHeroCanvas() {
+  const canvas = document.getElementById('hero-canvas');
+  if (!canvas) return;
+
+  const ctx = canvas.getContext('2d');
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const stars = [];
+  let raf;
+
+  function resize() {
+    const hero = canvas.closest('.hero') || document.body;
+    canvas.width = hero.offsetWidth;
+    canvas.height = hero.offsetHeight;
+  }
+
+  function buildStars() {
+    stars.length = 0;
+    const count = Math.min(Math.floor((canvas.width * canvas.height) / 7500), 130);
+    for (let i = 0; i < count; i++) {
+      stars.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        r: Math.random() * 1.1 + 0.15,
+        speed: Math.random() * 0.055 + 0.01,
+        drift: (Math.random() - 0.5) * 0.025,
+        opacity: Math.random() * 0.42 + 0.08,
+      });
+    }
+  }
+
+  function tick() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (const s of stars) {
+      ctx.beginPath();
+      ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(218, 230, 246, ${s.opacity})`;
+      ctx.fill();
+      if (!reduced) {
+        s.y -= s.speed;
+        s.x += s.drift;
+        if (s.y < -2) { s.y = canvas.height + 2; s.x = Math.random() * canvas.width; }
+        if (s.x < -2) s.x = canvas.width + 2;
+        if (s.x > canvas.width + 2) s.x = -2;
+      }
+    }
+    raf = requestAnimationFrame(tick);
+  }
+
+  resize();
+  buildStars();
+  tick();
+
+  const ro = new ResizeObserver(() => { resize(); buildStars(); });
+  ro.observe(canvas.closest('.hero') || document.body);
+}
 
 function initMobileMenu() {
   const menuToggle = document.getElementById('menu-toggle');

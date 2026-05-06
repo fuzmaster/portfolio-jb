@@ -3,11 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jacob Britten | Systems Architect</title>
+    <title>Jacob Britten | Media Systems Architect</title>
     <meta
       name="description"
-      content="Systems architect building React and Remotion automation workflows that reduce post-production time and scale media output."
+      content="Media Systems Architect who scaled the High Functioning Podcast to 274K+ views in 18 months using React + Remotion automation pipelines, transcript processing, and test-driven deployment."
     />
+    <link rel="canonical" href="https://jacobbritten.com/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jacobbritten.com/" />
+    <meta property="og:site_name" content="Jacob Britten" />
+    <meta property="og:title" content="Jacob Britten | Media Systems Architect" />
+    <meta property="og:description" content="Scaled the High Functioning Podcast to 274K+ views in 18 months. React + Remotion automation pipelines, 40% faster post-production, 50+ episodes automated end-to-end." />
+    <meta property="og:image" content="https://jacobbritten.com/images/youtube-analytics-422.jpg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Jacob Britten | Media Systems Architect" />
+    <meta name="twitter:description" content="React + Remotion automation systems. 40% faster post-production. 50+ episodes automated end-to-end." />
+    <meta name="twitter:image" content="https://jacobbritten.com/images/youtube-analytics-422.jpg" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,47 +44,57 @@
 
     <main id="main">
       <section class="hero section" id="hero" aria-labelledby="hero-title">
+        <div class="hero-bg" aria-hidden="true">
+          <canvas id="hero-canvas" class="hero-canvas"></canvas>
+          <div class="hero-orb hero-orb--1"></div>
+          <div class="hero-orb hero-orb--2"></div>
+          <div class="hero-orb hero-orb--3"></div>
+        </div>
         <div class="container hero-grid">
           <div class="hero-copy">
+            <div class="hero-avatar-row">
+              <img
+                src="images/jacob-headshot.jpg"
+                alt="Jacob Britten"
+                class="hero-avatar"
+                fetchpriority="high"
+                decoding="async"
+              />
+              <div class="hero-avatar-meta">
+                <span class="hero-avatar-name">Jacob Britten</span>
+                <span class="hero-avatar-title">Media Systems Architect</span>
+              </div>
+            </div>
             <section-label text="Systems Architecture"></section-label>
             <h1 id="hero-title">I build production media systems that remove editing bottlenecks.</h1>
             <p>
-              Cut post-production time by 40% and automated 50+ episodes for a
-              100K+ subscriber podcast using React + Remotion render pipelines,
-              transcript parsing services, and test-driven deployment workflows.
+              Scaled the High Functioning Podcast from 41 to 31,000+ monthly views in
+              18 months using React + Remotion render pipelines, transcript automation,
+              and test-driven deployment — while running content systems for 100K+ subscriber networks.
             </p>
             <div class="hero-actions">
               <a class="btn btn-primary" href="projects.html">View Projects</a>
               <a class="btn btn-secondary" href="#contact">Contact</a>
             </div>
             <ul class="hero-meta" aria-label="Key delivery outcomes">
+              <li>274K+ total views — High Functioning Podcast</li>
               <li>40% faster post-production turnaround</li>
               <li>50+ episodes automated end-to-end</li>
-              <li>100K+ subscriber distribution context</li>
             </ul>
           </div>
 
           <div class="hero-media">
-            <div class="image-frame" style="--ratio: 16/10; --img-pos: center;">
+            <div class="image-frame">
               <img
                 src="images/youtube-analytics-422.jpg"
-                alt="Analytics dashboard showing audience growth trend"
-                loading="lazy"
+                alt="YouTube analytics dashboard showing 274K+ views growth for High Functioning Podcast automated production pipeline"
+                fetchpriority="high"
                 decoding="async"
               />
-              <button
-                type="button"
-                class="play-overlay"
-                id="open-video"
-                aria-label="Play systems demo video"
-              >
-                <span class="play-icon" aria-hidden="true">▶</span>
-                Play Demo
-              </button>
             </div>
             <p class="media-caption">
-              Demo: code-driven media generation pipeline with schema validation,
-              subtitle automation, and publish-ready exports.
+              High Functioning Podcast: 274,796 total views via automated
+              React + Remotion production pipelines — Oct 2024 to Apr 2026.
             </p>
           </div>
         </div>
@@ -82,13 +107,60 @@
           <p class="section-intro">
             I model systems before implementation, use AI tools for scaffolding,
             and ship production logic with typed contracts and integration tests.
-            Metrics and infrastructure are consolidated below for full technical context.
+            The High Functioning Podcast is my primary case study: 274K views in
+            18 months through fully automated delivery pipelines.
           </p>
 
           <div class="metrics-grid" role="list" aria-label="Performance metrics">
-            <metric-card label="Subscribers Supported" value="100K+" detail="Automated content pipeline for active high-volume channel."></metric-card>
-            <metric-card label="Manual Time Reduction" value="40%" detail="Removed repetitive timeline editing with render orchestration."></metric-card>
-            <metric-card label="Episodes Automated" value="50+" detail="Delivered render-ready clips, captions, and social output packages."></metric-card>
+            <metric-card label="Total Views" value="274K+" detail="High Functioning Podcast: 274,796 views in 18 months via automated post-production pipelines."></metric-card>
+            <metric-card label="Post-Production Reduction" value="40%" detail="Removed repetitive timeline editing with React + Remotion render orchestration."></metric-card>
+            <metric-card label="Episodes Automated" value="50+" detail="Delivered render-ready clips, captions, and social output packages end-to-end."></metric-card>
+          </div>
+
+          <div class="hf-case" aria-label="High Functioning Podcast growth case study">
+            <div class="hf-case__visual">
+              <img
+                src="images/audience_growth_svg_preview.svg"
+                alt="High Functioning Podcast audience growth chart: from 41 monthly views in October 2024 to 31,961 views in April 2025, sustaining 31,691 in April 2026"
+                class="hf-case__chart"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="hf-case__content">
+              <p class="hf-case__eyebrow">Case Study — High Functioning Podcast</p>
+              <h3 class="hf-case__heading">From 41 to 31,000+ monthly views in 18 months.</h3>
+              <p class="hf-case__body">
+                Automated post-production pipelines to accelerate output velocity, allowing
+                the team to consistently book and publish high-profile niche guests while
+                driving sustained monthly growth with no additional headcount.
+              </p>
+              <dl class="hf-milestones" aria-label="Audience growth milestones">
+                <div class="hf-milestone">
+                  <dt class="hf-milestone__date">Oct '24</dt>
+                  <dd class="hf-milestone__value">41</dd>
+                  <dd class="hf-milestone__label">views/mo · baseline</dd>
+                </div>
+                <div class="hf-milestone">
+                  <dt class="hf-milestone__date">Jan '25</dt>
+                  <dd class="hf-milestone__value">16K+</dd>
+                  <dd class="hf-milestone__label">first spike</dd>
+                </div>
+                <div class="hf-milestone">
+                  <dt class="hf-milestone__date">Apr '25</dt>
+                  <dd class="hf-milestone__value">31,961</dd>
+                  <dd class="hf-milestone__label">breakout peak</dd>
+                </div>
+                <div class="hf-milestone">
+                  <dt class="hf-milestone__date">Apr '26</dt>
+                  <dd class="hf-milestone__value">31,691</dd>
+                  <dd class="hf-milestone__label">sustained volume</dd>
+                </div>
+              </dl>
+              <p class="hf-case__total">
+                <strong>274,796</strong> total views accumulated · Oct 2024 — Apr 2026
+              </p>
+            </div>
           </div>
 
           <div class="about-split">
@@ -174,15 +246,6 @@
         </div>
       </div>
     </footer>
-
-    <div class="video-modal" id="video-modal" aria-hidden="true" role="dialog" aria-label="Demo video player">
-      <div class="video-dialog">
-        <button type="button" class="close-modal" id="close-video" aria-label="Close video">×</button>
-        <video id="demo-video" controls preload="none" poster="images/youtube-analytics-422.jpg">
-          <source src="video/showreel.mp4" type="video/mp4" />
-        </video>
-      </div>
-    </div>
 
     <script src="components.js"></script>
     <script src="main.js"></script>

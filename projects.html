@@ -3,11 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projects | Jacob Britten</title>
+    <title>Projects | Jacob Britten – Media Systems Architect</title>
     <meta
       name="description"
-      content="Unified portfolio projects across production systems, automation tooling, and experimentation lab builds."
+      content="Production systems, automation tooling, and lab builds by Jacob Britten — React + Remotion pipelines, Playwright QA, Zod schema validation, and programmatic video generation."
     />
+    <link rel="canonical" href="https://jacobbritten.com/projects.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jacobbritten.com/projects.html" />
+    <meta property="og:site_name" content="Jacob Britten" />
+    <meta property="og:title" content="Projects | Jacob Britten – Media Systems Architect" />
+    <meta property="og:description" content="React + Remotion pipelines, Playwright QA utilities, Zod schema validation, and programmatic video generation tools. 40% faster post-production. 50+ episodes automated." />
+    <meta property="og:image" content="https://jacobbritten.com/images/youtube-analytics-422.jpg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Projects | Jacob Britten – Media Systems Architect" />
+    <meta name="twitter:description" content="React + Remotion pipelines, Playwright QA, Zod schema validation, and programmatic video generation tools." />
+    <meta name="twitter:image" content="https://jacobbritten.com/images/youtube-analytics-422.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -32,8 +47,8 @@
 
           <div class="project-grid" role="list" aria-label="Projects list">
             <article class="project-card" role="listitem">
-              <div class="image-frame" style="--ratio: 16/10; --img-pos: center;">
-                <img src="images/remotion-schema.jpg" alt="Remotion component schema and timeline composition" loading="lazy" decoding="async" />
+              <div class="image-frame image-frame--code">
+                <img src="images/code-podcast-pipeline.png" alt="TypeScript code: transcript-to-clips pipeline using Remotion renderMedia and Zod schema validation" loading="lazy" decoding="async" />
               </div>
               <h2>Podcast Automation Pipeline</h2>
               <p>
@@ -43,8 +58,8 @@
             </article>
 
             <article class="project-card" role="listitem">
-              <div class="image-frame" style="--ratio: 16/10; --img-pos: center;">
-                <img src="images/youtube-retention-424.jpg" alt="Retention graph with segment performance" loading="lazy" decoding="async" />
+              <div class="image-frame image-frame--code">
+                <img src="images/code-retention-dashboard.png" alt="TypeScript code: retention signal mapping with edit decision types cut, keep, retime" loading="lazy" decoding="async" />
               </div>
               <h2>Retention Signal Dashboard</h2>
               <p>
@@ -54,8 +69,8 @@
             </article>
 
             <article class="project-card" role="listitem">
-              <div class="image-frame" style="--ratio: 16/10; --img-pos: top;">
-                <img src="images/cropcheck-1.jpg" alt="Asset crop preview matrix for social channels" loading="lazy" decoding="async" />
+              <div class="image-frame image-frame--code">
+                <img src="images/code-cropcheck.png" alt="Playwright TypeScript test: crop-safe spec validating platform aspect ratios across Instagram, YouTube, TikTok" loading="lazy" decoding="async" />
               </div>
               <h2>Crop Check QA Utility</h2>
               <p>
@@ -66,20 +81,20 @@
             </article>
 
             <article class="project-card" role="listitem">
-              <div class="image-frame" style="--ratio: 16/10; --img-pos: center;">
-                <img src="images/Genera-Reels.jpg" alt="Code editor and generated vertical reels" loading="lazy" decoding="async" />
+              <div class="image-frame image-frame--code">
+                <img src="images/code-genera-reels.png" alt="Zod schema code: ReelSchema with project, artist, ctaText, reelType, and timing validation" loading="lazy" decoding="async" />
               </div>
               <h2>Genera-Reels Engine</h2>
               <p>
                 Template-based short-form video rendering tool that consumes payload
                 inputs and emits batch reels with repeatable output quality.
               </p>
-              <a href="https://github.com/fuzmaster/max-reels-project" target="_blank" rel="noopener noreferrer">View Source</a>
+              <span class="project-card__private">Private Repo</span>
             </article>
 
             <article class="project-card" role="listitem">
-              <div class="image-frame" style="--ratio: 16/10; --img-pos: center;">
-                <img src="images/keep7.png" alt="Probability simulator interface" loading="lazy" decoding="async" />
+              <div class="image-frame image-frame--code">
+                <img src="images/code-keep7.png" alt="TypeScript code: normalizeCards function parsing MTG deck list text into typed Card objects" loading="lazy" decoding="async" />
               </div>
               <h2>Keep7 Probability Simulator</h2>
               <p>
@@ -90,8 +105,8 @@
             </article>
 
             <article class="project-card" role="listitem">
-              <div class="image-frame" style="--ratio: 16/10; --img-pos: center;">
-                <img src="images/bjack.png" alt="Reducer-based blackjack game state transitions" loading="lazy" decoding="async" />
+              <div class="image-frame image-frame--code">
+                <img src="images/code-blackjack.png" alt="TypeScript reducer code: gameReducer with PLAYER_HIT case, state guards, and bust detection" loading="lazy" decoding="async" />
               </div>
               <h2>Blackjack State Engine</h2>
               <p>
@@ -111,7 +126,7 @@
         <div class="footer-links">
           <a href="index.html#about">About</a>
           <a href="index.html#contact">Contact</a>
-          <a href="lab.html">Legacy Lab</a>
+          <a href="lab.html">The Lab</a>
         </div>
       </div>
     </footer>
