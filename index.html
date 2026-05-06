@@ -28,7 +28,10 @@
     <site-nav current="home"></site-nav>
 
     <main id="main">
-      <section class="hero section" id="hero" aria-labelledby="hero-title">
+      <section class="hero hero-section section" id="hero" aria-labelledby="hero-title">
+        <video class="hero-bg-video" autoplay muted loop playsinline preload="metadata">
+          <source src="video/showreel.mp4" type="video/mp4" />
+        </video>
         <div class="container hero-grid">
           <div class="hero-copy">
             <section-label text="Systems Architecture"></section-label>
@@ -49,23 +52,22 @@
             </ul>
           </div>
 
-          <div class="hero-media">
-            <div class="image-frame" style="--ratio: 16/10; --img-pos: center;">
-              <img
-                src="images/youtube-analytics-422.jpg"
-                alt="Analytics dashboard showing audience growth trend"
-                loading="lazy"
-                decoding="async"
-              />
-              <button
-                type="button"
-                class="play-overlay"
-                id="open-video"
-                aria-label="Play systems demo video"
-              >
-                <span class="play-icon" aria-hidden="true">▶</span>
-                Play Demo
-              </button>
+          <div class="hero-media-wrapper">
+            <div class="hero-slider">
+              <div class="slide active">
+                <img src="images/cropcheck-1.jpg" alt="Crop Check UI" style="object-position: center top;" />
+              </div>
+              <div class="slide">
+                <img src="images/instagram-420.jpg" alt="Viral Reels" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 75%; position: absolute; inset: 0;" />
+              </div>
+              <div class="slide">
+                <img src="images/youtube-analytics-422.jpg" alt="Analytics Spike" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; position: absolute; inset: 0;" />
+              </div>
+              <div class="slider-dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+              </div>
             </div>
             <p class="media-caption">
               Demo: code-driven media generation pipeline with schema validation,
@@ -84,6 +86,29 @@
             and ship production logic with typed contracts and integration tests.
             Metrics and infrastructure are consolidated below for full technical context.
           </p>
+
+          <div class="bento-grid" aria-label="Code snapshot highlights">
+            <article class="bento-card">
+              <img class="bento-bg" src="images/remotion-schema.jpg" alt="TypeScript schema definitions" style="object-position: 0% 0%;" loading="lazy" decoding="async" />
+              <h3>Schema Contracts</h3>
+              <p>Interface-first payload design for deterministic render behavior.</p>
+            </article>
+            <article class="bento-card">
+              <img class="bento-bg" src="images/Genera-Reels.jpg" alt="Genera-Reels source code" style="object-position: 0% 0%;" loading="lazy" decoding="async" />
+              <h3>Generator Engine</h3>
+              <p>Composable reels pipeline with template-driven automation logic.</p>
+            </article>
+            <article class="bento-card">
+              <img class="bento-bg" src="images/youtube-retention-424.jpg" alt="YouTube retention chart" style="width: 100%; height: 100%; object-fit: cover; object-position: 10% 50%; position: absolute; inset: 0;" loading="lazy" decoding="async" />
+              <h3>Retention Analysis</h3>
+              <p>Segment-level diagnostics aligned to pacing and edit decisions.</p>
+            </article>
+            <article class="bento-card">
+              <img class="bento-bg" src="images/youtube-analytics-422.jpg" alt="Analytics spike graph" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; position: absolute; inset: 0;" loading="lazy" decoding="async" />
+              <h3>Growth Signals</h3>
+              <p>Graph trend snapshots used to prioritize distribution strategy.</p>
+            </article>
+          </div>
 
           <div class="metrics-grid" role="list" aria-label="Performance metrics">
             <metric-card label="Subscribers Supported" value="100K+" detail="Automated content pipeline for active high-volume channel."></metric-card>
@@ -119,19 +144,35 @@
 
       <section class="section" id="testimonials" aria-labelledby="testimonials-title">
         <div class="container">
-          <section-label text="References"></section-label>
-          <h2 id="testimonials-title">Delivery quality from operators and stakeholders</h2>
-          <div class="testimonials-grid">
-            <testimonial-card
-              quote="Jacob creates workflows that make complex projects easier to execute and scale."
-              name="Brandon Farrell"
-              role="Videographer, Lamacchia Realty"
-            ></testimonial-card>
-            <testimonial-card
-              quote="He delivers quickly while improving process quality and final output consistency."
-              name="Lindsay Favazza"
-              role="VP of Marketing, Lamacchia Realty"
-            ></testimonial-card>
+          <h2 id="testimonials-title" class="section-headline section-headline--centered" data-inview>
+            THE ORCHESTRATION<br>
+            <span class="headline-dim">LAYER<span class="accent-dot">.</span></span>
+          </h2>
+
+          <div class="testimonial-grid">
+            <div class="testimonial-card-ui">
+              <p class="testimonial-text">"Jacob has a passion for making projects seamless and creating workflows to make everyone's lives easier... He handles large amounts of projects at once with ease and can easily take on new tasks."</p>
+              <div class="testimonial-author-box">
+                <div class="testimonial-author-name">Brandon Farrell</div>
+                <div class="testimonial-author-role">Lamacchia Realty, Inc.</div>
+              </div>
+            </div>
+
+            <div class="testimonial-card-ui">
+              <p class="testimonial-text">"He works so quickly and adds his own touch to his work so not only do you get it done fast you also get it done better than you could have imagined. I highly recommend Jacob."</p>
+              <div class="testimonial-author-box">
+                <div class="testimonial-author-name">Lindsay Favazza</div>
+                <div class="testimonial-author-role">VP of Marketing, Lamacchia Realty</div>
+              </div>
+            </div>
+
+            <div class="testimonial-card-ui">
+              <p class="testimonial-text">"Jacob did a fabulous job without any direction or input from me. I trust he knows his discipline and doesn't need me breathing down his neck. Highly recommended."</p>
+              <div class="testimonial-author-box">
+                <div class="testimonial-author-name">Gary Kelley</div>
+                <div class="testimonial-author-role">Broker/Owner, Residential Real Estate</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -145,7 +186,7 @@
             and returns structured success/failure feedback.
           </p>
 
-          <form id="contact-form" class="contact-form" novalidate>
+          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
             <label for="name">Name</label>
             <input id="name" name="name" type="text" autocomplete="name" required />
 
@@ -158,7 +199,6 @@
             <button type="submit" class="btn btn-primary" aria-label="Send contact message">
               Send Message
             </button>
-            <p id="form-feedback" role="status" aria-live="polite"></p>
           </form>
         </div>
       </section>
@@ -168,23 +208,45 @@
       <div class="container footer-inner">
         <p>Jacob Britten - Systems Architect</p>
         <div class="footer-links">
-          <a href="projects.html">Projects</a>
+          <a href="lab.html">The Lab</a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
         </div>
       </div>
     </footer>
 
-    <div class="video-modal" id="video-modal" aria-hidden="true" role="dialog" aria-label="Demo video player">
-      <div class="video-dialog">
-        <button type="button" class="close-modal" id="close-video" aria-label="Close video">×</button>
-        <video id="demo-video" controls preload="none" poster="images/youtube-analytics-422.jpg">
-          <source src="video/showreel.mp4" type="video/mp4" />
-        </video>
-      </div>
-    </div>
-
     <script src="components.js"></script>
     <script src="main.js"></script>
+    <script>
+      const slides = document.querySelectorAll('.slide');
+      const dots = document.querySelectorAll('.dot');
+      let currentSlide = 0;
+
+      function goToSlide(index) {
+        slides[currentSlide].classList.remove('active');
+        dots[currentSlide].classList.remove('active');
+        currentSlide = index;
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
+      }
+
+      function nextSlide() {
+        goToSlide((currentSlide + 1) % slides.length);
+      }
+
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          goToSlide(index);
+          resetInterval();
+        });
+      });
+
+      let slideInterval = setInterval(nextSlide, 4000);
+
+      function resetInterval() {
+        clearInterval(slideInterval);
+        slideInterval = setInterval(nextSlide, 4000);
+      }
+    </script>
   </body>
 </html>

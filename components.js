@@ -4,7 +4,7 @@ class SiteNav extends HTMLElement {
 
     const links = [
       { href: 'index.html#about', label: 'About', key: 'about' },
-      { href: 'projects.html', label: 'Projects', key: 'projects' },
+      { href: 'lab.html', label: 'The Lab', key: 'lab' },
       { href: 'index.html#testimonials', label: 'References', key: 'references' },
       { href: 'index.html#contact', label: 'Contact', key: 'contact' },
     ];
@@ -14,7 +14,7 @@ class SiteNav extends HTMLElement {
         const active =
           current === link.key ||
           (current === 'home' && link.key === 'about') ||
-          (current === 'projects' && link.key === 'projects');
+          (current === 'lab' && link.key === 'lab');
 
         return `<li><a href="${link.href}"${active ? ' class="active"' : ''}>${link.label}</a></li>`;
       })

@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initScrollReveal();
   initVideoModal();
-  initContactForm();
 });
 
 function initMobileMenu() {
@@ -95,53 +94,4 @@ function initVideoModal() {
   });
 }
 
-function initContactForm() {
-  const form = document.getElementById('contact-form');
-  const feedback = document.getElementById('form-feedback');
 
-  if (!form || !feedback) {
-    return;
-  }
-
-  form.addEventListener('submit', async (event) => {
-    event.preventDefault();
-
-    const formData = new FormData(form);
-    const payload = {
-      name: String(formData.get('name') || '').trim(),
-      email: String(formData.get('email') || '').trim(),
-      message: String(formData.get('message') || '').trim(),
-    };
-
-    if (!payload.name || !payload.email || !payload.message) {
-      feedback.textContent = 'Please fill out all required fields.';
-      feedback.className = 'error';
-      return;
-    }
-
-    feedback.textContent = 'Sending...';
-    feedback.className = 'pending';
-
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      });
-
-      const result = await response.json().catch(() => ({ ok: false }));
-
-      if (!response.ok || !result.ok) {
-        throw new Error(result.error || 'Request failed');
-      }
-
-      feedback.textContent = 'Message sent. Thanks, I will reply shortly.';
-      feedback.className = 'success';
-      form.reset();
-    } catch (error) {
-      feedback.textContent = 'Unable to send right now. Please email directly at jacob@jacobbritten.com.';
-      feedback.className = 'error';
-      console.error('Contact form error:', error);
-    }
-  });
-}
