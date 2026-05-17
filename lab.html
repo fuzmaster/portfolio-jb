@@ -3,333 +3,207 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Lab | Jacob Britten – Media Systems Architect</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>The Lab | Jacob Britten</title>
     <meta
       name="description"
-      content="Production pipelines, web builds, and utility tools by Jacob Britten — Remotion video automation, Next.js architecture, React utilities, and logic experiments."
+      content="Projects and case studies from Jacob Britten: production media systems, civic dashboards, browser tools, and product experiments built from real workflow pain."
     />
-    <link rel="canonical" href="https://jacobbritten.com/lab.html" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://jacobbritten.com/lab.html" />
-    <meta property="og:title" content="The Lab | Jacob Britten – Media Systems Architect" />
-    <meta property="og:description" content="Production pipelines, web builds, and utility tools — Remotion, Next.js, React, Zod." />
-    <meta property="og:image" content="https://jacobbritten.com/images/youtube-analytics-422.jpg" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="The Lab | Jacob Britten – Media Systems Architect" />
-    <meta name="twitter:image" content="https://jacobbritten.com/images/youtube-analytics-422.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%2300FFC8' width='100' height='100' rx='16'/><text x='50' y='54' font-size='58' fill='%230B0D14' text-anchor='middle' dominant-baseline='middle' font-weight='bold'>J</text></svg>" />
   </head>
-  <body class="lab-page">
+  <body class="lab-page brutalist-lite">
     <a href="#main" class="skip-link">Skip to content</a>
 
     <site-nav current="lab"></site-nav>
 
     <main id="main" class="lab-main">
-      <div class="container lab-container">
+      <section class="lab-shell">
+        <div class="container">
+          <a class="lab-back-link" href="index.html">&larr; Back to System Core</a>
 
-        <a class="lab-back-link" href="index.html">&larr; Back to System Core</a>
+          <div class="section-label section-label--snug">
+            <span class="label-line" aria-hidden="true"></span>
+            <span>Projects / Case Studies / Product Experiments</span>
+          </div>
 
-        <div class="section-label">
-          <span class="label-line" aria-hidden="true"></span>
-          <span>Engineering Projects</span>
+          <h1 class="lab-title">I build small systems from real workflow pain.</h1>
+
+          <p class="lab-intro lab-intro--wide">
+            Most of these started by studying friction in a specific industry, then turning that pain into a working product through careful prompts, strict validation, and fast shipping loops. This page now combines the case studies and the Lab into one project surface.
+          </p>
+
+          <section class="lab-section" aria-labelledby="case-study-title">
+            <div class="lab-section-heading">
+              <p class="lab-kicker">Selected case studies</p>
+              <h2 id="case-study-title">Production systems and applied builds</h2>
+            </div>
+
+            <div class="lab-feature-grid">
+              <article class="lab-feature-card lab-feature-card--large">
+                <img class="lab-feature-img" src="images/StudioMonitor.JPG" alt="Studio monitor and broadcast production setup" loading="lazy" decoding="async" />
+                <div>
+                  <p class="lab-card-tag">High Functioning Podcast / Editing / Production Systems</p>
+                  <h3>High Functioning Podcast with Jason Reposa</h3>
+                  <p>
+                    Editor and producer for High Functioning Podcast, combining studio production, episode editing, caption workflows, and reusable social media packages for a 100K+ subscriber context.
+                  </p>
+                  <ul class="lab-tag-list">
+                    <li>50+ episodes</li>
+                    <li>Editor / producer</li>
+                    <li>ATEM switching</li>
+                    <li>Caption pipeline</li>
+                    <li>Social clips</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="lab-feature-card">
+                <img class="lab-feature-img" src="images/remotion-code.png" alt="Remotion code screenshot for repeatable video rendering workflow" loading="lazy" decoding="async" />
+                <div>
+                  <p class="lab-card-tag">Real Estate / Remotion / Local Rendering</p>
+                  <h3>Real Estate Reels</h3>
+                  <p>
+                    A developer-facing experiment for using Remotion to turn listing inputs into short-form reels through a repeatable render process, with local tooling for uploads, templates, and progress feedback.
+                  </p>
+                  <ul class="lab-tag-list">
+                    <li>React + Vite</li>
+                    <li>Express</li>
+                    <li>Remotion</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="lab-section" aria-labelledby="project-lab-title">
+            <div class="lab-section-heading">
+              <p class="lab-kicker">Project lab</p>
+              <h2 id="project-lab-title">Products, tools, and experiments</h2>
+            </div>
+
+            <div class="lab-grid" aria-label="Project cards">
+              <article class="lab-card lab-card--featured">
+                <img class="lab-card-img lab-card-img--top" src="images/srt-tests.png" alt="SRT parser test output showing passing subtitle cleanup tests" loading="lazy" decoding="async" />
+                <p class="lab-card-tag">Working / React / Vite / Web Workers</p>
+                <h3>SRT Fixer</h3>
+                <p>
+                  Browser-only subtitle cleanup for Reels, Shorts, TikToks, and podcast clips. Preserves timestamps in clean-text mode, adds batch/pro licensing paths, and keeps files local.
+                </p>
+                <div class="lab-card-actions">
+                  <a href="https://srt-fixer-eight.vercel.app" target="_blank" rel="noopener noreferrer">Live App</a>
+                  <a href="https://github.com/fuzmaster/srt-fixer" target="_blank" rel="noopener noreferrer">Source</a>
+                </div>
+              </article>
+
+              <article class="lab-card">
+                <img class="lab-card-img" src="images/projects/genera-reels-web-card.png" alt="Genera Reels Web multi-editor music reel interface concept" loading="lazy" decoding="async" />
+                <p class="lab-card-tag">Local WIP / Remotion / Multi-Editor</p>
+                <h3>Genera Reels Web</h3>
+                <p>
+                  Local project expanding the original Genera idea from a single editor into a multi-editor system for generating social reels for music campaigns.
+                </p>
+                <div class="lab-card-actions">
+                  <span>Local build</span>
+                </div>
+              </article>
+
+              <article class="lab-card">
+                <img class="lab-card-img" src="images/screencapture-localhost-3000-2026-05-05-22_03_14.png" alt="Real Estate Reels interface screenshot" loading="lazy" decoding="async" />
+                <p class="lab-card-tag">WIP / TypeScript / Remotion</p>
+                <h3>Real Estate Reels</h3>
+                <p>
+                  Developer workflow for preparing branded vertical listing videos with Remotion, using templates for Just Listed, Open House, and Just Sold render experiments.
+                </p>
+                <div class="lab-card-actions">
+                  <a href="https://github.com/fuzmaster/real-estate-reels" target="_blank" rel="noopener noreferrer">Source</a>
+                </div>
+              </article>
+
+              <article class="lab-card">
+                <img class="lab-card-img" src="images/projects/caitlin-portfolio-card.png" alt="Responsive creative portfolio website mockup" loading="lazy" decoding="async" />
+                <p class="lab-card-tag">Portfolio / Eleventy / SEO</p>
+                <h3>Caitlin Portfolio</h3>
+                <p>
+                  Hiring-focused portfolio for my wife, migrated to Eleventy with shared layouts, SEO hardening, and structured build outputs.
+                </p>
+                <div class="lab-card-actions">
+                  <a href="https://github.com/fuzmaster/caitlin-portfolio" target="_blank" rel="noopener noreferrer">Source</a>
+                </div>
+              </article>
+
+              <article class="lab-card">
+                <img class="lab-card-img" src="images/projects/artist-alley-card.png" alt="Artist alley convention break-even calculator mockup" loading="lazy" decoding="async" />
+                <p class="lab-card-tag">Launched / React / TypeScript</p>
+                <h3>Artist Alley Break-Even</h3>
+                <p>
+                  A convention calculator for vendors deciding how many prints, charms, stickers, or commissions they need to sell before a table breaks even.
+                </p>
+                <div class="lab-card-actions">
+                  <a href="https://artist-alley-break-even.vercel.app" target="_blank" rel="noopener noreferrer">Live App</a>
+                  <a href="https://github.com/fuzmaster/artist-alley-break-even" target="_blank" rel="noopener noreferrer">Source</a>
+                </div>
+              </article>
+
+              <article class="lab-card">
+                <img class="lab-card-img" src="images/projects/peabody-ready-hub-card.png" alt="Municipal emergency preparedness dashboard mockup" loading="lazy" decoding="async" />
+                <p class="lab-card-tag">Civic Demo / Next.js / NWS API</p>
+                <h3>Peabody Ready Hub</h3>
+                <p>
+                  Local emergency preparedness dashboard that turns official weather alerts and static hazard guidance into plain-English resident action cards.
+                </p>
+                <div class="lab-card-actions">
+                  <a href="https://peabody-ready-hub.vercel.app" target="_blank" rel="noopener noreferrer">Live App</a>
+                  <span>Private repo</span>
+                </div>
+              </article>
+
+              <article class="lab-card">
+                <img class="lab-card-img" src="images/9dceadde-9a94-4c93-961b-138d99c02d4c.png" alt="Calc My Dehumidifier sizing calculator interface" loading="lazy" decoding="async" />
+                <p class="lab-card-tag">Launched / TypeScript / Affiliate UX</p>
+                <h3>Dehumidifier Sizing Calculator</h3>
+                <p>
+                  Shopping calculator born from homeowner pain points: old 70-pint labels no longer map cleanly to modern DOE dehumidifier ratings.
+                </p>
+                <div class="lab-card-actions">
+                  <a href="https://calcmydehumidifier.com" target="_blank" rel="noopener noreferrer">Live App</a>
+                  <a href="https://github.com/fuzmaster/dehumidifier-sizing-calculator" target="_blank" rel="noopener noreferrer">Source</a>
+                </div>
+              </article>
+
+              <article class="lab-card">
+                <img class="lab-card-img" src="images/Genera-Reels.png" alt="Genera Reels code and generated vertical reel preview" loading="lazy" decoding="async" />
+                <p class="lab-card-tag">Remotion / React / Video Generation</p>
+                <h3>Genera-Reels</h3>
+                <p>
+                  Programmatic short-form video generator using Remotion compositions and structured payloads to produce repeatable vertical reels.
+                </p>
+                <div class="lab-card-actions">
+                  <a href="https://github.com/fuzmaster/max-reels-project" target="_blank" rel="noopener noreferrer">Source</a>
+                </div>
+              </article>
+            </div>
+          </section>
         </div>
-
-        <h1 class="lab-title">I build tools that fix real workflow pain.</h1>
-        <p class="lab-intro">
-          Production pipelines, active web builds, and side experiments.
-          I use Remotion for programmatic video, Playwright for e2e validation,
-          Zod for schema-enforced data flow, and Next.js for architecture builds.
-        </p>
-
-        <!-- ─── PIPELINES ──────────────────────────────── -->
-        <section class="lab-group" aria-labelledby="group-pipelines">
-          <div class="lab-group__header">
-            <span class="lab-group__type">Media Production</span>
-            <h2 id="group-pipelines" class="lab-group__title">Pipelines</h2>
-          </div>
-
-          <div class="lab-grid">
-
-            <!-- Genera Reels -->
-            <article class="lab-card">
-              <div class="lab-card__body">
-                <p class="lab-card__tag">Remotion / React / Zod / GSAP</p>
-                <h3 class="lab-card__title">Genera Reels</h3>
-                <p class="lab-card__desc">
-                  Turned a manual, isolated reel-editing process into a company-wide
-                  programmatic pipeline. Anyone can instantly generate localized, branded
-                  reels without opening Premiere Pro — driven by a Zod schema data-flow
-                  with typed render contracts at every stage.
-                </p>
-              </div>
-              <div class="lab-card__media">
-                <img
-                  src="images/screenshot-genera-reels.jpg"
-                  alt="Genera Reels: campaign builder interface with project selection, media upload, copy fields, and reel type controls"
-                  loading="lazy" decoding="async"
-                />
-              </div>
-              <div class="lab-card__footer">
-                <span class="lab-card__private">Private Repo</span>
-              </div>
-            </article>
-
-            <!-- Dehumidifier Ad Engine -->
-            <article class="lab-card">
-              <div class="lab-card__body">
-                <p class="lab-card__tag">React / Remotion / Zod</p>
-                <h3 class="lab-card__title">Dehumidifier Ad Engine</h3>
-                <p class="lab-card__desc">
-                  A React utility and Remotion pipeline that calculates environmental
-                  inputs (sq ft, dampness level, basement temperature) and automatically
-                  renders targeted product video ads for the user's specific conditions.
-                  Input flows through a typed Zod schema into the render composition.
-                </p>
-              </div>
-              <div class="lab-card__media">
-                <img
-                  src="images/screenshot-dehumidifier.jpg"
-                  alt="Calc My Dehumidifier brand mark — the product identity for the automated ad engine"
-                  loading="lazy" decoding="async"
-                />
-              </div>
-              <div class="lab-card__footer">
-                <span class="lab-card__private">Private Repo</span>
-              </div>
-            </article>
-
-            <!-- High Functioning Graphics -->
-            <article class="lab-card">
-              <div class="lab-card__body">
-                <p class="lab-card__tag">Remotion / TypeScript / React</p>
-                <h3 class="lab-card__title">High Functioning Graphics</h3>
-                <p class="lab-card__desc">
-                  A Remotion-powered engine that programmatically generates transparent,
-                  broadcast-quality lower-thirds and overlays for podcast guests.
-                  Eliminates After Effects render queues entirely — output is render-ready
-                  in seconds from a structured data input.
-                </p>
-              </div>
-              <div class="lab-card__media">
-                <img
-                  src="images/HighFunctioningLogo.png"
-                  alt="High Functioning Podcast brand mark — the broadcast identity this graphics engine serves"
-                  loading="lazy" decoding="async"
-                />
-              </div>
-              <div class="lab-card__footer">
-                <a href="https://github.com/fuzmaster/highfunctioning-graphics" target="_blank" rel="noopener noreferrer" class="lab-card__link">
-                  <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-                  View Source
-                </a>
-              </div>
-            </article>
-
-            <!-- Fastlisting -->
-            <article class="lab-card">
-              <div class="lab-card__body">
-                <p class="lab-card__tag">Next.js / Remotion / TypeScript</p>
-                <h3 class="lab-card__title">Fastlisting</h3>
-                <p class="lab-card__desc">
-                  A Next.js and Remotion integration that takes real estate photo arrays
-                  and automatically renders them into dynamic, motion-graphics video tours
-                  ready for MLS listings and social distribution. Reduces listing media
-                  turnaround from hours to minutes.
-                </p>
-              </div>
-              <div class="lab-card__media">
-                <img
-                  src="images/remotion-schema.jpg"
-                  alt="Remotion composition schema for Fastlisting automated real estate video tour pipeline"
-                  loading="lazy" decoding="async"
-                />
-              </div>
-              <div class="lab-card__footer">
-                <span class="lab-card__private">In Progress</span>
-              </div>
-            </article>
-
-          </div>
-        </section>
-
-        <!-- ─── BUILDS ─────────────────────────────────── -->
-        <section class="lab-group" aria-labelledby="group-builds">
-          <div class="lab-group__header">
-            <span class="lab-group__type">Web Architecture</span>
-            <h2 id="group-builds" class="lab-group__title">Builds</h2>
-          </div>
-
-          <div class="lab-grid">
-
-            <!-- BAS Web Starter -->
-            <article class="lab-card">
-              <div class="lab-card__body">
-                <p class="lab-card__tag">Next.js 14 / Tailwind / TypeScript</p>
-                <h3 class="lab-card__title">BAS Web Starter</h3>
-                <p class="lab-card__desc">
-                  Full site rebuild for an FAA-licensed drone photography and real estate
-                  media company based in Peabody, MA. Structured for fast iteration with
-                  Next.js 14 server components, Tailwind CSS, and TypeScript — featuring
-                  a video showreel, modular portfolio gallery, and optimized asset delivery.
-                </p>
-              </div>
-              <div class="lab-card__media">
-                <img
-                  src="images/notion-pipeline.png"
-                  alt="Architecture pipeline and project planning diagram for BAS Web Starter"
-                  loading="lazy" decoding="async"
-                />
-              </div>
-              <div class="lab-card__footer">
-                <a href="https://github.com/fuzmaster/britten-aerial-services" target="_blank" rel="noopener noreferrer" class="lab-card__link">
-                  <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-                  View Source
-                </a>
-                <a href="https://britten-aerial-services.vercel.app" target="_blank" rel="noopener noreferrer" class="lab-card__link lab-card__link--live">
-                  Live Site ↗
-                </a>
-              </div>
-            </article>
-
-            <!-- Deposit Letter -->
-            <article class="lab-card">
-              <div class="lab-card__body">
-                <p class="lab-card__tag">React / Vite / PostHog</p>
-                <h3 class="lab-card__title">Deposit Letter</h3>
-                <p class="lab-card__desc">
-                  Client-side utility for landlords to generate itemized security deposit
-                  deduction letters. Dynamic line items, live calculation totals, and
-                  browser-native print-to-PDF — fully client-side with no server dependency.
-                  Live at depositletter.com.
-                </p>
-              </div>
-              <div class="lab-card__media lab-card__media--code">
-                <img
-                  src="images/code-podcast-pipeline.png"
-                  alt="TypeScript code preview"
-                  loading="lazy" decoding="async"
-                />
-              </div>
-              <div class="lab-card__footer">
-                <a href="https://github.com/fuzmaster/deposit-letter" target="_blank" rel="noopener noreferrer" class="lab-card__link">
-                  <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-                  View Source
-                </a>
-                <a href="https://depositletter.com" target="_blank" rel="noopener noreferrer" class="lab-card__link lab-card__link--live">
-                  Live Site ↗
-                </a>
-              </div>
-            </article>
-
-          </div>
-        </section>
-
-        <!-- ─── TOOLS ──────────────────────────────────── -->
-        <section class="lab-group" aria-labelledby="group-tools">
-          <div class="lab-group__header">
-            <span class="lab-group__type">Logic &amp; Utilities</span>
-            <h2 id="group-tools" class="lab-group__title">Tools</h2>
-          </div>
-
-          <div class="lab-grid">
-
-            <!-- Keep7 -->
-            <article class="lab-card">
-              <div class="lab-card__body">
-                <p class="lab-card__tag">React / Algorithms / Regex</p>
-                <h3 class="lab-card__title">Keep7 — MTG Probability Simulator</h3>
-                <p class="lab-card__desc">
-                  Opening-hand math is annoying to do by feel. This client-side math lab
-                  runs combinatorial analysis so players can stress-test deck consistency
-                  in seconds instead of guessing their odds.
-                </p>
-              </div>
-              <div class="lab-card__media lab-card__media--code">
-                <img
-                  src="images/code-keep7.png"
-                  alt="TypeScript: normalizeCards parser splitting MTG deck list text into typed Card objects"
-                  loading="lazy" decoding="async"
-                />
-              </div>
-              <div class="lab-card__footer">
-                <a href="https://github.com/fuzmaster/keep7" target="_blank" rel="noopener noreferrer" class="lab-card__link">
-                  <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-                  View Source
-                </a>
-              </div>
-            </article>
-
-            <!-- Blackjack State Machine -->
-            <article class="lab-card">
-              <div class="lab-card__body">
-                <p class="lab-card__tag">React / Reducers / State Machines</p>
-                <h3 class="lab-card__title">Blackjack State Machine</h3>
-                <p class="lab-card__desc">
-                  A reducer-driven game engine that models turn flow, bets, splits, and
-                  outcome resolution without state drift or hidden transitions. Built to
-                  enforce explicit state rules and eliminate edge-case bugs common in
-                  imperative game logic.
-                </p>
-              </div>
-              <div class="lab-card__media lab-card__media--code">
-                <img
-                  src="images/code-blackjack.png"
-                  alt="TypeScript gameReducer: PLAYER_HIT case with state guard and bust detection"
-                  loading="lazy" decoding="async"
-                />
-              </div>
-              <div class="lab-card__footer">
-                <a href="https://github.com/fuzmaster/MVP-Social-Chaos-Engine" target="_blank" rel="noopener noreferrer" class="lab-card__link">
-                  <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-                  View Source
-                </a>
-              </div>
-            </article>
-
-            <!-- Dehumidifier Sizing Calculator -->
-            <article class="lab-card">
-              <div class="lab-card__body">
-                <p class="lab-card__tag">React / Zod</p>
-                <h3 class="lab-card__title">Dehumidifier Sizing Calculator</h3>
-                <p class="lab-card__desc">
-                  Environmental input calculator that takes square footage, dampness level,
-                  basement temperature, and drainage setup to determine the correct
-                  dehumidifier capacity. Zod-validated inputs with instant output.
-                </p>
-              </div>
-              <div class="lab-card__media">
-                <img
-                  src="images/screenshot-hf-graphics.jpg"
-                  alt="Calc My Dehumidifier: square footage, moisture level, basement temperature, and drainage setup input interface"
-                  loading="lazy" decoding="async"
-                />
-              </div>
-              <div class="lab-card__footer">
-                <a href="https://github.com/fuzmaster/dehumidifier-sizing-calculator" target="_blank" rel="noopener noreferrer" class="lab-card__link">
-                  <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-                  View Source
-                </a>
-              </div>
-            </article>
-
-          </div>
-        </section>
-
-      </div>
+      </section>
     </main>
 
+    <!-- ── FOOTER ── -->
     <footer class="footer">
       <div class="container footer-inner">
-        <p>Jacob Britten - Systems Architect</p>
-        <div class="footer-links">
-          <a href="projects.html">Projects</a>
-          <a href="index.html#about">About</a>
-          <a href="index.html#contact">Contact</a>
+        <div class="footer-left">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span class="footer-id">jacob_britten — content_systems &amp; ai_pipelines</span>
         </div>
+        <div class="footer-links">
+          <a href="lab.html" class="social-link">The Lab</a>
+          <a href="https://www.linkedin.com/in/jacob-britten-a3b52026/" target="_blank" rel="noopener noreferrer" class="social-link">LinkedIn</a>
+          <a href="https://www.instagram.com/jakefzbritten" target="_blank" rel="noopener noreferrer" class="social-link">Instagram</a>
+        </div>
+        <p class="footer-copy">&copy; 2026 Jacob Britten. All rights reserved.</p>
       </div>
     </footer>
 

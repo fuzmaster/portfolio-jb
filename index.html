@@ -3,26 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jacob Britten | Media Systems Architect</title>
+    <title>Jacob Britten | Systems Architect</title>
     <meta
       name="description"
-      content="Media Systems Architect who scaled the High Functioning Podcast to 274K+ views in 18 months using React + Remotion automation pipelines, transcript processing, and test-driven deployment."
+      content="Systems architect building React and Remotion automation workflows that reduce post-production time and scale media output."
     />
-    <link rel="canonical" href="https://jacobbritten.com/" />
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://jacobbritten.com/" />
-    <meta property="og:site_name" content="Jacob Britten" />
-    <meta property="og:title" content="Jacob Britten | Media Systems Architect" />
-    <meta property="og:description" content="Scaled the High Functioning Podcast to 274K+ views in 18 months. React + Remotion automation pipelines, 40% faster post-production, 50+ episodes automated end-to-end." />
-    <meta property="og:image" content="https://jacobbritten.com/images/youtube-analytics-422.jpg" />
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Jacob Britten | Media Systems Architect" />
-    <meta name="twitter:description" content="React + Remotion automation systems. 40% faster post-production. 50+ episodes automated end-to-end." />
-    <meta name="twitter:image" content="https://jacobbritten.com/images/youtube-analytics-422.jpg" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -43,58 +28,50 @@
     <site-nav current="home"></site-nav>
 
     <main id="main">
-      <section class="hero section" id="hero" aria-labelledby="hero-title">
-        <div class="hero-bg" aria-hidden="true">
-          <canvas id="hero-canvas" class="hero-canvas"></canvas>
-          <div class="hero-orb hero-orb--1"></div>
-          <div class="hero-orb hero-orb--2"></div>
-          <div class="hero-orb hero-orb--3"></div>
-        </div>
+      <section class="hero hero-section section" id="hero" aria-labelledby="hero-title">
+        <video class="hero-bg-video" autoplay muted loop playsinline preload="metadata">
+          <source src="video/showreel.mp4" type="video/mp4" />
+        </video>
         <div class="container hero-grid">
           <div class="hero-copy">
-            <div class="hero-avatar-row">
-              <img
-                src="images/jacob-headshot.jpg"
-                alt="Jacob Britten"
-                class="hero-avatar"
-                fetchpriority="high"
-                decoding="async"
-              />
-              <div class="hero-avatar-meta">
-                <span class="hero-avatar-name">Jacob Britten</span>
-                <span class="hero-avatar-title">Media Systems Architect</span>
-              </div>
-            </div>
             <section-label text="Systems Architecture"></section-label>
             <h1 id="hero-title">I build production media systems that remove editing bottlenecks.</h1>
             <p>
-              Scaled the High Functioning Podcast from 41 to 31,000+ monthly views in
-              18 months using React + Remotion render pipelines, transcript automation,
-              and test-driven deployment — while running content systems for 100K+ subscriber networks.
+              Cut post-production time by 40% and automated 50+ episodes for a
+              100K+ subscriber podcast using React + Remotion render pipelines,
+              transcript parsing services, and test-driven deployment workflows.
             </p>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="projects.html">View Projects</a>
+              <a class="btn btn-primary" href="lab.html">View Projects</a>
               <a class="btn btn-secondary" href="#contact">Contact</a>
             </div>
             <ul class="hero-meta" aria-label="Key delivery outcomes">
-              <li>274K+ total views — High Functioning Podcast</li>
               <li>40% faster post-production turnaround</li>
               <li>50+ episodes automated end-to-end</li>
+              <li>100K+ subscriber distribution context</li>
             </ul>
           </div>
 
-          <div class="hero-media">
-            <div class="image-frame">
-              <img
-                src="images/youtube-analytics-422.jpg"
-                alt="YouTube analytics dashboard showing 274K+ views growth for High Functioning Podcast automated production pipeline"
-                fetchpriority="high"
-                decoding="async"
-              />
+          <div class="hero-media-wrapper">
+            <div class="hero-slider">
+              <div class="slide active">
+                <img class="media-img media-img--top" src="images/cropcheck-1.png" alt="Crop Check UI" />
+              </div>
+              <div class="slide">
+                <img class="media-img media-img--lower" src="images/instagram-420.jpg" alt="Viral Reels" />
+              </div>
+              <div class="slide">
+                <img class="media-img media-img--upper" src="images/youtube-analytics-422.png" alt="Analytics Spike" />
+              </div>
+              <div class="slider-dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+              </div>
             </div>
             <p class="media-caption">
-              High Functioning Podcast: 274,796 total views via automated
-              React + Remotion production pipelines — Oct 2024 to Apr 2026.
+              Demo: code-driven media generation pipeline with schema validation,
+              subtitle automation, and publish-ready exports.
             </p>
           </div>
         </div>
@@ -107,60 +84,36 @@
           <p class="section-intro">
             I model systems before implementation, use AI tools for scaffolding,
             and ship production logic with typed contracts and integration tests.
-            The High Functioning Podcast is my primary case study: 274K views in
-            18 months through fully automated delivery pipelines.
+            Metrics and infrastructure are consolidated below for full technical context.
           </p>
 
-          <div class="metrics-grid" role="list" aria-label="Performance metrics">
-            <metric-card label="Total Views" value="274K+" detail="High Functioning Podcast: 274,796 views in 18 months via automated post-production pipelines."></metric-card>
-            <metric-card label="Post-Production Reduction" value="40%" detail="Removed repetitive timeline editing with React + Remotion render orchestration."></metric-card>
-            <metric-card label="Episodes Automated" value="50+" detail="Delivered render-ready clips, captions, and social output packages end-to-end."></metric-card>
+          <div class="bento-grid" aria-label="Code snapshot highlights">
+            <article class="bento-card">
+              <img class="bento-bg media-img--origin" src="images/remotion-schema.png" alt="TypeScript schema definitions" loading="lazy" decoding="async" />
+              <h3>Schema Contracts</h3>
+              <p>Interface-first payload design for deterministic render behavior.</p>
+            </article>
+            <article class="bento-card">
+              <img class="bento-bg media-img--origin" src="images/Genera-Reels.jpg" alt="Genera-Reels source code" loading="lazy" decoding="async" />
+              <h3>Generator Engine</h3>
+              <p>Composable reels pipeline with template-driven automation logic.</p>
+            </article>
+            <article class="bento-card">
+              <img class="bento-bg media-img--left" src="images/youtube-growth.svg" alt="YouTube growth chart" loading="lazy" decoding="async" />
+              <h3>Retention Analysis</h3>
+              <p>Segment-level diagnostics aligned to pacing and edit decisions.</p>
+            </article>
+            <article class="bento-card">
+              <img class="bento-bg media-img--upper" src="images/youtube-analytics-422.png" alt="Analytics spike graph" loading="lazy" decoding="async" />
+              <h3>Growth Signals</h3>
+              <p>Graph trend snapshots used to prioritize distribution strategy.</p>
+            </article>
           </div>
 
-          <div class="hf-case" aria-label="High Functioning Podcast growth case study">
-            <div class="hf-case__visual">
-              <img
-                src="images/audience_growth_svg_preview.svg"
-                alt="High Functioning Podcast audience growth chart: from 41 monthly views in October 2024 to 31,961 views in April 2025, sustaining 31,691 in April 2026"
-                class="hf-case__chart"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-            <div class="hf-case__content">
-              <p class="hf-case__eyebrow">Case Study — High Functioning Podcast</p>
-              <h3 class="hf-case__heading">From 41 to 31,000+ monthly views in 18 months.</h3>
-              <p class="hf-case__body">
-                Automated post-production pipelines to accelerate output velocity, allowing
-                the team to consistently book and publish high-profile niche guests while
-                driving sustained monthly growth with no additional headcount.
-              </p>
-              <dl class="hf-milestones" aria-label="Audience growth milestones">
-                <div class="hf-milestone">
-                  <dt class="hf-milestone__date">Oct '24</dt>
-                  <dd class="hf-milestone__value">41</dd>
-                  <dd class="hf-milestone__label">views/mo · baseline</dd>
-                </div>
-                <div class="hf-milestone">
-                  <dt class="hf-milestone__date">Jan '25</dt>
-                  <dd class="hf-milestone__value">16K+</dd>
-                  <dd class="hf-milestone__label">first spike</dd>
-                </div>
-                <div class="hf-milestone">
-                  <dt class="hf-milestone__date">Apr '25</dt>
-                  <dd class="hf-milestone__value">31,961</dd>
-                  <dd class="hf-milestone__label">breakout peak</dd>
-                </div>
-                <div class="hf-milestone">
-                  <dt class="hf-milestone__date">Apr '26</dt>
-                  <dd class="hf-milestone__value">31,691</dd>
-                  <dd class="hf-milestone__label">sustained volume</dd>
-                </div>
-              </dl>
-              <p class="hf-case__total">
-                <strong>274,796</strong> total views accumulated · Oct 2024 — Apr 2026
-              </p>
-            </div>
+          <div class="metrics-grid" role="list" aria-label="Performance metrics">
+            <metric-card label="Subscribers Supported" value="100K+" detail="Automated content pipeline for active high-volume channel."></metric-card>
+            <metric-card label="Manual Time Reduction" value="40%" detail="Removed repetitive timeline editing with render orchestration."></metric-card>
+            <metric-card label="Episodes Automated" value="50+" detail="Delivered render-ready clips, captions, and social output packages."></metric-card>
           </div>
 
           <div class="about-split">
@@ -189,21 +142,81 @@
         </div>
       </section>
 
+      <section class="section" id="activity" aria-labelledby="activity-title">
+        <div class="container">
+          <section-label text="Latest Signals"></section-label>
+          <div class="section-heading-row">
+            <div>
+              <h2 id="activity-title">Recent build activity and public updates.</h2>
+              <p class="section-intro">
+                Public GitHub work, LinkedIn updates, and the trail of experiments behind the lab.
+              </p>
+            </div>
+            <a class="btn btn-secondary" href="lab.html">Open Lab</a>
+          </div>
+
+          <div class="activity-grid" aria-label="Latest public activity">
+            <article class="activity-card">
+              <div class="activity-card-head">
+                <p class="activity-kicker">GitHub</p>
+                <a href="https://github.com/fuzmaster" target="_blank" rel="noopener noreferrer">Profile</a>
+              </div>
+              <ul class="activity-list" id="github-activity-list" aria-live="polite">
+                <li class="activity-empty">Loading recent public activity...</li>
+              </ul>
+            </article>
+
+            <article class="activity-card activity-card--linkedin">
+              <div class="activity-card-head">
+                <p class="activity-kicker">LinkedIn</p>
+                <a href="https://www.linkedin.com/in/jacob-britten-a3b52026/" target="_blank" rel="noopener noreferrer">Profile</a>
+              </div>
+              <div class="linkedin-latest">
+                <h3>Follow the newest posts and build notes.</h3>
+                <p>
+                  I share project progress, production lessons, and the AI-assisted workflows
+                  behind these experiments on LinkedIn.
+                </p>
+                <a class="btn btn-primary" href="https://www.linkedin.com/in/jacob-britten-a3b52026/" target="_blank" rel="noopener noreferrer">
+                  View LinkedIn
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section class="section" id="testimonials" aria-labelledby="testimonials-title">
         <div class="container">
-          <section-label text="References"></section-label>
-          <h2 id="testimonials-title">Delivery quality from operators and stakeholders</h2>
-          <div class="testimonials-grid">
-            <testimonial-card
-              quote="Jacob creates workflows that make complex projects easier to execute and scale."
-              name="Brandon Farrell"
-              role="Videographer, Lamacchia Realty"
-            ></testimonial-card>
-            <testimonial-card
-              quote="He delivers quickly while improving process quality and final output consistency."
-              name="Lindsay Favazza"
-              role="VP of Marketing, Lamacchia Realty"
-            ></testimonial-card>
+          <h2 id="testimonials-title" class="section-headline section-headline--centered" data-inview>
+            THE ORCHESTRATION<br>
+            <span class="headline-dim">LAYER<span class="accent-dot">.</span></span>
+          </h2>
+
+          <div class="testimonial-grid">
+            <div class="testimonial-card-ui">
+              <p class="testimonial-text">"Jacob has a passion for making projects seamless and creating workflows to make everyone's lives easier... He handles large amounts of projects at once with ease and can easily take on new tasks."</p>
+              <div class="testimonial-author-box">
+                <div class="testimonial-author-name">Brandon Farrell</div>
+                <div class="testimonial-author-role">Lamacchia Realty, Inc.</div>
+              </div>
+            </div>
+
+            <div class="testimonial-card-ui">
+              <p class="testimonial-text">"He works so quickly and adds his own touch to his work so not only do you get it done fast you also get it done better than you could have imagined. I highly recommend Jacob."</p>
+              <div class="testimonial-author-box">
+                <div class="testimonial-author-name">Lindsay Favazza</div>
+                <div class="testimonial-author-role">VP of Marketing, Lamacchia Realty</div>
+              </div>
+            </div>
+
+            <div class="testimonial-card-ui">
+              <p class="testimonial-text">"Jacob did a fabulous job without any direction or input from me. I trust he knows his discipline and doesn't need me breathing down his neck. Highly recommended."</p>
+              <div class="testimonial-author-box">
+                <div class="testimonial-author-name">Gary Kelley</div>
+                <div class="testimonial-author-role">Broker/Owner, Residential Real Estate</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -213,24 +226,27 @@
           <section-label text="Contact"></section-label>
           <h2 id="contact-title">Discuss an automation build or systems role</h2>
           <p class="section-intro">
-            Use the form to send project context. The message is posted to a serverless endpoint
-            and returns structured success/failure feedback.
+            Use the form to send project context. The message is handled by a serverless endpoint
+            and returns structured success or failure feedback.
           </p>
 
-          <form id="contact-form" class="contact-form" novalidate>
+          <form action="/api/contact" method="POST" class="contact-form" id="contact-form" novalidate>
             <label for="name">Name</label>
-            <input id="name" name="name" type="text" autocomplete="name" required />
+            <input id="name" name="name" type="text" autocomplete="name" maxlength="120" required />
 
             <label for="email">Email</label>
-            <input id="email" name="email" type="email" autocomplete="email" required />
+            <input id="email" name="email" type="email" autocomplete="email" maxlength="254" required />
 
             <label for="message">Message</label>
-            <textarea id="message" name="message" rows="6" required></textarea>
+            <textarea id="message" name="message" rows="6" maxlength="4000" required></textarea>
+
+            <label class="honeypot" for="company">Company</label>
+            <input class="honeypot" id="company" name="company" type="text" tabindex="-1" autocomplete="off" />
 
             <button type="submit" class="btn btn-primary" aria-label="Send contact message">
               Send Message
             </button>
-            <p id="form-feedback" role="status" aria-live="polite"></p>
+            <p id="form-feedback" class="form-feedback" role="status" aria-live="polite"></p>
           </form>
         </div>
       </section>
@@ -240,13 +256,12 @@
       <div class="container footer-inner">
         <p>Jacob Britten - Systems Architect</p>
         <div class="footer-links">
-          <a href="projects.html">Projects</a>
+          <a href="lab.html">The Lab</a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
         </div>
       </div>
     </footer>
-
     <script src="components.js"></script>
     <script src="main.js"></script>
   </body>

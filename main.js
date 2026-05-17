@@ -1,65 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-  initHeroCanvas();
   initMobileMenu();
   initScrollReveal();
+  initVideoModal();
+  initHeroSlider();
+  initLatestActivity();
   initContactForm();
 });
-
-function initHeroCanvas() {
-  const canvas = document.getElementById('hero-canvas');
-  if (!canvas) return;
-
-  const ctx = canvas.getContext('2d');
-  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const stars = [];
-  let raf;
-
-  function resize() {
-    const hero = canvas.closest('.hero') || document.body;
-    canvas.width = hero.offsetWidth;
-    canvas.height = hero.offsetHeight;
-  }
-
-  function buildStars() {
-    stars.length = 0;
-    const count = Math.min(Math.floor((canvas.width * canvas.height) / 7500), 130);
-    for (let i = 0; i < count; i++) {
-      stars.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        r: Math.random() * 1.1 + 0.15,
-        speed: Math.random() * 0.055 + 0.01,
-        drift: (Math.random() - 0.5) * 0.025,
-        opacity: Math.random() * 0.42 + 0.08,
-      });
-    }
-  }
-
-  function tick() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    for (const s of stars) {
-      ctx.beginPath();
-      ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(218, 230, 246, ${s.opacity})`;
-      ctx.fill();
-      if (!reduced) {
-        s.y -= s.speed;
-        s.x += s.drift;
-        if (s.y < -2) { s.y = canvas.height + 2; s.x = Math.random() * canvas.width; }
-        if (s.x < -2) s.x = canvas.width + 2;
-        if (s.x > canvas.width + 2) s.x = -2;
-      }
-    }
-    raf = requestAnimationFrame(tick);
-  }
-
-  resize();
-  buildStars();
-  tick();
-
-  const ro = new ResizeObserver(() => { resize(); buildStars(); });
-  ro.observe(canvas.closest('.hero') || document.body);
-}
 
 function initMobileMenu() {
   const menuToggle = document.getElementById('menu-toggle');
@@ -86,7 +32,7 @@ function initMobileMenu() {
 
 function initScrollReveal() {
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const revealTargets = document.querySelectorAll('.section, .project-card, .metric-card, .testimonial-card, .stack-card');
+  const revealTargets = document.querySelectorAll('.section, .project-card, .metric-card, .testimonial-card, .testimonial-card-ui, .stack-card, .activity-card, [data-inview]');
 
   if (!revealTargets.length) {
     return;
@@ -110,6 +56,50 @@ function initScrollReveal() {
   );
 
   revealTargets.forEach((target) => observer.observe(target));
+}
+
+function initHeroSlider() {
+  const slider = document.querySelector('.hero-slider');
+
+  if (!slider) {
+    return;
+  }
+
+  const slides = Array.from(slider.querySelectorAll('.slide'));
+  const dots = Array.from(slider.querySelectorAll('.dot'));
+
+  if (slides.length < 2 || slides.length !== dots.length) {
+    slides[0]?.classList.add('active');
+    dots[0]?.classList.add('active');
+    return;
+  }
+
+  let currentSlide = Math.max(0, slides.findIndex((slide) => slide.classList.contains('active')));
+  let slideInterval;
+
+  const goToSlide = (index) => {
+    slides[currentSlide].classList.remove('active');
+    dots[currentSlide].classList.remove('active');
+    currentSlide = index;
+    slides[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+  };
+
+  const resetInterval = () => {
+    window.clearInterval(slideInterval);
+    slideInterval = window.setInterval(() => {
+      goToSlide((currentSlide + 1) % slides.length);
+    }, 4000);
+  };
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      goToSlide(index);
+      resetInterval();
+    });
+  });
+
+  resetInterval();
 }
 
 function initVideoModal() {
@@ -151,53 +141,182 @@ function initVideoModal() {
   });
 }
 
-function initContactForm() {
-  const form = document.getElementById('contact-form');
-  const feedback = document.getElementById('form-feedback');
+function initLatestActivity() {
+  const list = document.getElementById('github-activity-list');
 
-  if (!form || !feedback) {
+  if (!list) {
     return;
   }
 
+  const formatDate = (value) => {
+    const date = new Date(value);
+
+    if (Number.isNaN(date.getTime())) {
+      return 'Recently';
+    }
+
+    return new Intl.DateTimeFormat('en', {
+      month: 'short',
+      day: 'numeric',
+    }).format(date);
+  };
+
+  const formatEvent = (event) => {
+    const repo = event.repo?.name?.replace(/^fuzmaster\//, '') || 'GitHub';
+    const payload = event.payload || {};
+
+    if (event.type === 'PushEvent') {
+      const count = payload.commits?.length || 1;
+      return {
+        title: `Pushed ${count} commit${count === 1 ? '' : 's'}`,
+        detail: repo,
+      };
+    }
+
+    if (event.type === 'CreateEvent') {
+      return {
+        title: `Created ${payload.ref_type || 'item'}`,
+        detail: repo,
+      };
+    }
+
+    if (event.type === 'PullRequestEvent') {
+      return {
+        title: `${capitalize(payload.action || 'Updated')} pull request`,
+        detail: repo,
+      };
+    }
+
+    if (event.type === 'IssuesEvent') {
+      return {
+        title: `${capitalize(payload.action || 'Updated')} issue`,
+        detail: repo,
+      };
+    }
+
+    if (event.type === 'WatchEvent') {
+      return {
+        title: 'Starred repository',
+        detail: repo,
+      };
+    }
+
+    return {
+      title: event.type?.replace(/Event$/, '') || 'Updated activity',
+      detail: repo,
+    };
+  };
+
+  const renderEmpty = (message) => {
+    list.replaceChildren();
+    const item = document.createElement('li');
+    item.className = 'activity-empty';
+    item.textContent = message;
+    list.append(item);
+  };
+
+  fetch('https://api.github.com/users/fuzmaster/events/public?per_page=5', {
+    headers: { Accept: 'application/vnd.github+json' },
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('GitHub activity could not be loaded.');
+      }
+
+      return response.json();
+    })
+    .then((events) => {
+      const publicEvents = Array.isArray(events) ? events.slice(0, 4) : [];
+
+      if (!publicEvents.length) {
+        renderEmpty('Recent public GitHub activity will appear here.');
+        return;
+      }
+
+      list.replaceChildren();
+      publicEvents.forEach((event) => {
+        const content = formatEvent(event);
+        const item = document.createElement('li');
+        item.className = 'activity-item';
+
+        const title = document.createElement('span');
+        title.className = 'activity-title';
+        title.textContent = content.title;
+
+        const meta = document.createElement('span');
+        meta.className = 'activity-meta';
+        meta.textContent = `${content.detail} / ${formatDate(event.created_at)}`;
+
+        item.append(title, meta);
+        list.append(item);
+      });
+    })
+    .catch(() => {
+      renderEmpty('Open GitHub for the latest public activity.');
+    });
+}
+
+function capitalize(value) {
+  const text = String(value || '').trim();
+  return text ? `${text.charAt(0).toUpperCase()}${text.slice(1)}` : '';
+}
+
+function initContactForm() {
+  const form = document.getElementById('contact-form');
+
+  if (!form) {
+    return;
+  }
+
+  const feedback = document.getElementById('form-feedback');
+  const submitButton = form.querySelector('button[type="submit"]');
+
+  const setFeedback = (message, state = '') => {
+    if (!feedback) {
+      return;
+    }
+
+    feedback.textContent = message;
+    feedback.className = `form-feedback ${state}`.trim();
+  };
+
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
+
+    if (!form.reportValidity()) {
+      setFeedback('Please complete the required fields.', 'error');
+      return;
+    }
 
     const formData = new FormData(form);
     const payload = {
       name: String(formData.get('name') || '').trim(),
       email: String(formData.get('email') || '').trim(),
       message: String(formData.get('message') || '').trim(),
+      company: String(formData.get('company') || '').trim(),
     };
 
-    if (!payload.name || !payload.email || !payload.message) {
-      feedback.textContent = 'Please fill out all required fields.';
-      feedback.className = 'error';
-      return;
-    }
-
-    feedback.textContent = 'Sending...';
-    feedback.className = 'pending';
+    submitButton?.setAttribute('disabled', 'true');
+    setFeedback('Sending...', 'pending');
 
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch(form.action, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
       });
-
-      const result = await response.json().catch(() => ({ ok: false }));
+      const result = await response.json().catch(() => ({}));
 
       if (!response.ok || !result.ok) {
-        throw new Error(result.error || 'Request failed');
+        throw new Error(result.error || 'Message failed to send.');
       }
 
-      feedback.textContent = 'Message sent. Thanks, I will reply shortly.';
-      feedback.className = 'success';
       form.reset();
+      setFeedback('Thanks. Your message was sent.', 'success');
     } catch (error) {
-      feedback.textContent = 'Unable to send right now. Please email directly at jacob@jacobbritten.com.';
-      feedback.className = 'error';
-      console.error('Contact form error:', error);
+      setFeedback(error.message || 'Message failed to send. Please try again.', 'error');
+    } finally {
+      submitButton?.removeAttribute('disabled');
     }
   });
 }
