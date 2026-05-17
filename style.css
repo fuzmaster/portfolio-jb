@@ -1928,6 +1928,146 @@ body {
   background: #00FFC8;
 }
 
+/* ─── HERO COMMAND CENTER REFRESH ─────────────────── */
+.hero-copy {
+  position: relative;
+}
+
+.hero h1 {
+  max-width: 13.5ch;
+  letter-spacing: -0.035em;
+}
+
+.hero-actions {
+  flex-wrap: wrap;
+}
+
+.hero-proof-rail {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.7rem;
+  max-width: 620px;
+  margin-top: 1.45rem;
+}
+
+.hero-proof-rail li {
+  min-height: 82px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.55rem;
+  padding: 0.85rem;
+  border: 1px solid rgba(248,245,240,0.14);
+  border-radius: 10px;
+  background: rgba(255,255,255,0.045);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+.hero-proof-rail strong {
+  color: #fffaf2;
+  font-size: clamp(1.35rem, 3vw, 2rem);
+  line-height: 1;
+}
+
+.hero-proof-rail span {
+  color: rgba(248,245,240,0.66);
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  line-height: 1.45;
+  text-transform: uppercase;
+}
+
+.hero-console {
+  padding: 0.85rem;
+  border: 1px solid rgba(254,110,0,0.28);
+  border-radius: 16px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.025)),
+    rgba(8,9,12,0.82);
+  box-shadow: 0 28px 80px rgba(0,0,0,0.42), inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+.hero-console-bar,
+.hero-console-footer,
+.hero-pipeline {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-console-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.2rem 0.25rem 0.75rem;
+  color: rgba(248,245,240,0.72);
+}
+
+.hero-console-bar div {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.console-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: var(--command-orange);
+  box-shadow: 0 0 12px rgba(254,110,0,0.8);
+}
+
+.hero-pipeline {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.45rem;
+  margin-bottom: 0.75rem;
+}
+
+.hero-pipeline li {
+  min-height: 2.15rem;
+  display: grid;
+  place-items: center;
+  padding: 0.4rem 0.35rem;
+  border: 1px solid rgba(248,245,240,0.12);
+  border-radius: 999px;
+  color: rgba(248,245,240,0.72);
+  background: rgba(255,255,255,0.045);
+  text-align: center;
+}
+
+.hero-console .hero-slider {
+  border-radius: 12px;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04);
+}
+
+.hero-console-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  padding: 0.75rem 0.25rem 0.1rem;
+  color: rgba(248,245,240,0.6);
+}
+
+.hero-console-footer span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.hero-console-footer span::before {
+  content: "";
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 999px;
+  background: rgba(254,110,0,0.78);
+}
+
 /* ============================== */
 /* DESIGN.md Direction: Command Center + Genesis discipline */
 /* ============================== */
@@ -2326,5 +2466,16 @@ button:focus-visible,
     width: 92%;
     padding: 1.25rem;
     border-radius: 12px;
+  }
+
+  .hero-proof-rail,
+  .hero-pipeline {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-console-bar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.35rem;
   }
 }
