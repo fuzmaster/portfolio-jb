@@ -2,6 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initScrollReveal();
   initVideoModal();
+  initHeroSlider();
+  initLatestActivity();
+  initContactForm();
 });
 
 function initMobileMenu() {
@@ -29,7 +32,7 @@ function initMobileMenu() {
 
 function initScrollReveal() {
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const revealTargets = document.querySelectorAll('.section, .project-card, .metric-card, .testimonial-card, .stack-card');
+  const revealTargets = document.querySelectorAll('.section, .project-card, .metric-card, .testimonial-card, .testimonial-card-ui, .stack-card, .activity-card, [data-inview]');
 
   if (!revealTargets.length) {
     return;
@@ -53,6 +56,50 @@ function initScrollReveal() {
   );
 
   revealTargets.forEach((target) => observer.observe(target));
+}
+
+function initHeroSlider() {
+  const slider = document.querySelector('.hero-slider');
+
+  if (!slider) {
+    return;
+  }
+
+  const slides = Array.from(slider.querySelectorAll('.slide'));
+  const dots = Array.from(slider.querySelectorAll('.dot'));
+
+  if (slides.length < 2 || slides.length !== dots.length) {
+    slides[0]?.classList.add('active');
+    dots[0]?.classList.add('active');
+    return;
+  }
+
+  let currentSlide = Math.max(0, slides.findIndex((slide) => slide.classList.contains('active')));
+  let slideInterval;
+
+  const goToSlide = (index) => {
+    slides[currentSlide].classList.remove('active');
+    dots[currentSlide].classList.remove('active');
+    currentSlide = index;
+    slides[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+  };
+
+  const resetInterval = () => {
+    window.clearInterval(slideInterval);
+    slideInterval = window.setInterval(() => {
+      goToSlide((currentSlide + 1) % slides.length);
+    }, 4000);
+  };
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      goToSlide(index);
+      resetInterval();
+    });
+  });
+
+  resetInterval();
 }
 
 function initVideoModal() {
@@ -94,4 +141,182 @@ function initVideoModal() {
   });
 }
 
+function initLatestActivity() {
+  const list = document.getElementById('github-activity-list');
 
+  if (!list) {
+    return;
+  }
+
+  const formatDate = (value) => {
+    const date = new Date(value);
+
+    if (Number.isNaN(date.getTime())) {
+      return 'Recently';
+    }
+
+    return new Intl.DateTimeFormat('en', {
+      month: 'short',
+      day: 'numeric',
+    }).format(date);
+  };
+
+  const formatEvent = (event) => {
+    const repo = event.repo?.name?.replace(/^fuzmaster\//, '') || 'GitHub';
+    const payload = event.payload || {};
+
+    if (event.type === 'PushEvent') {
+      const count = payload.commits?.length || 1;
+      return {
+        title: `Pushed ${count} commit${count === 1 ? '' : 's'}`,
+        detail: repo,
+      };
+    }
+
+    if (event.type === 'CreateEvent') {
+      return {
+        title: `Created ${payload.ref_type || 'item'}`,
+        detail: repo,
+      };
+    }
+
+    if (event.type === 'PullRequestEvent') {
+      return {
+        title: `${capitalize(payload.action || 'Updated')} pull request`,
+        detail: repo,
+      };
+    }
+
+    if (event.type === 'IssuesEvent') {
+      return {
+        title: `${capitalize(payload.action || 'Updated')} issue`,
+        detail: repo,
+      };
+    }
+
+    if (event.type === 'WatchEvent') {
+      return {
+        title: 'Starred repository',
+        detail: repo,
+      };
+    }
+
+    return {
+      title: event.type?.replace(/Event$/, '') || 'Updated activity',
+      detail: repo,
+    };
+  };
+
+  const renderEmpty = (message) => {
+    list.replaceChildren();
+    const item = document.createElement('li');
+    item.className = 'activity-empty';
+    item.textContent = message;
+    list.append(item);
+  };
+
+  fetch('https://api.github.com/users/fuzmaster/events/public?per_page=5', {
+    headers: { Accept: 'application/vnd.github+json' },
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('GitHub activity could not be loaded.');
+      }
+
+      return response.json();
+    })
+    .then((events) => {
+      const publicEvents = Array.isArray(events) ? events.slice(0, 4) : [];
+
+      if (!publicEvents.length) {
+        renderEmpty('Recent public GitHub activity will appear here.');
+        return;
+      }
+
+      list.replaceChildren();
+      publicEvents.forEach((event) => {
+        const content = formatEvent(event);
+        const item = document.createElement('li');
+        item.className = 'activity-item';
+
+        const title = document.createElement('span');
+        title.className = 'activity-title';
+        title.textContent = content.title;
+
+        const meta = document.createElement('span');
+        meta.className = 'activity-meta';
+        meta.textContent = `${content.detail} / ${formatDate(event.created_at)}`;
+
+        item.append(title, meta);
+        list.append(item);
+      });
+    })
+    .catch(() => {
+      renderEmpty('Open GitHub for the latest public activity.');
+    });
+}
+
+function capitalize(value) {
+  const text = String(value || '').trim();
+  return text ? `${text.charAt(0).toUpperCase()}${text.slice(1)}` : '';
+}
+
+function initContactForm() {
+  const form = document.getElementById('contact-form');
+
+  if (!form) {
+    return;
+  }
+
+  const feedback = document.getElementById('form-feedback');
+  const submitButton = form.querySelector('button[type="submit"]');
+
+  const setFeedback = (message, state = '') => {
+    if (!feedback) {
+      return;
+    }
+
+    feedback.textContent = message;
+    feedback.className = `form-feedback ${state}`.trim();
+  };
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    if (!form.reportValidity()) {
+      setFeedback('Please complete the required fields.', 'error');
+      return;
+    }
+
+    const formData = new FormData(form);
+    const payload = {
+      name: String(formData.get('name') || '').trim(),
+      email: String(formData.get('email') || '').trim(),
+      message: String(formData.get('message') || '').trim(),
+      company: String(formData.get('company') || '').trim(),
+    };
+
+    submitButton?.setAttribute('disabled', 'true');
+    setFeedback('Sending...', 'pending');
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const result = await response.json().catch(() => ({}));
+
+      if (!response.ok || !result.ok) {
+        throw new Error(result.error || 'Message failed to send.');
+      }
+
+      form.reset();
+      setFeedback('Thanks. Your message was sent.', 'success');
+    } catch (error) {
+      setFeedback(error.message || 'Message failed to send. Please try again.', 'error');
+    } finally {
+      submitButton?.removeAttribute('disabled');
+    }
+  });
+}

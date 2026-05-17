@@ -42,7 +42,7 @@
               transcript parsing services, and test-driven deployment workflows.
             </p>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="projects.html">View Projects</a>
+              <a class="btn btn-primary" href="lab.html">View Projects</a>
               <a class="btn btn-secondary" href="#contact">Contact</a>
             </div>
             <ul class="hero-meta" aria-label="Key delivery outcomes">
@@ -55,13 +55,13 @@
           <div class="hero-media-wrapper">
             <div class="hero-slider">
               <div class="slide active">
-                <img src="images/cropcheck-1.jpg" alt="Crop Check UI" style="object-position: center top;" />
+                <img class="media-img media-img--top" src="images/cropcheck-1.png" alt="Crop Check UI" />
               </div>
               <div class="slide">
-                <img src="images/instagram-420.jpg" alt="Viral Reels" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 75%; position: absolute; inset: 0;" />
+                <img class="media-img media-img--lower" src="images/instagram-420.jpg" alt="Viral Reels" />
               </div>
               <div class="slide">
-                <img src="images/youtube-analytics-422.jpg" alt="Analytics Spike" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; position: absolute; inset: 0;" />
+                <img class="media-img media-img--upper" src="images/youtube-analytics-422.png" alt="Analytics Spike" />
               </div>
               <div class="slider-dots">
                 <span class="dot active" data-index="0"></span>
@@ -89,22 +89,22 @@
 
           <div class="bento-grid" aria-label="Code snapshot highlights">
             <article class="bento-card">
-              <img class="bento-bg" src="images/remotion-schema.jpg" alt="TypeScript schema definitions" style="object-position: 0% 0%;" loading="lazy" decoding="async" />
+              <img class="bento-bg media-img--origin" src="images/remotion-schema.png" alt="TypeScript schema definitions" loading="lazy" decoding="async" />
               <h3>Schema Contracts</h3>
               <p>Interface-first payload design for deterministic render behavior.</p>
             </article>
             <article class="bento-card">
-              <img class="bento-bg" src="images/Genera-Reels.jpg" alt="Genera-Reels source code" style="object-position: 0% 0%;" loading="lazy" decoding="async" />
+              <img class="bento-bg media-img--origin" src="images/Genera-Reels.jpg" alt="Genera-Reels source code" loading="lazy" decoding="async" />
               <h3>Generator Engine</h3>
               <p>Composable reels pipeline with template-driven automation logic.</p>
             </article>
             <article class="bento-card">
-              <img class="bento-bg" src="images/youtube-retention-424.jpg" alt="YouTube retention chart" style="width: 100%; height: 100%; object-fit: cover; object-position: 10% 50%; position: absolute; inset: 0;" loading="lazy" decoding="async" />
+              <img class="bento-bg media-img--left" src="images/youtube-growth.svg" alt="YouTube growth chart" loading="lazy" decoding="async" />
               <h3>Retention Analysis</h3>
               <p>Segment-level diagnostics aligned to pacing and edit decisions.</p>
             </article>
             <article class="bento-card">
-              <img class="bento-bg" src="images/youtube-analytics-422.jpg" alt="Analytics spike graph" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; position: absolute; inset: 0;" loading="lazy" decoding="async" />
+              <img class="bento-bg media-img--upper" src="images/youtube-analytics-422.png" alt="Analytics spike graph" loading="lazy" decoding="async" />
               <h3>Growth Signals</h3>
               <p>Graph trend snapshots used to prioritize distribution strategy.</p>
             </article>
@@ -137,6 +137,50 @@
                 4) Validate with Playwright and contract checks.
                 5) Deploy via CI and monitor output quality.
               </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="activity" aria-labelledby="activity-title">
+        <div class="container">
+          <section-label text="Latest Signals"></section-label>
+          <div class="section-heading-row">
+            <div>
+              <h2 id="activity-title">Recent build activity and public updates.</h2>
+              <p class="section-intro">
+                Public GitHub work, LinkedIn updates, and the trail of experiments behind the lab.
+              </p>
+            </div>
+            <a class="btn btn-secondary" href="lab.html">Open Lab</a>
+          </div>
+
+          <div class="activity-grid" aria-label="Latest public activity">
+            <article class="activity-card">
+              <div class="activity-card-head">
+                <p class="activity-kicker">GitHub</p>
+                <a href="https://github.com/fuzmaster" target="_blank" rel="noopener noreferrer">Profile</a>
+              </div>
+              <ul class="activity-list" id="github-activity-list" aria-live="polite">
+                <li class="activity-empty">Loading recent public activity...</li>
+              </ul>
+            </article>
+
+            <article class="activity-card activity-card--linkedin">
+              <div class="activity-card-head">
+                <p class="activity-kicker">LinkedIn</p>
+                <a href="https://www.linkedin.com/in/jacob-britten-a3b52026/" target="_blank" rel="noopener noreferrer">Profile</a>
+              </div>
+              <div class="linkedin-latest">
+                <h3>Follow the newest posts and build notes.</h3>
+                <p>
+                  I share project progress, production lessons, and the AI-assisted workflows
+                  behind these experiments on LinkedIn.
+                </p>
+                <a class="btn btn-primary" href="https://www.linkedin.com/in/jacob-britten-a3b52026/" target="_blank" rel="noopener noreferrer">
+                  View LinkedIn
+                </a>
+              </div>
             </article>
           </div>
         </div>
@@ -182,23 +226,27 @@
           <section-label text="Contact"></section-label>
           <h2 id="contact-title">Discuss an automation build or systems role</h2>
           <p class="section-intro">
-            Use the form to send project context. The message is posted to a serverless endpoint
-            and returns structured success/failure feedback.
+            Use the form to send project context. The message is handled by a serverless endpoint
+            and returns structured success or failure feedback.
           </p>
 
-          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+          <form action="/api/contact" method="POST" class="contact-form" id="contact-form" novalidate>
             <label for="name">Name</label>
-            <input id="name" name="name" type="text" autocomplete="name" required />
+            <input id="name" name="name" type="text" autocomplete="name" maxlength="120" required />
 
             <label for="email">Email</label>
-            <input id="email" name="email" type="email" autocomplete="email" required />
+            <input id="email" name="email" type="email" autocomplete="email" maxlength="254" required />
 
             <label for="message">Message</label>
-            <textarea id="message" name="message" rows="6" required></textarea>
+            <textarea id="message" name="message" rows="6" maxlength="4000" required></textarea>
+
+            <label class="honeypot" for="company">Company</label>
+            <input class="honeypot" id="company" name="company" type="text" tabindex="-1" autocomplete="off" />
 
             <button type="submit" class="btn btn-primary" aria-label="Send contact message">
               Send Message
             </button>
+            <p id="form-feedback" class="form-feedback" role="status" aria-live="polite"></p>
           </form>
         </div>
       </section>
@@ -214,39 +262,7 @@
         </div>
       </div>
     </footer>
-
     <script src="components.js"></script>
     <script src="main.js"></script>
-    <script>
-      const slides = document.querySelectorAll('.slide');
-      const dots = document.querySelectorAll('.dot');
-      let currentSlide = 0;
-
-      function goToSlide(index) {
-        slides[currentSlide].classList.remove('active');
-        dots[currentSlide].classList.remove('active');
-        currentSlide = index;
-        slides[currentSlide].classList.add('active');
-        dots[currentSlide].classList.add('active');
-      }
-
-      function nextSlide() {
-        goToSlide((currentSlide + 1) % slides.length);
-      }
-
-      dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-          goToSlide(index);
-          resetInterval();
-        });
-      });
-
-      let slideInterval = setInterval(nextSlide, 4000);
-
-      function resetInterval() {
-        clearInterval(slideInterval);
-        slideInterval = setInterval(nextSlide, 4000);
-      }
-    </script>
   </body>
 </html>
