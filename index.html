@@ -6,7 +6,7 @@
     <title>Jacob Britten | Systems Architect</title>
     <meta
       name="description"
-      content="Systems architect building React and Remotion automation workflows that reduce post-production time and scale media output."
+      content="Systems architect building AI-assisted media automation systems with React, Remotion, and production workflow design."
     />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -34,16 +34,17 @@
         </video>
         <div class="container hero-grid">
           <div class="hero-copy">
-            <section-label text="Systems Architecture"></section-label>
-            <h1 id="hero-title">I build production media systems that remove editing bottlenecks.</h1>
+            <section-label text="AI-Assisted Media Systems"></section-label>
+            <h1 id="hero-title">I build AI-assisted media automation systems.</h1>
             <p>
-              Cut post-production time by 40% and automated 50+ episodes for a
-              100K+ subscriber podcast using React + Remotion render pipelines,
-              transcript parsing services, and test-driven deployment workflows.
+              My work sits between editing, production operations, and software systems, which
+              lets me build tools for workflow problems I have actually lived. Recent builds
+              use React, Remotion, transcript parsing, and test-driven deployment workflows to
+              reduce post-production bottlenecks.
             </p>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="lab.html">View Projects</a>
-              <a class="btn btn-secondary" href="#contact">Contact</a>
+              <a class="btn btn-primary" href="lab.html">Open The Lab</a>
+              <a class="btn btn-secondary" href="#contact">Work With Me</a>
             </div>
             <ul class="hero-meta" aria-label="Key delivery outcomes">
               <li>40% faster post-production turnaround</li>
@@ -142,6 +143,43 @@
         </div>
       </section>
 
+      <section class="section" id="process" aria-labelledby="process-title">
+        <div class="container">
+          <section-label text="How I Build"></section-label>
+          <div class="process-grid">
+            <div>
+              <h2 id="process-title">From industry painpoint to working software.</h2>
+              <p class="section-intro">
+                I use AI as a fast prototyping partner, but the shape of each product starts with
+                real workflow observation, validation, and production judgment.
+              </p>
+            </div>
+            <ol class="process-list" aria-label="Build process">
+              <li>
+                <span>01</span>
+                <strong>Find the friction</strong>
+                Study real operators, niche communities, and repeated complaints until the workflow pain is concrete.
+              </li>
+              <li>
+                <span>02</span>
+                <strong>Shape the prompt</strong>
+                Turn the problem into structured requirements, constraints, example inputs, and expected outputs.
+              </li>
+              <li>
+                <span>03</span>
+                <strong>Prototype the system</strong>
+                Use AI-assisted scaffolding, then manually tighten contracts, edge cases, and user-facing flows.
+              </li>
+              <li>
+                <span>04</span>
+                <strong>Ship the proof</strong>
+                Validate with tests, real files, local runs, and deployable artifacts people can actually use.
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
       <section class="section" id="activity" aria-labelledby="activity-title">
         <div class="container">
           <section-label text="Latest Signals"></section-label>
@@ -152,7 +190,7 @@
                 Public GitHub work, LinkedIn updates, and the trail of experiments behind the lab.
               </p>
             </div>
-            <a class="btn btn-secondary" href="lab.html">Open Lab</a>
+            <a class="btn btn-secondary" href="lab.html">Open The Lab</a>
           </div>
 
           <div class="activity-grid" aria-label="Latest public activity">
@@ -224,21 +262,21 @@
       <section class="section" id="contact" aria-labelledby="contact-title">
         <div class="container contact-wrap">
           <section-label text="Contact"></section-label>
-          <h2 id="contact-title">Discuss an automation build or systems role</h2>
+          <h2 id="contact-title">Tell me what workflow you want to turn into software.</h2>
           <p class="section-intro">
-            Use the form to send project context. The message is handled by a serverless endpoint
-            and returns structured success or failure feedback.
+            Send a build idea, hiring note, or messy process you want made repeatable. Useful context:
+            who it is for, what is slow today, and what a successful output should look like.
           </p>
 
           <form action="/api/contact" method="POST" class="contact-form" id="contact-form" novalidate>
             <label for="name">Name</label>
-            <input id="name" name="name" type="text" autocomplete="name" maxlength="120" required />
+            <input id="name" name="name" type="text" autocomplete="name" maxlength="120" placeholder="Your name" required />
 
             <label for="email">Email</label>
-            <input id="email" name="email" type="email" autocomplete="email" maxlength="254" required />
+            <input id="email" name="email" type="email" autocomplete="email" maxlength="254" placeholder="you@example.com" required />
 
             <label for="message">Message</label>
-            <textarea id="message" name="message" rows="6" maxlength="4000" required></textarea>
+            <textarea id="message" name="message" rows="6" maxlength="4000" placeholder="Example: I need a media automation tool that turns long episodes into captioned clips, or I am hiring for a systems/frontend role..." required></textarea>
 
             <label class="honeypot" for="company">Company</label>
             <input class="honeypot" id="company" name="company" type="text" tabindex="-1" autocomplete="off" />

@@ -148,6 +148,33 @@ function initLatestActivity() {
     return;
   }
 
+  const repoLabels = {
+    'srt-fixer': 'SRT Fixer',
+    'real-estate-reels': 'Real Estate Reels',
+    'artist-alley-break-even': 'Artist Alley Break-Even',
+    'peabody-ready-hub': 'Peabody Ready Hub',
+    'dehumidifier-sizing-calculator': 'Dehumidifier Calculator',
+    'caitlin-portfolio': 'Caitlin Portfolio',
+    'portfolio-jb': 'Portfolio',
+    'new-portfolio-jbritten': 'Portfolio',
+    'max-reels-project': 'Genera Reels',
+  };
+
+  const formatRepoName = (name = '') => {
+    const slug = String(name).replace(/^fuzmaster\//, '');
+    return repoLabels[slug] || slug.replace(/-/g, ' ').replace(/\b\w/g, (letter) => letter.toUpperCase()) || 'GitHub';
+  };
+
+  const cleanCommitMessage = (message = '') => {
+    const firstLine = String(message).split('\n')[0].trim();
+
+    if (!firstLine) {
+      return 'Build update';
+    }
+
+    return firstLine.length > 72 ? `${firstLine.slice(0, 69)}...` : firstLine;
+  };
+
   const formatDate = (value) => {
     const date = new Date(value);
 
@@ -162,48 +189,49 @@ function initLatestActivity() {
   };
 
   const formatEvent = (event) => {
-    const repo = event.repo?.name?.replace(/^fuzmaster\//, '') || 'GitHub';
+    const repo = formatRepoName(event.repo?.name);
     const payload = event.payload || {};
 
     if (event.type === 'PushEvent') {
       const count = payload.commits?.length || 1;
+      const headline = cleanCommitMessage(payload.commits?.[0]?.message);
       return {
-        title: `Pushed ${count} commit${count === 1 ? '' : 's'}`,
-        detail: repo,
+        title: `${repo}: ${headline}`,
+        detail: `${count} commit${count === 1 ? '' : 's'} pushed`,
       };
     }
 
     if (event.type === 'CreateEvent') {
       return {
-        title: `Created ${payload.ref_type || 'item'}`,
-        detail: repo,
+        title: `${repo}: Created ${payload.ref_type || 'item'}`,
+        detail: 'Repository activity',
       };
     }
 
     if (event.type === 'PullRequestEvent') {
       return {
-        title: `${capitalize(payload.action || 'Updated')} pull request`,
-        detail: repo,
+        title: `${repo}: ${capitalize(payload.action || 'Updated')} pull request`,
+        detail: payload.pull_request?.title || 'Pull request activity',
       };
     }
 
     if (event.type === 'IssuesEvent') {
       return {
-        title: `${capitalize(payload.action || 'Updated')} issue`,
-        detail: repo,
+        title: `${repo}: ${capitalize(payload.action || 'Updated')} issue`,
+        detail: payload.issue?.title || 'Issue activity',
       };
     }
 
     if (event.type === 'WatchEvent') {
       return {
-        title: 'Starred repository',
-        detail: repo,
+        title: `${repo}: Starred repository`,
+        detail: 'Discovery signal',
       };
     }
 
     return {
-      title: event.type?.replace(/Event$/, '') || 'Updated activity',
-      detail: repo,
+      title: `${repo}: ${event.type?.replace(/Event$/, '') || 'Updated activity'}`,
+      detail: 'Public GitHub activity',
     };
   };
 
