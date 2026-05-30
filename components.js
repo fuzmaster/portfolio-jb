@@ -7,6 +7,7 @@ class SiteNav extends HTMLElement {
       { href: 'projects.html', label: 'Projects', key: 'projects' },
       { href: 'index.html#testimonials', label: 'References', key: 'references' },
       { href: 'index.html#contact', label: 'Contact', key: 'contact' },
+      { href: 'support.html', label: 'Support', key: 'support' },
     ];
 
     const linkMarkup = links

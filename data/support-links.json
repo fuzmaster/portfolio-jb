@@ -1,0 +1,24 @@
+{
+  "support": {
+    "enabled": true,
+    "intro": "Use one of my tools? Support future builds.",
+    "links": [
+      {
+        "id": "kofi",
+        "label": "Ko-fi",
+        "url": "https://ko-fi.com/jacobbritten",
+        "description": "Send a one-time tip or monthly support through Ko-fi.",
+        "type": "donation",
+        "external": true
+      },
+      {
+        "id": "paypal",
+        "label": "PayPal",
+        "url": "PAYPAL_DONATION_URL_HERE",
+        "description": "Use PayPal if you prefer a direct donation link.",
+        "type": "donation",
+        "external": true
+      }
+    ]
+  }
+}
