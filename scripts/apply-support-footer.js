@@ -34,7 +34,7 @@ const END_MARKER = '<!-- JBD SUPPORT FOOTER END -->';
  *     "copy": "Use one of my tools? Support future builds.",
  *     "links": [
  *       { "label": "Ko-fi", "href": "https://ko-fi.com/jacobbritten", "external": true },
- *       { "label": "PayPal", "href": "PAYPAL_DONATION_URL_HERE", "external": true },
+ *       { "label": "PayPal", "href": "https://www.paypal.com/donate/?hosted_button_id=47A4JJ4WNBY9U", "external": true },
  *       { "label": "Support", "href": "support.html" }
  *     ]
  *   }
@@ -61,7 +61,7 @@ function buildFooterBlock(config) {
     },
     {
       label: 'PayPal',
-      href: 'PAYPAL_DONATION_URL_HERE',
+      href: 'https://www.paypal.com/donate/?hosted_button_id=47A4JJ4WNBY9U',
       external: true,
     },
     {

@@ -5,7 +5,7 @@ Main support links are stored in `/data/support-links.json`.
 Current links:
 
 - Ko-fi: https://ko-fi.com/jacobbritten
-- PayPal: replace `PAYPAL_DONATION_URL_HERE` with the final public PayPal donation URL.
+- PayPal: https://www.paypal.com/donate/?hosted_button_id=47A4JJ4WNBY9U
 
 ## Apply support footer to another static project
 

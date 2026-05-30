@@ -14,7 +14,7 @@
       {
         "id": "paypal",
         "label": "PayPal",
-        "url": "PAYPAL_DONATION_URL_HERE",
+        "url": "https://www.paypal.com/donate/?hosted_button_id=47A4JJ4WNBY9U",
         "description": "Use PayPal if you prefer a direct donation link.",
         "type": "donation",
         "external": true
