@@ -109,6 +109,46 @@
             </div>
 
             <div class="project-grid" role="list" aria-label="Utilities and experiments">
+              <article class="project-card project-card--feature" role="listitem">
+                <div class="image-frame image-frame--code">
+                  <img src="images/code-helix.png" alt="TypeScript: calculateHelix pure function computing effective grade, curve drag, and a plain-English build-risk verdict across model railroad scales" loading="lazy" decoding="async" />
+                </div>
+                <h3>Will My Helix Work?</h3>
+                <p>
+                  A model railroad helix risk checker. It walks five risk dimensions
+                  for any helix design in O, S, HO, N, or Z scale and returns a
+                  plain-English verdict — from Looks Good to High Risk — before you cut wood.
+                </p>
+                <details class="project-detail">
+                  <summary class="project-detail__summary">
+                    <span class="project-detail__label-more">What it checks</span>
+                    <span class="project-detail__label-less">Show less</span>
+                    <svg class="project-detail__chevron" width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </summary>
+                  <div class="project-detail__body">
+                    <ul class="project-detail__list">
+                      <li><strong>Grade</strong> — rise per turn ÷ track length per turn, as a percentage.</li>
+                      <li><strong>Curve drag</strong> — added resistance from constant turning, using John Allen's scale-specific rule of thumb (32/R for HO, scaled per gauge).</li>
+                      <li><strong>Clearance</strong> — the vertical stack of track, roadbed, deck, open air, and safety margin between levels.</li>
+                      <li><strong>Footprint</strong> — outer diameter of the helix and the aisle space needed to reach inside for derailments.</li>
+                      <li><strong>Train type</strong> — heavy steam, long passenger, and small switchers behave differently from generic freight on the same grade.</li>
+                    </ul>
+                    <p>
+                      All math runs in the browser — no server, no database, no account.
+                      Inputs serialize into the URL, so a design shares with a single link.
+                      Verdict thresholds are calibrated against published model railroad
+                      guidance, and the site ships with a glossary, FAQ, gear checklist,
+                      and three worked example builds.
+                    </p>
+                    <p class="project-detail__tech">Next.js 14 App Router · React · TypeScript · Tailwind CSS · Vercel</p>
+                  </div>
+                </details>
+                <div class="project-card__actions">
+                  <a href="https://will-my-helix-work.vercel.app" target="_blank" rel="noopener noreferrer" class="project-card__live">Live Site ↗</a>
+                  <span class="project-card__private">Private Repo</span>
+                </div>
+              </article>
+
               <article class="project-card" role="listitem">
                 <div class="image-frame image-frame--code">
                   <img src="images/code-keep7.png" alt="TypeScript code: normalizeCards function parsing MTG deck list text into typed Card objects" loading="lazy" decoding="async" />
