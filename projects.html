@@ -151,6 +151,44 @@
 
               <article class="project-card" role="listitem">
                 <div class="image-frame image-frame--code">
+                  <img src="images/code-artist-alley.png" alt="TypeScript: calculateBreakEven pure function computing profit per item, break-even units, and required sales per day and hour for an artist alley table" loading="lazy" decoding="async" />
+                </div>
+                <h3>Artist Alley Break-Even Calculator</h3>
+                <p>
+                  Tells anime convention vendors how many prints, charms, stickers, or
+                  commissions they need to sell to cover their table before they profit —
+                  with live sales-per-day and sales-per-hour targets.
+                </p>
+                <details class="project-detail">
+                  <summary class="project-detail__summary">
+                    <span class="project-detail__label-more">What it figures out</span>
+                    <span class="project-detail__label-less">Show less</span>
+                    <svg class="project-detail__chevron" width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </summary>
+                  <div class="project-detail__body">
+                    <ul class="project-detail__list">
+                      <li><strong>Break-even units</strong> — fixed costs divided by profit per item, rounded up.</li>
+                      <li><strong>Pace targets</strong> — the sales per day and per hour that target requires.</li>
+                      <li><strong>Product presets</strong> — Sticker, Charm, Print, and Commission, each editable after selection.</li>
+                      <li><strong>Reality checks</strong> — warns on zero/negative margin and on an unrealistic sales pace.</li>
+                      <li><strong>Share &amp; reuse</strong> — Copy Summary button, large screenshot-friendly result card, and localStorage persistence.</li>
+                    </ul>
+                    <p>
+                      Mobile-first one-page dashboard with a sticky desktop result panel.
+                      All math is client-side with divide-by-zero guards — no backend,
+                      no account, no tracking.
+                    </p>
+                    <p class="project-detail__tech">Vite · React · TypeScript · Tailwind CSS · Vercel</p>
+                  </div>
+                </details>
+                <div class="project-card__actions">
+                  <a href="https://artist-alley-break-even.vercel.app" target="_blank" rel="noopener noreferrer" class="project-card__live">Live Site ↗</a>
+                  <a href="https://github.com/fuzmaster/artist-alley-break-even" target="_blank" rel="noopener noreferrer">View Source</a>
+                </div>
+              </article>
+
+              <article class="project-card" role="listitem">
+                <div class="image-frame image-frame--code">
                   <img src="images/code-keep7.png" alt="TypeScript code: normalizeCards function parsing MTG deck list text into typed Card objects" loading="lazy" decoding="async" />
                 </div>
                 <h3>Keep7 Probability Simulator</h3>
