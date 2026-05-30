@@ -39,83 +39,101 @@
       <section class="section">
         <div class="container">
           <section-label text="Projects"></section-label>
-          <h1 class="projects-title">Work and lab systems in one surface.</h1>
+          <h1 class="projects-title">Production work and the tools around it.</h1>
           <p class="section-intro projects-intro">
-            Production implementations, internal tools, and QA utilities grouped by
-            measurable impact rather than by page type.
+            Split into the production systems I build for media work, and the
+            utilities and experiments I build to think through problems.
           </p>
 
-          <div class="project-grid" role="list" aria-label="Projects list">
-            <article class="project-card" role="listitem">
-              <div class="image-frame image-frame--code">
-                <img src="images/code-podcast-pipeline.png" alt="TypeScript code: transcript-to-clips pipeline using Remotion renderMedia and Zod schema validation" loading="lazy" decoding="async" />
-              </div>
-              <h2>Podcast Automation Pipeline</h2>
-              <p>
-                React + Remotion render architecture that transforms transcript data
-                into captioned clips and social variants with typed schema validation.
-              </p>
-            </article>
+          <!-- ── Production Systems ─────────────────────────── -->
+          <section class="project-group" aria-labelledby="group-production">
+            <div class="project-group__header">
+              <span class="project-group__type">Media Production</span>
+              <h2 id="group-production" class="project-group__title">Production Systems</h2>
+            </div>
 
-            <article class="project-card" role="listitem">
-              <div class="image-frame image-frame--code">
-                <img src="images/code-retention-dashboard.png" alt="TypeScript code: retention signal mapping with edit decision types cut, keep, retime" loading="lazy" decoding="async" />
-              </div>
-              <h2>Retention Signal Dashboard</h2>
-              <p>
-                Structured reporting layer that maps watch-time drop-offs to specific
-                edit decisions for iterative episode optimization.
-              </p>
-            </article>
+            <div class="project-grid" role="list" aria-label="Production systems">
+              <article class="project-card" role="listitem">
+                <div class="image-frame image-frame--code">
+                  <img src="images/code-podcast-pipeline.png" alt="TypeScript code: transcript-to-clips pipeline using Remotion renderMedia and Zod schema validation" loading="lazy" decoding="async" />
+                </div>
+                <h3>Podcast Automation Pipeline</h3>
+                <p>
+                  React + Remotion render architecture that transforms transcript data
+                  into captioned clips and social variants with typed schema validation.
+                </p>
+              </article>
 
-            <article class="project-card" role="listitem">
-              <div class="image-frame image-frame--code">
-                <img src="images/code-cropcheck.png" alt="Playwright TypeScript test: crop-safe spec validating platform aspect ratios across Instagram, YouTube, TikTok" loading="lazy" decoding="async" />
-              </div>
-              <h2>Crop Check QA Utility</h2>
-              <p>
-                Platform-safe area preview system with deterministic screenshot checks
-                to catch layout breakage before publishing.
-              </p>
-              <a href="https://github.com/fuzmaster/social-preview" target="_blank" rel="noopener noreferrer">View Source</a>
-            </article>
+              <article class="project-card" role="listitem">
+                <div class="image-frame image-frame--code">
+                  <img src="images/code-retention-dashboard.png" alt="TypeScript code: retention signal mapping with edit decision types cut, keep, retime" loading="lazy" decoding="async" />
+                </div>
+                <h3>Retention Signal Dashboard</h3>
+                <p>
+                  Structured reporting layer that maps watch-time drop-offs to specific
+                  edit decisions for iterative episode optimization.
+                </p>
+              </article>
 
-            <article class="project-card" role="listitem">
-              <div class="image-frame image-frame--code">
-                <img src="images/code-genera-reels.png" alt="Zod schema code: ReelSchema with project, artist, ctaText, reelType, and timing validation" loading="lazy" decoding="async" />
-              </div>
-              <h2>Genera-Reels Engine</h2>
-              <p>
-                Template-based short-form video rendering tool that consumes payload
-                inputs and emits batch reels with repeatable output quality.
-              </p>
-              <span class="project-card__private">Private Repo</span>
-            </article>
+              <article class="project-card" role="listitem">
+                <div class="image-frame image-frame--code">
+                  <img src="images/code-cropcheck.png" alt="Playwright TypeScript test: crop-safe spec validating platform aspect ratios across Instagram, YouTube, TikTok" loading="lazy" decoding="async" />
+                </div>
+                <h3>Crop Check QA Utility</h3>
+                <p>
+                  Platform-safe area preview system with deterministic screenshot checks
+                  to catch layout breakage before publishing.
+                </p>
+                <a href="https://github.com/fuzmaster/social-preview" target="_blank" rel="noopener noreferrer">View Source</a>
+              </article>
 
-            <article class="project-card" role="listitem">
-              <div class="image-frame image-frame--code">
-                <img src="images/code-keep7.png" alt="TypeScript code: normalizeCards function parsing MTG deck list text into typed Card objects" loading="lazy" decoding="async" />
-              </div>
-              <h2>Keep7 Probability Simulator</h2>
-              <p>
-                Browser-based combinatorial analysis tool for opening-hand consistency
-                and mulligan decision support.
-              </p>
-              <a href="https://github.com/fuzmaster/keep7" target="_blank" rel="noopener noreferrer">View Source</a>
-            </article>
+              <article class="project-card" role="listitem">
+                <div class="image-frame image-frame--code">
+                  <img src="images/code-genera-reels.png" alt="Zod schema code: ReelSchema with project, artist, ctaText, reelType, and timing validation" loading="lazy" decoding="async" />
+                </div>
+                <h3>Genera-Reels Engine</h3>
+                <p>
+                  Template-based short-form video rendering tool that consumes payload
+                  inputs and emits batch reels with repeatable output quality.
+                </p>
+                <span class="project-card__private">Private Repo</span>
+              </article>
+            </div>
+          </section>
 
-            <article class="project-card" role="listitem">
-              <div class="image-frame image-frame--code">
-                <img src="images/code-blackjack.png" alt="TypeScript reducer code: gameReducer with PLAYER_HIT case, state guards, and bust detection" loading="lazy" decoding="async" />
-              </div>
-              <h2>Blackjack State Engine</h2>
-              <p>
-                Reducer-driven game state machine built to enforce explicit transition
-                rules and avoid hidden state drift bugs.
-              </p>
-              <a href="https://github.com/fuzmaster/MVP-Social-Chaos-Engine" target="_blank" rel="noopener noreferrer">View Source</a>
-            </article>
-          </div>
+          <!-- ── Utilities & Experiments ────────────────────── -->
+          <section class="project-group" aria-labelledby="group-utilities">
+            <div class="project-group__header">
+              <span class="project-group__type">Side Builds</span>
+              <h2 id="group-utilities" class="project-group__title">Utilities &amp; Experiments</h2>
+            </div>
+
+            <div class="project-grid" role="list" aria-label="Utilities and experiments">
+              <article class="project-card" role="listitem">
+                <div class="image-frame image-frame--code">
+                  <img src="images/code-keep7.png" alt="TypeScript code: normalizeCards function parsing MTG deck list text into typed Card objects" loading="lazy" decoding="async" />
+                </div>
+                <h3>Keep7 Probability Simulator</h3>
+                <p>
+                  Browser-based combinatorial analysis tool for opening-hand consistency
+                  and mulligan decision support.
+                </p>
+                <a href="https://github.com/fuzmaster/keep7" target="_blank" rel="noopener noreferrer">View Source</a>
+              </article>
+
+              <article class="project-card" role="listitem">
+                <div class="image-frame image-frame--code">
+                  <img src="images/code-blackjack.png" alt="TypeScript reducer code: gameReducer with PLAYER_HIT case, state guards, and bust detection" loading="lazy" decoding="async" />
+                </div>
+                <h3>Blackjack State Engine</h3>
+                <p>
+                  Reducer-driven game state machine built to enforce explicit transition
+                  rules and avoid hidden state drift bugs.
+                </p>
+                <a href="https://github.com/fuzmaster/MVP-Social-Chaos-Engine" target="_blank" rel="noopener noreferrer">View Source</a>
+              </article>
+            </div>
+          </section>
           <div class="project-support-cta">
             <p class="project-support-cta__copy">If a project here helped you, you can support future tools.</p>
             <div class="project-support-cta__links">
