@@ -98,6 +98,42 @@
                 </p>
                 <span class="project-card__private">Private Repo</span>
               </article>
+
+              <article class="project-card" role="listitem">
+                <div class="image-frame image-frame--code">
+                  <img src="images/code-twitch-assets.png" alt="Remotion code: RemotionRoot registering StartingSoon, Intermission, stinger, and alpha-channel alert compositions for a Twitch stream" loading="lazy" decoding="async" />
+                </div>
+                <h3>Twitch Stream Asset Pack</h3>
+                <p>
+                  A Remotion render pipeline that programmatically generates a full broadcast
+                  kit for a Twitch channel — starting-soon and intermission scenes, animated
+                  follower / sub / raid alerts, a stinger transition, and info panels.
+                </p>
+                <details class="project-detail">
+                  <summary class="project-detail__summary">
+                    <span class="project-detail__label-more">What it renders</span>
+                    <span class="project-detail__label-less">Show less</span>
+                    <svg class="project-detail__chevron" width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </summary>
+                  <div class="project-detail__body">
+                    <ul class="project-detail__list">
+                      <li><strong>Scenes</strong> — Starting Soon, Intermission, and Offline screens at 1080p.</li>
+                      <li><strong>Alerts</strong> — follower, donation, sub, and raid animations exported with an alpha channel (VP9 / WebM) so they layer cleanly in OBS.</li>
+                      <li><strong>Stinger transition</strong> — a branded wipe between scenes.</li>
+                      <li><strong>Panels</strong> — About, Schedule, Socials, Donate, and Rules stills rendered to PNG.</li>
+                    </ul>
+                    <p>
+                      Every asset is defined as code, so the whole pack re-renders on a single
+                      command when the brand changes. Built for the "crashdontfall" stream as a
+                      personal project — no public site, it outputs video and image files.
+                    </p>
+                    <p class="project-detail__tech">Remotion · React · TypeScript</p>
+                  </div>
+                </details>
+                <div class="project-card__actions">
+                  <span class="project-card__private">Personal Project</span>
+                </div>
+              </article>
             </div>
           </section>
 
@@ -184,6 +220,114 @@
                 <div class="project-card__actions">
                   <a href="https://artist-alley-break-even.vercel.app" target="_blank" rel="noopener noreferrer" class="project-card__live">Live Site ↗</a>
                   <a href="https://github.com/fuzmaster/artist-alley-break-even" target="_blank" rel="noopener noreferrer">View Source</a>
+                </div>
+              </article>
+
+              <article class="project-card" role="listitem">
+                <div class="image-frame image-frame--code">
+                  <img src="images/code-paint-planner.png" alt="TypeScript: planSupplies function computing per-color paint volume, cost, and a total from a project's mini count" loading="lazy" decoding="async" />
+                </div>
+                <h3>Paint Supply Planner</h3>
+                <p>
+                  Detects the main colors in a reference image, then builds a miniature-
+                  painting supply list — how much of each paint you need and what it costs —
+                  before you buy.
+                </p>
+                <details class="project-detail">
+                  <summary class="project-detail__summary">
+                    <span class="project-detail__label-more">What it does</span>
+                    <span class="project-detail__label-less">Show less</span>
+                    <svg class="project-detail__chevron" width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </summary>
+                  <div class="project-detail__body">
+                    <ul class="project-detail__list">
+                      <li><strong>Color detection</strong> — upload a photo, screenshot, or reference and it pulls out the main colors.</li>
+                      <li><strong>Editable palette</strong> — adjust, add, or remove colors before the list is built; you stay in control.</li>
+                      <li><strong>Supply math</strong> — paint volume and cost per color scaled to how many minis you're painting.</li>
+                      <li><strong>Export</strong> — a clean total and CSV you can take to the store.</li>
+                    </ul>
+                    <p>
+                      A calm, warm-paper tool feel. Runs entirely client-side with your
+                      inputs saved in the browser — no account, no backend.
+                    </p>
+                    <p class="project-detail__tech">Vite · React · TypeScript · localStorage · Vercel</p>
+                  </div>
+                </details>
+                <div class="project-card__actions">
+                  <a href="https://paint-supply-planner.vercel.app" target="_blank" rel="noopener noreferrer" class="project-card__live">Live Site ↗</a>
+                </div>
+              </article>
+
+              <article class="project-card" role="listitem">
+                <div class="image-frame image-frame--code">
+                  <img src="images/code-deposit-letter.png" alt="JavaScript: buildLetter function summing deposit deductions, computing the refund due, and exporting through the browser print engine" loading="lazy" decoding="async" />
+                </div>
+                <h3>DepositLetter</h3>
+                <p>
+                  Helps self-managing landlords generate a professional, itemized security-
+                  deposit deduction letter with the math done correctly — the #1 way landlords
+                  lose small-claims disputes is getting this wrong.
+                </p>
+                <details class="project-detail">
+                  <summary class="project-detail__summary">
+                    <span class="project-detail__label-more">What it does</span>
+                    <span class="project-detail__label-less">Show less</span>
+                    <svg class="project-detail__chevron" width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </summary>
+                  <div class="project-detail__body">
+                    <ul class="project-detail__list">
+                      <li><strong>Itemized deductions</strong> — a dynamic repeater for each damage line item.</li>
+                      <li><strong>Live balance math</strong> — total deducted and refund due update as you type.</li>
+                      <li><strong>Print to PDF</strong> — uses the browser's native print engine via @media print, so there's zero PDF-library weight.</li>
+                      <li><strong>Privacy by design</strong> — letter contents never leave the browser; no accounts, no database.</li>
+                    </ul>
+                    <p>
+                      A deliberately zero-backend build with edge security headers, a strict
+                      CSP, and a published privacy policy. Live at depositletter.com.
+                    </p>
+                    <p class="project-detail__tech">React 19 · Vite · @media print · Vercel</p>
+                  </div>
+                </details>
+                <div class="project-card__actions">
+                  <a href="https://depositletter.com" target="_blank" rel="noopener noreferrer" class="project-card__live">Live Site ↗</a>
+                  <a href="https://github.com/fuzmaster/deposit-letter" target="_blank" rel="noopener noreferrer">View Source</a>
+                </div>
+              </article>
+
+              <article class="project-card" role="listitem">
+                <div class="image-frame image-frame--code">
+                  <img src="images/code-book-reader.png" alt="Node Express code: a route that streams a comic page from a CBZ archive, with notes on CBR conversion, PDF rendering, and thumbnailing" loading="lazy" decoding="async" />
+                </div>
+                <h3>Self-Hosted Comic &amp; Book Reader</h3>
+                <p>
+                  A self-hosted reading library for comics, manga, PDFs, and EPUBs that runs
+                  on your own machine and streams to any browser on your home network — your
+                  files never leave your device.
+                </p>
+                <details class="project-detail">
+                  <summary class="project-detail__summary">
+                    <span class="project-detail__label-more">What it does</span>
+                    <span class="project-detail__label-less">Show less</span>
+                    <svg class="project-detail__chevron" width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </summary>
+                  <div class="project-detail__body">
+                    <ul class="project-detail__list">
+                      <li><strong>One library, many formats</strong> — CBR/CBZ comics, image folders, PDFs, and EPUB books in one place.</li>
+                      <li><strong>Comic converter</strong> — turns .cbr and image-folder series into standard CBZ automatically.</li>
+                      <li><strong>Real reader UX</strong> — 3D page-flip, pinch-zoom, right-to-left manga mode, bookmarks, and resume-where-you-left-off.</li>
+                      <li><strong>Read anywhere on your LAN</strong> — open it on your phone over WiFi or a private Tailscale tailnet; installable as an offline PWA.</li>
+                      <li><strong>Hardened</strong> — security headers, optional shared-secret token, rate-limited metadata proxy, generic error messages.</li>
+                    </ul>
+                    <p>
+                      Express server that indexes your files, streams comic pages from CBZ,
+                      renders PDF pages, and generates thumbnails. No cloud, no accounts, no
+                      database. A personal project — runs locally, so there's no public site.
+                    </p>
+                    <p class="project-detail__tech">Node.js · Express · PWA · sharp · pdf-to-img</p>
+                  </div>
+                </details>
+                <div class="project-card__actions">
+                  <a href="https://github.com/fuzmaster/book-comic-reader" target="_blank" rel="noopener noreferrer">View Source</a>
                 </div>
               </article>
 
