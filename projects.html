@@ -225,6 +225,45 @@
 
               <article class="project-card" role="listitem">
                 <div class="image-frame image-frame--code">
+                  <img src="images/code-quotecheck.png" alt="TypeScript: analyzeQuotes pure function computing bid spread percentage, scope-gap detection, and deterministic risk flags across contractor quotes" loading="lazy" decoding="async" />
+                </div>
+                <h3>QuoteCheck Home</h3>
+                <p>
+                  Helps homeowners compare contractor bids side by side, spot scope items
+                  one quote quietly left out, and generate the exact follow-up questions to
+                  ask each contractor before signing.
+                </p>
+                <details class="project-detail">
+                  <summary class="project-detail__summary">
+                    <span class="project-detail__label-more">What it does</span>
+                    <span class="project-detail__label-less">Show less</span>
+                    <svg class="project-detail__chevron" width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </summary>
+                  <div class="project-detail__body">
+                    <ul class="project-detail__list">
+                      <li><strong>Side-by-side comparison</strong> — line up 2 to 5 contractors' totals, deposits, timelines, and scope in one view.</li>
+                      <li><strong>Scope-gap detection</strong> — flags line items present in one bid but missing or unclear in another (labor, materials, permits, cleanup, warranty).</li>
+                      <li><strong>Risk flags</strong> — surfaces high deposits, very short timelines, wide-spread outliers, and unspecified material quality.</li>
+                      <li><strong>Question generator</strong> — produces a per-contractor list of clarifying questions from the gaps it finds.</li>
+                      <li><strong>Printable report</strong> — a clean print layout to take into a meeting.</li>
+                    </ul>
+                    <p>
+                      Deliberately no AI — every flag is a pure function of the structured
+                      input, so a homeowner can trust the arithmetic. Runs entirely
+                      client-side; nothing leaves the browser. Ships with security headers,
+                      an origin-locked API, and a privacy page.
+                    </p>
+                    <p class="project-detail__tech">Vite · React 19 · TypeScript · Zustand · Zod · Vercel</p>
+                  </div>
+                </details>
+                <div class="project-card__actions">
+                  <a href="https://quotecheck.homes" target="_blank" rel="noopener noreferrer" class="project-card__live">Live Site ↗</a>
+                  <a href="https://github.com/fuzmaster/quotecheck-home" target="_blank" rel="noopener noreferrer">View Source</a>
+                </div>
+              </article>
+
+              <article class="project-card" role="listitem">
+                <div class="image-frame image-frame--code">
                   <img src="images/code-paint-planner.png" alt="TypeScript: planSupplies function computing per-color paint volume, cost, and a total from a project's mini count" loading="lazy" decoding="async" />
                 </div>
                 <h3>Paint Supply Planner</h3>
