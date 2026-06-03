@@ -1,2 +1,9 @@
 images/Extra/photostoreview-04.mp4
 .vercel
+
+# Editor / IDE config
+.claude/
+
+# Local dev scaffolding (image generators, panel renderers, screenshot scripts)
+_*.html
+_*.js
