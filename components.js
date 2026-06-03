@@ -3,9 +3,9 @@ class SiteNav extends HTMLElement {
     const current = this.getAttribute('current') || '';
 
     const links = [
-      { href: 'index.html#about', label: 'About', key: 'about' },
-      { href: 'projects.html', label: 'Projects', key: 'projects' },
-      { href: 'index.html#testimonials', label: 'References', key: 'references' },
+      { href: 'projects.html', label: 'Work', key: 'projects' },
+      { href: 'lab.html', label: 'Tools', key: 'lab' },
+      { href: 'about.html', label: 'About', key: 'about' },
       { href: 'index.html#contact', label: 'Contact', key: 'contact' },
       { href: 'support.html', label: 'Support', key: 'support' },
     ];
