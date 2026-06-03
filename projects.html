@@ -187,6 +187,45 @@
 
               <article class="project-card" role="listitem">
                 <div class="image-frame image-frame--code">
+                  <img src="images/code-dcc-calculator.png" alt="TypeScript: calcVoltageDrop pure function computing percentage voltage drop over the full copper path and returning a Safe / Acceptable / Borderline / Risky verdict" loading="lazy" decoding="async" />
+                </div>
+                <h3>DCC Bus &amp; Feeder Calculator</h3>
+                <p>
+                  A voltage-drop calculator for model railroaders. Type your scale, bus
+                  wire, and feeder plan and get a Safe / Acceptable / Borderline / Risky
+                  verdict before you solder a single rail. Built after a weekend of chasing
+                  stalls that turned out to be an undersized 16 AWG bus.
+                </p>
+                <details class="project-detail">
+                  <summary class="project-detail__summary">
+                    <span class="project-detail__label-more">What it does</span>
+                    <span class="project-detail__label-less">Show less</span>
+                    <svg class="project-detail__chevron" width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </summary>
+                  <div class="project-detail__body">
+                    <ul class="project-detail__list">
+                      <li><strong>Real voltage-drop math</strong> — standard copper AWG resistance over the full out-and-back electrical path, across eleven inputs.</li>
+                      <li><strong>Risk verdict</strong> — a Safe / Acceptable / Borderline / Risky stamp with a 0–12% drop meter showing where you land.</li>
+                      <li><strong>Live schematic</strong> — thickens whichever leg, bus or feeder, is dominating the drop, so the fix advice maps onto a picture.</li>
+                      <li><strong>Shareable</strong> — every input encodes into the URL, so a whole configuration drops into a forum reply as one link.</li>
+                      <li><strong>Sourced FAQ</strong> — every answer cites NMRA TN-9, DCC Wiki, or Wiring for DCC, with FAQ schema markup for rich results.</li>
+                    </ul>
+                    <p>
+                      Per-scale SEO pages (N, HO, O, G) share one JS bundle for instant
+                      navigation, and it prints to a clean black-and-white workbench
+                      worksheet. Client-side only — no backend, no accounts, no analytics.
+                    </p>
+                    <p class="project-detail__tech">Vite · React · TypeScript · SEO · Vercel</p>
+                  </div>
+                </details>
+                <div class="project-card__actions">
+                  <a href="https://dcc-bus-feeder-calculator.vercel.app" target="_blank" rel="noopener noreferrer" class="project-card__live">Live Site ↗</a>
+                  <a href="https://github.com/fuzmaster/dcc-bus-feeder-calculator" target="_blank" rel="noopener noreferrer">View Source</a>
+                </div>
+              </article>
+
+              <article class="project-card" role="listitem">
+                <div class="image-frame image-frame--code">
                   <img src="images/code-artist-alley.png" alt="TypeScript: calculateBreakEven pure function computing profit per item, break-even units, and required sales per day and hour for an artist alley table" loading="lazy" decoding="async" />
                 </div>
                 <h3>Artist Alley Break-Even Calculator</h3>
