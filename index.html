@@ -31,7 +31,7 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="redesign.css" />
     <link
       rel="icon"
       href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%2300FFC8' width='100' height='100' rx='16'/><text x='50' y='54' font-size='58' fill='%230B0D14' text-anchor='middle' dominant-baseline='middle' font-weight='bold'>J</text></svg>"
@@ -43,38 +43,31 @@
     <site-nav current="home"></site-nav>
 
     <main id="main">
-      <section class="hero section" id="hero" aria-labelledby="hero-title">
-        <div class="hero-bg" aria-hidden="true">
-          <canvas id="hero-canvas" class="hero-canvas"></canvas>
-          <div class="hero-orb hero-orb--1"></div>
-          <div class="hero-orb hero-orb--2"></div>
-          <div class="hero-orb hero-orb--3"></div>
-        </div>
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <div class="hero-avatar-row">
-              <img
-                src="images/jacob-headshot.jpg"
-                alt="Jacob Britten"
-                class="hero-avatar"
-                fetchpriority="high"
-                decoding="async"
-              />
-              <div class="hero-avatar-meta">
-                <span class="hero-avatar-name">Jacob Britten</span>
-                <span class="hero-avatar-title">Media Systems Architect</span>
-              </div>
+      <section class="hero" id="hero" aria-labelledby="hero-title">
+        <div class="container">
+          <div class="hero-avatar-row">
+            <img
+              src="images/jacob-headshot.jpg"
+              alt="Jacob Britten"
+              class="hero-avatar"
+              fetchpriority="high"
+              decoding="async"
+            />
+            <div class="hero-avatar-meta">
+              <span class="hero-avatar-name">Jacob Britten</span>
+              <span class="hero-avatar-title">Media Systems Architect</span>
             </div>
-            <section-label text="Systems Architecture"></section-label>
-            <h1 id="hero-title">I build production media systems that remove editing bottlenecks.</h1>
+          </div>
+          <div class="hero-copy">
+            <h1 id="hero-title">Production systems and the <em>tools</em> around repeatable media work.</h1>
             <p>
-              Scaled the High Functioning Podcast from 41 to 31,000+ monthly views in
-              18 months using React + Remotion render pipelines, transcript automation,
-              and test-driven deployment — while running content systems for 100K+ subscriber networks.
+              I build React + Remotion render pipelines, programmatic video, QA utilities,
+              and small calculators that turn slow manual media work into something repeatable.
+              Scaled the High Functioning Podcast from 41 to 31,000+ monthly views in 18 months.
             </p>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="projects.html">View Projects</a>
-              <a class="btn btn-secondary" href="#contact">Contact</a>
+              <a class="btn btn-primary" href="projects.html">View the work</a>
+              <a class="btn btn-secondary" href="#contact">Get in touch</a>
             </div>
             <ul class="hero-meta" aria-label="Key delivery outcomes">
               <li>274K+ total views — High Functioning Podcast</li>
@@ -82,20 +75,42 @@
               <li>50+ episodes automated end-to-end</li>
             </ul>
           </div>
+        </div>
+      </section>
 
-          <div class="hero-media">
-            <div class="image-frame">
-              <img
-                src="images/youtube-analytics-422.jpg"
-                alt="YouTube analytics dashboard showing 274K+ views growth for High Functioning Podcast automated production pipeline"
-                fetchpriority="high"
-                decoding="async"
-              />
-            </div>
-            <p class="media-caption">
-              High Functioning Podcast: 274,796 total views via automated
-              React + Remotion production pipelines — Oct 2024 to Apr 2026.
-            </p>
+      <section class="section" id="work" aria-labelledby="work-title">
+        <div class="container">
+          <section-label text="Selected Work"></section-label>
+          <h2 id="work-title" class="sr-only-visually" hidden>Selected Work</h2>
+          <div class="work-index">
+            <a class="work-row" href="projects.html">
+              <span class="work-row__num">01</span>
+              <span><span class="work-row__title">Podcast Automation Pipeline</span><span class="work-row__desc">Transcript-to-clips render architecture with typed schema validation.</span></span>
+              <span class="work-row__meta">Remotion · React <span class="arrow">↗</span></span>
+            </a>
+            <a class="work-row" href="https://quotecheck.homes" target="_blank" rel="noopener noreferrer">
+              <span class="work-row__num">02</span>
+              <span><span class="work-row__title">QuoteCheck Home</span><span class="work-row__desc">Compare contractor bids, spot scope gaps, generate the questions to ask.</span></span>
+              <span class="work-row__meta">Vite · TS <span class="arrow">↗</span></span>
+            </a>
+            <a class="work-row" href="https://will-my-helix-work.vercel.app" target="_blank" rel="noopener noreferrer">
+              <span class="work-row__num">03</span>
+              <span><span class="work-row__title">Will My Helix Work?</span><span class="work-row__desc">Model-railroad helix risk checker across five build dimensions.</span></span>
+              <span class="work-row__meta">Next.js <span class="arrow">↗</span></span>
+            </a>
+            <a class="work-row" href="https://artist-alley-break-even.vercel.app" target="_blank" rel="noopener noreferrer">
+              <span class="work-row__num">04</span>
+              <span><span class="work-row__title">Artist Alley Break-Even</span><span class="work-row__desc">Tells convention vendors how many items they must sell to profit.</span></span>
+              <span class="work-row__meta">Vite · TS <span class="arrow">↗</span></span>
+            </a>
+            <a class="work-row" href="projects.html">
+              <span class="work-row__num">05</span>
+              <span><span class="work-row__title">Genera-Reels Engine</span><span class="work-row__desc">Template-driven batch short-form video rendering.</span></span>
+              <span class="work-row__meta">Remotion · Zod <span class="arrow">↗</span></span>
+            </a>
+          </div>
+          <div class="work-more">
+            <a class="btn btn-secondary" href="projects.html">All 13 projects →</a>
           </div>
         </div>
       </section>
