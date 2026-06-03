@@ -464,6 +464,15 @@ a.project-card__live:hover { background: var(--cyan); color: var(--bg); border-c
 }
 .lab-intro { font-size: 18px; color: var(--dim); max-width: 58ch; margin-bottom: 20px; }
 
+.lab-hero-visual {
+  margin: 36px 0 8px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  background: #05070C;
+}
+.lab-hero-visual img { width: 100%; height: auto; display: block; }
+
 .lab-group { margin-top: 64px; }
 .lab-group__header {
   display: flex; align-items: baseline; gap: 14px;
