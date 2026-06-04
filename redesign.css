@@ -270,13 +270,38 @@ img, svg { display: block; max-width: 100%; }
 .work-more { margin-top: 32px; }
 
 /* ─── TESTIMONIALS ───────────────────────────────────── */
+.references-source {
+  font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em;
+  color: var(--faint); margin: -28px 0 32px;
+}
+.references-source a {
+  color: var(--cyan-dim); border-bottom: 1px solid var(--line);
+  padding-bottom: 1px; transition: color var(--t), border-color var(--t);
+}
+.references-source a:hover { color: var(--cyan); border-color: var(--cyan-dim); }
+
 .testimonials-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-.testimonial-card { background: var(--bg-soft); border: 1px solid var(--line); border-radius: 14px; padding: 28px; }
-.testimonial-quote { font-size: 16px; line-height: 1.6; margin-bottom: 18px; }
-.testimonial-quote::before { content: "“"; color: var(--cyan); }
-.testimonial-quote::after { content: "”"; color: var(--cyan); }
-.testimonial-name { font-family: var(--mono); font-size: 13px; font-weight: 700; letter-spacing: 0.04em; }
-.testimonial-role { font-family: var(--mono); font-size: 11px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--faint); margin-top: 4px; }
+.testimonial-card {
+  background: var(--bg-soft); border: 1px solid var(--line); border-radius: 14px;
+  padding: 28px; display: flex; flex-direction: column;
+  transition: border-color var(--t);
+}
+.testimonial-card:hover { border-color: var(--line-2); }
+.testimonial-quote { font-size: 15.5px; line-height: 1.6; margin-bottom: 18px; flex: 1; color: var(--text); }
+.testimonial-quote::before { content: "“"; color: var(--cyan); margin-right: 2px; }
+.testimonial-quote::after { content: "”"; color: var(--cyan); margin-left: 2px; }
+.testimonial-name {
+  font-family: var(--mono); font-size: 12.5px; font-weight: 700;
+  letter-spacing: 0.04em; color: var(--text);
+}
+.testimonial-role {
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.05em;
+  text-transform: uppercase; color: var(--cyan-dim); margin-top: 6px; line-height: 1.5;
+}
+
+@media (max-width: 720px) {
+  .testimonials-grid { grid-template-columns: 1fr; }
+}
 
 /* ─── CONTACT FORM ───────────────────────────────────── */
 .contact-form { display: flex; flex-direction: column; gap: 8px; max-width: 520px; }
