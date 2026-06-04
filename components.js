@@ -67,7 +67,7 @@ class MetricCard extends HTMLElement {
     const detail = this.getAttribute('detail') || '';
 
     this.innerHTML = `
-      <article class="metric-card" role="listitem">
+      <article class="metric-card">
         <p class="metric-label">${label}</p>
         <p class="metric-value">${value}</p>
         <p class="metric-detail">${detail}</p>
