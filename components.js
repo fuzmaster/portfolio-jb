@@ -80,7 +80,8 @@ class TestimonialCard extends HTMLElement {
   connectedCallback() {
     const quote = this.getAttribute('quote') || '';
     const name = this.getAttribute('name') || '';
-    const role = this.getAttribute('role') || '';
+    // 'byline' (job title) — renamed from 'role' to avoid colliding with the ARIA role attribute
+    const role = this.getAttribute('byline') || this.getAttribute('role') || '';
 
     this.innerHTML = `
       <article class="testimonial-card">
