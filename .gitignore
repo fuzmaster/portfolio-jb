@@ -7,3 +7,8 @@ images/Extra/photostoreview-04.mp4
 # Local dev scaffolding (image generators, panel renderers, screenshot scripts)
 _*.html
 _*.js
+
+# Reel scaffold — install + render artifacts stay local
+reel/node_modules/
+reel/out/
+reel/.remotion/

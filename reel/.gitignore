@@ -1,0 +1,8 @@
+node_modules
+out
+.remotion
+*.log
+
+# Real footage stays local — commit only the placeholders / safe samples
+assets/raw/
+assets/private/

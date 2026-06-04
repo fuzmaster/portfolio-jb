@@ -1,0 +1,34 @@
+{
+  "name": "jacobbritten-sizzle-reel",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Programmatic 60-90s sizzle reel for jacobbritten.com. Schema-validated config, six typographic scenes, footage-optional. Built on Remotion 4.",
+  "scripts": {
+    "studio": "remotion studio",
+    "render": "remotion render Reel out/sizzle.mp4 --codec=h264 --crf=20",
+    "render:webm": "remotion render Reel out/sizzle.webm --codec=vp9",
+    "render:square": "remotion render ReelSquare out/sizzle-square.mp4 --codec=h264 --crf=20",
+    "render:vertical": "remotion render ReelVertical out/sizzle-vertical.mp4 --codec=h264 --crf=20",
+    "still": "remotion still Reel out/poster.png --frame=60",
+    "lint": "eslint src --ext .ts,.tsx",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.0",
+    "@remotion/bundler": "^4.0.0",
+    "@remotion/google-fonts": "^4.0.0",
+    "@remotion/renderer": "^4.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "^4.0.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.4.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
