@@ -17,6 +17,7 @@
     <meta property="og:title" content="Jacob Britten | Media Production &amp; Workflow Systems" />
     <meta property="og:description" content="I produce podcasts, video, motion graphics, and captions — and build the tools that make media work repeatable. Grew the High Functioning Podcast to 274K views in 18 months." />
     <meta property="og:image" content="https://jacobbritten.com/images/og-share.jpg" />
+    <meta property="og:image:alt" content="Jacob Britten — Media Production and Workflow Systems, with a cyan audio waveform on a dark background" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -34,6 +35,44 @@
     />
 
     <link rel="stylesheet" href="redesign.css" />
+
+    <!-- JSON-LD: Person — for recruiter tools, LinkedIn-style scrapers, Google knowledge panel -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Jacob Britten",
+      "url": "https://jacobbritten.com/",
+      "image": "https://jacobbritten.com/images/jacob-headshot.jpg",
+      "jobTitle": "Media Production & Workflow Systems Specialist",
+      "description": "Production-first media specialist in the Boston area. Produces podcasts, video, motion graphics, and captions, and builds the React + Remotion workflow tools that make media teams ship faster.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Boston",
+        "addressRegion": "MA",
+        "addressCountry": "US"
+      },
+      "knowsAbout": [
+        "Podcast Production",
+        "Video Editing",
+        "Motion Graphics",
+        "Captions and Accessibility",
+        "Instructional and Training Media",
+        "Audio Post-Production",
+        "Workflow Automation",
+        "Drone and Real Estate Media",
+        "Remotion",
+        "React",
+        "TypeScript",
+        "Next.js"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/jacob-britten-a3b52026/",
+        "https://github.com/fuzmaster"
+      ]
+    }
+    </script>
+
     <link
       rel="icon"
       href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%2300FFC8' width='100' height='100' rx='16'/><text x='50' y='54' font-size='58' fill='%230B0D14' text-anchor='middle' dominant-baseline='middle' font-weight='bold'>J</text></svg>"
@@ -71,6 +110,21 @@
               <a class="btn btn-primary" href="projects.html">See the work</a>
               <a class="btn btn-secondary" href="#contact">Hire me</a>
             </div>
+            <p class="hero-availability">
+              <span class="hero-availability__dot" aria-hidden="true"></span>
+              Based in the Boston area · Open to on-site or hybrid roles
+            </p>
+            <div class="hero-roles" aria-label="Roles I'm hiring into">
+              <p class="hero-roles__label">Roles I'm hiring into</p>
+              <ul class="hero-roles__list">
+                <li>Media Producer</li>
+                <li>Multimedia Specialist</li>
+                <li>Technical Producer</li>
+                <li>Podcast Producer</li>
+                <li>Learning Media Producer</li>
+                <li>Creative Technologist</li>
+              </ul>
+            </div>
             <ul class="hero-meta" aria-label="Key delivery outcomes">
               <li>274K+ total views produced — High Functioning Podcast</li>
               <li>40% faster post turnaround after workflow rebuild</li>
@@ -88,6 +142,7 @@
             <li>Video Editing</li>
             <li>Motion Graphics</li>
             <li>Captions &amp; Accessibility</li>
+            <li>Instructional &amp; Training Media</li>
             <li>Audio Post</li>
             <li>YouTube Packaging</li>
             <li>Workflow Automation</li>
@@ -136,13 +191,21 @@
       <section class="section" id="about" aria-labelledby="about-title">
         <div class="container">
           <section-label text="About"></section-label>
-          <h2 id="about-title">Architecture approach: contract-first, test-first, measurable outputs.</h2>
-          <p class="section-intro">
-            I model systems before implementation, use AI tools for scaffolding,
-            and ship production logic with typed contracts and integration tests.
-            The High Functioning Podcast is my primary case study: 274K views in
-            18 months through fully automated delivery pipelines.
-          </p>
+          <h2 id="about-title">How I work</h2>
+          <ul class="how-pillars">
+            <li>
+              <span class="how-pillars__k">Production</span>
+              Hands on every job — edit, mix, caption, package. I don't ship work I haven't touched.
+            </li>
+            <li>
+              <span class="how-pillars__k">Systems</span>
+              Repeatable workflows behind every show. The pipeline absorbs the work that doesn't need a human.
+            </li>
+            <li>
+              <span class="how-pillars__k">Delivery</span>
+              AI-assisted scaffolding, human-shipped output. The High Functioning Podcast is the primary proof: 274K views in 18 months.
+            </li>
+          </ul>
 
           <div class="metrics-grid" aria-label="Performance metrics">
             <metric-card label="Total Views" value="274K+" detail="High Functioning Podcast: 274,796 views in 18 months via automated post-production pipelines."></metric-card>
