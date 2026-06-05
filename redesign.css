@@ -709,6 +709,167 @@ a.project-card__live:hover { background: var(--cyan); color: var(--bg); border-c
 }
 
 /* ═══════════════════════════════════════════════════════
+   LANE PAGE (e.g. /work/podcast.html)
+   ═══════════════════════════════════════════════════════ */
+.lane-main > .lane { padding: 70px 0 64px; }
+.lane-back {
+  display: inline-block;
+  font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em;
+  color: var(--faint); margin-bottom: 36px; transition: color var(--t);
+}
+.lane-back:hover { color: var(--cyan); }
+
+.lane-hero {
+  display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: 48px; align-items: center;
+  margin-bottom: 56px;
+  padding-bottom: 56px; border-bottom: 1px solid var(--line);
+}
+.lane-eyebrow {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--cyan); margin-bottom: 20px;
+}
+.lane-title {
+  font-size: clamp(32px, 4.8vw, 50px); line-height: 1.06;
+  font-weight: 700; letter-spacing: -0.025em; color: var(--text);
+  margin-bottom: 22px; max-width: 18ch;
+}
+.lane-title em { font-style: normal; color: var(--cyan); }
+.lane-deck { font-size: 17px; color: var(--dim); line-height: 1.65; max-width: 56ch; margin-bottom: 28px; }
+.lane-credit-line {
+  list-style: none; display: flex; flex-wrap: wrap; gap: 10px;
+}
+.lane-credit-line li {
+  font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--cyan);
+  border: 1px solid var(--cyan-dim); border-radius: 6px;
+  padding: 6px 12px; background: var(--cyan-soft);
+}
+.lane-hero__art {
+  margin: 0; border-radius: 16px; overflow: hidden;
+  background: var(--bg-soft); border: 1px solid var(--line);
+}
+.lane-hero__art img { width: 100%; height: auto; display: block; }
+
+/* ─── Lane sections ─── */
+.lane-section { max-width: 880px; margin: 0 auto 56px; }
+.lane-h2 {
+  font-size: clamp(22px, 3vw, 28px); font-weight: 700; letter-spacing: -0.015em;
+  margin-bottom: 18px;
+}
+.lane-lead { font-size: 17px; color: var(--text); line-height: 1.6; margin-bottom: 24px; }
+.lane-section p { font-size: 16px; color: var(--dim); line-height: 1.7; }
+
+/* ─── Shows grid ─── */
+.show-grid {
+  display: grid; grid-template-columns: 1fr; gap: 18px;
+}
+.show-card {
+  background: var(--bg-soft); border: 1px solid var(--line);
+  border-radius: 16px; overflow: hidden;
+  transition: border-color var(--t);
+}
+.show-card:hover { border-color: var(--cyan-dim); }
+.show-card__link { display: grid; grid-template-columns: 240px 1fr; gap: 0; }
+.show-card__art-wrap { background: var(--bg); overflow: hidden; }
+.show-card__art-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.show-card__meta { padding: 22px 26px; display: flex; flex-direction: column; gap: 8px; }
+.show-card__name { font-size: 20px; font-weight: 700; color: var(--text); }
+.show-card__credit {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--cyan-dim);
+}
+.show-card__stat { font-size: 14px; color: var(--dim); }
+.show-card__stat strong { color: var(--cyan); font-weight: 700; }
+.show-card__cta {
+  font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.07em;
+  text-transform: uppercase; color: var(--cyan); margin-top: 6px;
+}
+.show-card__listen {
+  display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+  padding: 16px 26px; border-top: 1px solid var(--line);
+  background: rgba(0,0,0,0.18);
+}
+.show-card__listen-label {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--faint);
+}
+.show-card__listen-todo {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.04em;
+  color: var(--dim); font-style: italic;
+}
+
+/* ─── How-I-produce steps ─── */
+.lane-steps { list-style: none; display: flex; flex-direction: column; margin: 12px 0 0; }
+.lane-steps li {
+  display: grid; grid-template-columns: 56px 1fr; gap: 18px; align-items: start;
+  padding: 22px 0; border-top: 1px solid var(--line);
+}
+.lane-steps li:last-child { border-bottom: 1px solid var(--line); }
+.lane-step-n { font-family: var(--mono); font-size: 13px; color: var(--cyan); letter-spacing: 0.04em; padding-top: 4px; }
+.lane-steps h3 { font-size: 17px; font-weight: 700; color: var(--text); letter-spacing: -0.005em; margin-bottom: 8px; }
+.lane-steps p { font-size: 15px; color: var(--dim); line-height: 1.65; margin: 0; }
+.lane-steps p + p { margin-top: 8px; }
+.lane-step-link a { color: var(--cyan); font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; }
+
+/* ─── Stack grid ─── */
+.lane-stack-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 18px;
+  margin: 14px 0 32px;
+}
+.lane-stack-col {
+  background: var(--bg-soft); border: 1px solid var(--line);
+  border-radius: 14px; padding: 22px 24px;
+}
+.lane-stack-col__title {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--cyan); margin-bottom: 14px;
+}
+.lane-stack-col__list { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+.lane-stack-col__list li {
+  font-size: 14.5px; color: var(--dim); padding-left: 18px; position: relative;
+}
+.lane-stack-col__list li::before {
+  content: ""; position: absolute; left: 0; top: 0.6em; width: 5px; height: 5px;
+  border-radius: 50%; background: var(--cyan-dim);
+}
+
+/* ─── Atmospheric gear shot ─── */
+.lane-gear {
+  margin: 12px 0 0; border-radius: 16px; overflow: hidden;
+  border: 1px solid var(--line); background: var(--bg-soft);
+}
+.lane-gear img { width: 100%; height: auto; display: block; }
+
+/* ─── Fits list ─── */
+.lane-fits {
+  list-style: none; display: flex; flex-direction: column; gap: 14px; margin-top: 8px;
+}
+.lane-fits li {
+  font-size: 16px; color: var(--dim); line-height: 1.6;
+  padding-left: 22px; position: relative;
+}
+.lane-fits li::before {
+  content: ""; position: absolute; left: 0; top: 0.7em; width: 7px; height: 7px;
+  border-radius: 50%; background: var(--cyan);
+}
+.lane-fits strong { color: var(--text); font-weight: 600; }
+
+/* ─── Lane CTA ─── */
+.lane-cta {
+  display: flex; gap: 14px; flex-wrap: wrap;
+  padding-top: 36px; border-top: 1px solid var(--line);
+}
+
+@media (max-width: 820px) {
+  .lane-hero { grid-template-columns: 1fr; gap: 32px; }
+  .show-card__link { grid-template-columns: 1fr; }
+  .show-card__art-wrap { aspect-ratio: 16/9; }
+  .lane-stack-grid { grid-template-columns: 1fr; }
+  .lane-steps li { grid-template-columns: 36px 1fr; gap: 14px; }
+}
+
+/* ═══════════════════════════════════════════════════════
    /now PAGE
    ═══════════════════════════════════════════════════════ */
 .now-main > .now { padding: 80px 0 64px; }
@@ -745,6 +906,32 @@ a.project-card__live:hover { background: var(--cyan); color: var(--bg); border-c
 .now-cta {
   display: flex; gap: 14px; flex-wrap: wrap; margin-top: 24px;
   padding-top: 36px; border-top: 1px solid var(--line);
+}
+
+.now-where {
+  margin: 64px 0 0;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--line);
+}
+.now-where img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  filter: brightness(0.55) saturate(0.85);
+}
+.now-where figcaption {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 22px 26px;
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  color: var(--cyan);
+  background: linear-gradient(to top, rgba(10,12,18,0.85), transparent);
 }
 
 /* ═══════════════════════════════════════════════════════
