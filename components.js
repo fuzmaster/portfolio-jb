@@ -86,7 +86,7 @@ class TestimonialCard extends HTMLElement {
 
     this.innerHTML = `
       <article class="testimonial-card">
-        <p class="testimonial-quote">\"${quote}\"</p>
+        <p class="testimonial-quote">${quote}</p>
         <p class="testimonial-name">${name}</p>
         <p class="testimonial-role">${role}</p>
       </article>
