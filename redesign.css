@@ -195,10 +195,21 @@ img, svg { display: block; max-width: 100%; }
 .hero-roles__list li {
   font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.04em;
   color: var(--text); border: 1px solid var(--line-2); border-radius: 6px;
-  padding: 6px 11px; background: rgba(0,255,200,0.04);
-  transition: border-color var(--t);
+  background: rgba(0,255,200,0.04);
+  transition: border-color var(--t), color var(--t);
+}
+.hero-roles__list li > a,
+.hero-roles__list li > span {
+  display: inline-block;
+  padding: 6px 11px;
+  color: inherit;
+  text-decoration: none;
 }
 .hero-roles__list li:hover { border-color: var(--cyan-dim); }
+.hero-roles__list li:hover > a { color: var(--cyan); }
+/* The Learning Media chip has no destination yet — render dimmer + non-interactive */
+.hero-roles__list li > span[aria-disabled] { color: var(--dim); cursor: default; }
+.hero-roles__list li:has(> span[aria-disabled]) { background: transparent; }
 
 .hero-meta {
   list-style: none; display: flex; flex-direction: column; gap: 10px;
@@ -356,6 +367,17 @@ img, svg { display: block; max-width: 100%; }
 #form-feedback.success { color: var(--cyan); }
 #form-feedback.error { color: #ff8b7a; }
 #form-feedback.pending { color: var(--dim); }
+
+.contact-privacy {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: 0.02em;
+  color: var(--faint);
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  line-height: 1.55;
+}
 
 /* ─── FOOTER ─────────────────────────────────────────── */
 .footer { border-top: 1px solid var(--line); margin-top: 40px; padding: 40px 0; }
