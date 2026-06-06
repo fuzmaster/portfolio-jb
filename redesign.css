@@ -18,8 +18,11 @@
   --line-2:    rgba(255, 255, 255, 0.12);
   --sans:      'DM Sans', system-ui, sans-serif;
   --mono:      'JetBrains Mono', 'SF Mono', Consolas, monospace;
-  --col:       760px;     /* centered reading column */
-  --col-wide:  860px;
+  /* Fluid container widths — narrow on small screens, comfortable wide on big monitors.
+   * clamp(min, preferred, max). The 78-86vw preferred values mean the container
+   * always leaves some breathing room on the sides. */
+  --col:       clamp(680px, 82vw, 1240px);  /* main reading + grid column */
+  --col-wide:  clamp(720px, 88vw, 1340px);  /* nav + slightly wider sections */
   --ease:      cubic-bezier(0.16, 1, 0.3, 1);
   --t:         0.25s var(--ease);
 }
@@ -430,8 +433,11 @@ img, svg { display: block; max-width: 100%; }
   text-transform: uppercase; font-weight: 700; color: var(--text);
 }
 
-/* card grid */
+/* card grid — 2 cols default, 3 cols on wider screens */
 .project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+@media (min-width: 1100px) {
+  .project-grid { grid-template-columns: repeat(3, 1fr); }
+}
 .project-card {
   background: var(--bg-soft); border: 1px solid var(--line); border-radius: 16px;
   overflow: hidden; display: flex; flex-direction: column;
@@ -543,6 +549,9 @@ a.project-card__live:hover { background: var(--cyan); color: var(--bg); border-c
 .lab-group__title { font-family: var(--mono); font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 700; color: var(--text); }
 
 .lab-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+@media (min-width: 1100px) {
+  .lab-grid { grid-template-columns: repeat(3, 1fr); }
+}
 .lab-card {
   background: var(--bg-soft); border: 1px solid var(--line); border-radius: 16px;
   overflow: hidden; display: flex; flex-direction: column;
@@ -598,7 +607,7 @@ a.project-card__live:hover { background: var(--cyan); color: var(--bg); border-c
 }
 .case-back:hover { color: var(--cyan); }
 
-.case-head { max-width: 720px; margin-bottom: 56px; }
+.case-head { max-width: 720px; margin: 0 auto 56px; }
 .case-eyebrow {
   font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em;
   text-transform: uppercase; color: var(--cyan); margin-bottom: 22px;
@@ -637,7 +646,7 @@ a.project-card__live:hover { background: var(--cyan); color: var(--bg); border-c
 }
 .case-meta strong { font-size: 13px; font-weight: 500; color: var(--text); }
 
-.case-section { max-width: 720px; margin-bottom: 56px; }
+.case-section { max-width: 720px; margin: 0 auto 56px; }
 .case-h2 {
   font-size: clamp(22px, 3vw, 28px); font-weight: 700; letter-spacing: -0.015em;
   margin-bottom: 18px;
@@ -884,7 +893,7 @@ a.project-card__live:hover { background: var(--cyan); color: var(--bg); border-c
 .now-deck { font-size: 17px; color: var(--dim); line-height: 1.65; max-width: 56ch; margin-bottom: 48px; }
 .now-deck a { color: var(--cyan); border-bottom: 1px solid var(--cyan-dim); }
 .now-deck a:hover { border-color: var(--cyan); }
-.now-section { max-width: 680px; margin-bottom: 44px; }
+.now-section { max-width: 680px; margin: 0 auto 44px; }
 .now-h2 {
   font-family: var(--mono); font-size: 12px; letter-spacing: 0.12em;
   text-transform: uppercase; color: var(--cyan); margin-bottom: 14px;
@@ -946,9 +955,9 @@ a.project-card__live:hover { background: var(--cyan); color: var(--bg); border-c
 .about-name { font-size: clamp(28px, 4vw, 38px); font-weight: 700; letter-spacing: -0.02em; }
 .about-role { font-family: var(--mono); font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--cyan); margin-top: 6px; }
 .about-location { font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; color: var(--faint); margin-top: 6px; }
-.about-body { max-width: 64ch; display: flex; flex-direction: column; gap: 16px; margin-bottom: 48px; }
+.about-body { max-width: 64ch; display: flex; flex-direction: column; gap: 16px; margin: 0 auto 48px; }
 .about-body p { font-size: 16px; color: var(--dim); line-height: 1.7; }
-.about-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; max-width: 680px; margin-bottom: 48px; }
+.about-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; max-width: 680px; margin: 0 auto 48px; }
 .about-col__title { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cyan); margin-bottom: 16px; }
 .about-list { list-style: none; display: flex; flex-direction: column; gap: 9px; }
 .about-list li { font-size: 14px; color: var(--dim); padding-left: 18px; position: relative; }
@@ -957,7 +966,7 @@ a.project-card__live:hover { background: var(--cyan); color: var(--bg); border-c
 
 .about-pullquote {
   max-width: 680px;
-  margin: 8px 0 48px;
+  margin: 8px auto 48px;
   padding: 8px 0 8px 26px;
   border-left: 2px solid var(--cyan);
   display: flex;
