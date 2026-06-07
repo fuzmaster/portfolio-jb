@@ -733,6 +733,17 @@ a.project-card__live:hover { background: var(--cyan); color: var(--bg); border-c
   padding-top: 36px; border-top: 1px solid var(--line);
 }
 
+.case-listen {
+  display: flex; gap: 22px; flex-wrap: wrap; margin: 22px 0 0 !important;
+  padding: 14px 0 0; border-top: 1px solid var(--line);
+}
+.case-listen a {
+  font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--cyan-dim);
+  transition: color var(--t);
+}
+.case-listen a:hover { color: var(--cyan); }
+
 @media (max-width: 640px) {
   .case-meta { grid-template-columns: repeat(2, 1fr); }
   .case-results { grid-template-columns: 1fr; }
@@ -829,6 +840,12 @@ a.project-card__live:hover { background: var(--cyan); color: var(--bg); border-c
   font-family: var(--mono); font-size: 11px; letter-spacing: 0.04em;
   color: var(--dim); font-style: italic;
 }
+.show-card__listen-link {
+  font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--cyan-dim);
+  transition: color var(--t);
+}
+.show-card__listen-link:hover { color: var(--cyan); }
 
 /* ─── How-I-produce steps ─── */
 .lane-steps { list-style: none; display: flex; flex-direction: column; margin: 12px 0 0; }
