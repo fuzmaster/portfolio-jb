@@ -3,6 +3,10 @@
  * Validated by Zod (see types.ts) — a typo here is caught BEFORE render.
  *
  * Everything is text-driven by default. Add `src:` paths as you cut clips.
+ *
+ * Current tune: Boston-area media producer lane.
+ *   Lead with the HF Podcast production credit and the operational story.
+ *   Drone + motion graphics + tooling support the thesis, not lead it.
  */
 import type { ReelConfig } from './types';
 
@@ -14,10 +18,11 @@ export const config: ReelConfig = {
 
   thesis: {
     lines: [
-      'I edit, mix, caption, and package',
-      'real media —',
+      'I produce podcasts,',
+      'video, motion graphics,',
+      'and captions —',
       'and build the systems',
-      'behind it.',
+      'behind it all.',
     ],
     accent: 'and build the systems',
   },
@@ -25,44 +30,48 @@ export const config: ReelConfig = {
   production: {
     eyebrow: 'Production',
     clips: [
-      // Drop real footage here as you cut it. Empty `src:` falls back to text frame.
-      { src: 'bas-drone-01.mp4', caption: 'BAS · Aerial real estate' },
-      { src: 'bas-drone-02.mp4', caption: 'BAS · New construction' },
-      { src: 'hf-lower-third.mp4', caption: 'HF · Lower-third overlay' },
-      { src: 'caption-frame.mp4', caption: 'StrictSub · Captions' },
+      // Order matters — first clip leads the production beat.
+      // Files live in reel/assets/. Missing files render as labeled placeholders.
+      // Five clips × ~3s each fits the 15s Production scene.
+      { src: 'hf-cover.webp',         caption: 'High Functioning Podcast · Producer · Editor · Captions · Pipeline' },
+      { src: 'podcast-gear.webp',     caption: 'Multi-cam record · ATEM switching · live audio' },     // TODO: drop podcast-gear.webp from /images
+      { src: 'bas-aerial.webp',       caption: 'Britten Aerial Services · FAA Part 107' },
+      { src: 'strictsub-caption.webp',caption: 'StrictSub · Caption pass on every release' },
+      { src: 'hf-lower-third.mp4',    caption: 'High Functioning Graphics · Remotion lower-thirds' }, // TODO: render this clip
     ],
-    fallback: 'Podcast · Drone · Motion Graphics · Captions',
+    fallback: 'Podcast · Multi-cam Video · Motion Graphics · Captions · Drone',
   },
 
   numbers: {
-    eyebrow: 'Results',
+    eyebrow: 'Results — and still going',
     items: [
-      { value: '274K',  label: 'total views produced',         detail: 'High Functioning Podcast, 18 months' },
-      { value: '50+',   label: 'episodes shipped end to end',  detail: 'with a two-person team' },
-      { value: '40%',   label: 'faster post turnaround',       detail: 'after workflow rebuild' },
-      { value: '41 → 31K',  label: 'monthly views',            detail: 'baseline to sustained' },
+      { value: '100+',  label: 'episodes shipped end to end', detail: 'with a two-person team, weekly cadence' },
+      { value: '274K+', label: 'total views produced',         detail: 'High Functioning Podcast · Oct 2024 — present' },
+      { value: '40%',   label: 'faster post turnaround',       detail: 'after the pipeline rebuild' },
+      { value: '41 → 31K', label: 'monthly views',             detail: '770× growth, sustained on every release' },
     ],
   },
 
   credits: {
-    eyebrow:   'Credits',
+    eyebrow:   'Primary Credit',
     showName:  'High Functioning Podcast',
     roleLine:  'Producer · Editor · Captions · Pipeline',
     toolStack: [
       'Premiere',
-      'DaVinci',
+      'DaVinci Resolve',
       'Descript',
       'Remotion',
       'After Effects',
       'React',
       'TypeScript',
       'Zod',
+      'Vercel',
     ],
   },
 
   outro: {
-    headline: 'Open for hire',
-    subline:  'Boston area · On-site or hybrid',
+    headline: 'Hiring in Boston?',
+    subline:  'Media Producer · Technical Producer · Podcast Ops · On-site or hybrid',
     url:      'jacobbritten.com',
   },
 };
