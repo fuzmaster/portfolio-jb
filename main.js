@@ -3,7 +3,30 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initScrollReveal();
   initContactForm();
+  initCardSpotlight();
 });
+
+/**
+ * Sets --mx / --my custom properties on cards based on cursor position so
+ * the radial spotlight gradient follows the mouse. Skipped if the user
+ * prefers reduced motion.
+ */
+function initCardSpotlight() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const cards = document.querySelectorAll('.project-card, .lab-card');
+  if (!cards.length) return;
+
+  cards.forEach((card) => {
+    card.addEventListener('mousemove', (event) => {
+      const rect = card.getBoundingClientRect();
+      const x = ((event.clientX - rect.left) / rect.width) * 100;
+      const y = ((event.clientY - rect.top) / rect.height) * 100;
+      card.style.setProperty('--mx', x + '%');
+      card.style.setProperty('--my', y + '%');
+    });
+  });
+}
 
 function initHeroCanvas() {
   const canvas = document.getElementById('hero-canvas');

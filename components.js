@@ -25,7 +25,19 @@ class SiteNav extends HTMLElement {
     this.innerHTML = `
       <header class="navbar" id="navbar">
         <div class="container nav-container">
-          <a href="index.html" class="logo" aria-label="Jacob Britten home">JACOB BRITTEN</a>
+          <a href="index.html" class="logo" aria-label="Jacob Britten home">
+            <svg class="logo__mark" width="32" height="16" viewBox="0 0 32 16" aria-hidden="true" fill="currentColor">
+              <rect x="3"  y="5"   width="2" height="6"  rx="1"/>
+              <rect x="6"  y="1"   width="2" height="14" rx="1"/>
+              <rect x="9"  y="3"   width="2" height="10" rx="1"/>
+              <rect x="12" y="6"   width="2" height="4"  rx="1"/>
+              <line x1="14.5" y1="8" x2="20.5" y2="8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              <circle cx="22" cy="8" r="2.2"/>
+              <line x1="24.2" y1="8" x2="27.8" y2="8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              <circle cx="29.5" cy="8" r="2.2"/>
+            </svg>
+            <span class="logo__text">JACOB BRITTEN</span>
+          </a>
           <nav aria-label="Main navigation">
             <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">
               <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>

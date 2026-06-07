@@ -1,0 +1,18 @@
+<!-- Hybrid mark: waveform → nodes
+     Production (left) flows into Systems (right) via a connector.
+     32×32 viewport, designed to read down to 16×16 favicon. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="#00FFC8">
+  <!-- Waveform bars — heights vary like a small audio sample -->
+  <rect x="3"  y="13" width="2" height="6"  rx="1"/>
+  <rect x="6"  y="9"  width="2" height="14" rx="1"/>
+  <rect x="9"  y="11" width="2" height="10" rx="1"/>
+  <rect x="12" y="14" width="2" height="4"  rx="1"/>
+
+  <!-- Connector line — production flows into systems -->
+  <line x1="14.5" y1="16" x2="20.5" y2="16" stroke="#00FFC8" stroke-width="1.6" stroke-linecap="round"/>
+
+  <!-- Node + outbound link + final node -->
+  <circle cx="22" cy="16" r="2.2"/>
+  <line x1="24.2" y1="16" x2="27.8" y2="16" stroke="#00FFC8" stroke-width="1.6" stroke-linecap="round"/>
+  <circle cx="29.5" cy="16" r="2.2"/>
+</svg>
