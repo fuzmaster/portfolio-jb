@@ -644,6 +644,12 @@ a.project-card__live:hover { background: var(--cyan); color: var(--bg); border-c
 .lab-card__link:hover { color: var(--cyan); border-color: var(--cyan-dim); }
 .lab-card__link--live { color: var(--cyan); border-color: var(--cyan-dim); background: var(--cyan-soft); }
 .lab-card__link--live:hover { background: var(--cyan); color: var(--bg); border-color: var(--cyan); }
+.lab-card__link--muted, .project-card__muted {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--dim); border: 1px dashed var(--line-2); border-radius: 6px; padding: 5px 11px;
+  opacity: 0.7;
+}
 .lab-card__private { font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--faint); border: 1px solid var(--line); border-radius: 6px; padding: 5px 11px; white-space: nowrap; }
 
 /* ─── "HOW I WORK" PILLARS (homepage About section) ─── */
