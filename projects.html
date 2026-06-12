@@ -46,18 +46,19 @@
           <section-label text="Projects"></section-label>
           <h1 class="projects-title">Production work and the tools around it.</h1>
           <p class="section-intro projects-intro">
-            Split into the production systems I build for media work, and the
-            utilities and experiments I build to think through problems.
+            Media production systems first, then small focused web tools, then the
+            earlier media and brand work that shaped them.
           </p>
 
-          <!-- ── Production Systems ─────────────────────────── -->
-          <section class="project-group" aria-labelledby="group-production">
+          <!-- ── Media production systems ── -->
+          <section class="project-group" aria-labelledby="group-media-systems">
             <div class="project-group__header">
               <span class="project-group__type">Media Production</span>
-              <h2 id="group-production" class="project-group__title">Production Systems</h2>
+              <h2 id="group-media-systems" class="project-group__title">Media production systems</h2>
             </div>
+            <p class="project-group__intro">Podcast, caption, clip, analytics, and workflow tools built from real production problems.</p>
 
-            <div class="project-grid" aria-label="Production systems">
+            <div class="project-grid" aria-label="Media production systems">
               <article class="project-card project-card--feature">
                 <div class="image-frame">
                   <img src="images/cover-podcast-pipeline.webp" alt="Stylized podcast pipeline cover: an audio waveform feeding into four published clip cards labeled CLIP_01 through CLIP_04 — concept art for the transcript-to-clips render architecture" loading="lazy" decoding="async" />
@@ -90,126 +91,6 @@
                 <div class="project-card__actions">
                   <a href="cutroom.html" class="project-card__live">Read the build →</a>
                   <span class="project-card__muted">Prototype · in development · local app</span>
-                </div>
-              </article>
-
-              <article class="project-card">
-                <div class="image-frame">
-                  <img src="images/cover-retention-dashboard.webp" alt="Concept dashboard cover: a declining audience-retention curve with decision flags and KPI tiles — concept art for the High Functioning Analytics OS dashboard" loading="lazy" decoding="async" />
-                </div>
-                <h3>High Functioning Analytics OS</h3>
-                <p>
-                  Private, meeting-ready analytics dashboard for the High Functioning /
-                  Good Feels team — a decision-ready brief for the host and a deep,
-                  verifiable view for production: KPIs, platform breakdowns, trend watch,
-                  and keyword search across all 80 episode transcripts. React + Recharts,
-                  fully local (no backend, no live APIs).
-                </p>
-                <div class="project-card__actions">
-                  <span class="project-card__muted">Private · internal dashboard</span>
-                </div>
-              </article>
-
-              <article class="project-card">
-                <div class="image-frame">
-                  <img src="images/cover-crop-check.webp" alt="Three platform aspect-ratio frames — 9:16, 1:1, and 16:9 — each with a dashed safe-area inset and a green PASS badge, showing how Crop Check validates layouts across Reels, Instagram, and YouTube" loading="lazy" decoding="async" />
-                </div>
-                <h3>Crop Check QA Utility</h3>
-                <p>
-                  Platform-safe area preview system with deterministic screenshot checks
-                  to catch layout breakage before publishing.
-                </p>
-                <div class="project-card__actions">
-                  <span class="project-card__muted">Source private</span>
-                </div>
-              </article>
-
-              <article class="project-card">
-                <div class="image-frame">
-                  <img src="images/bas-aerial.webp" alt="Aerial real-estate photograph of a contemporary New England home with white trim, gray shingle roof, and a double garage on a wooded lot — captured for Britten Aerial Services" loading="lazy" decoding="async" />
-                </div>
-                <h3>Britten Aerial Services</h3>
-                <p>
-                  FAA-licensed drone photography and real-estate media for clients in
-                  Massachusetts — aerial stills, listing videos, and the full Next.js
-                  site that delivers them. Fast turnaround, repeatable workflow.
-                </p>
-                <div class="aerial-strip" aria-label="Sample aerial work">
-                  <img src="images/aerial-home.webp" alt="Aerial drone photo of a New England home with a gray shingle roof and double garage on a wooded autumn lot" loading="lazy" decoding="async" />
-                  <img src="images/aerial-longview.webp" alt="Aerial drone photo of a Massachusetts property captured for a real-estate listing" loading="lazy" decoding="async" />
-                  <img src="images/aerial-solar.webp" alt="Aerial drone photo of a commercial solar installation captured for marketing and site documentation" loading="lazy" decoding="async" />
-                </div>
-                <details class="project-detail">
-                  <summary class="project-detail__summary">
-                    <span class="project-detail__label-more">What I deliver</span>
-                    <span class="project-detail__label-less">Show less</span>
-                    <svg class="project-detail__chevron" width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  </summary>
-                  <div class="project-detail__body">
-                    <ul class="project-detail__list">
-                      <li><strong>Aerial real-estate photography</strong> — listing stills shot with an FAA-licensed drone, color-corrected and listing-ready the same day.</li>
-                      <li><strong>Development &amp; progress media</strong> — repeat-visit aerials for new construction, solar installs, and large-lot land surveys.</li>
-                      <li><strong>Listing video</strong> — short-form aerial tours edited for MLS and social distribution.</li>
-                      <li><strong>The full client site</strong> — a Next.js 14 site (showreel, portfolio, contact) built around the production work so leads land directly on the deliverables.</li>
-                    </ul>
-                    <p>
-                      Real production credit, real clients, real turnaround. Based in
-                      Peabody, MA — built for the brokers and developers who need
-                      media yesterday, not next week.
-                    </p>
-                    <p class="project-detail__tech">FAA Part 107 · Next.js 14 · Vercel</p>
-                  </div>
-                </details>
-                <div class="project-card__actions">
-                  <a href="https://britten-aerial-services.vercel.app" target="_blank" rel="noopener noreferrer" class="project-card__live">Live Site ↗</a>
-                </div>
-              </article>
-
-              <article class="project-card">
-                <div class="image-frame">
-                  <img src="images/cover-genera-reels.webp" alt="A grid of twelve 9:16 reel templates — CTA, INTRO, QUOTE, STAT, GUEST, OUTRO — visualizing one payload rendered as a full batch of branded reels" loading="lazy" decoding="async" />
-                </div>
-                <h3>Genera-Reels Engine</h3>
-                <p>
-                  Template-based short-form video rendering tool that consumes payload
-                  inputs and emits batch reels with repeatable output quality.
-                </p>
-                <span class="project-card__private">Private Repo</span>
-              </article>
-
-              <article class="project-card">
-                <div class="image-frame">
-                  <img src="images/cover-twitch-assets.webp" alt="A Twitch scene mockup: large STARTING SOON wordmark with the crashdontfall channel name, plus a follower-alert preview in the corner — the kind of broadcast-ready output the Remotion asset pack renders" loading="lazy" decoding="async" />
-                </div>
-                <h3>Twitch Stream Asset Pack</h3>
-                <p>
-                  A Remotion render pipeline that programmatically generates a full broadcast
-                  kit for a Twitch channel — starting-soon and intermission scenes, animated
-                  follower / sub / raid alerts, a stinger transition, and info panels.
-                </p>
-                <details class="project-detail">
-                  <summary class="project-detail__summary">
-                    <span class="project-detail__label-more">What it renders</span>
-                    <span class="project-detail__label-less">Show less</span>
-                    <svg class="project-detail__chevron" width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  </summary>
-                  <div class="project-detail__body">
-                    <ul class="project-detail__list">
-                      <li><strong>Scenes</strong> — Starting Soon, Intermission, and Offline screens at 1080p.</li>
-                      <li><strong>Alerts</strong> — follower, donation, sub, and raid animations exported with an alpha channel (VP9 / WebM) so they layer cleanly in OBS.</li>
-                      <li><strong>Stinger transition</strong> — a branded wipe between scenes.</li>
-                      <li><strong>Panels</strong> — About, Schedule, Socials, Donate, and Rules stills rendered to PNG.</li>
-                    </ul>
-                    <p>
-                      Every asset is defined as code, so the whole pack re-renders on a single
-                      command when the brand changes. Built for the "crashdontfall" stream as a
-                      personal project — no public site, it outputs video and image files.
-                    </p>
-                    <p class="project-detail__tech">Remotion · React · TypeScript</p>
-                  </div>
-                </details>
-                <div class="project-card__actions">
-                  <span class="project-card__private">Personal Project</span>
                 </div>
               </article>
 
@@ -250,6 +131,32 @@
 
               <article class="project-card">
                 <div class="image-frame">
+                  <img src="images/cover-crop-check.webp" alt="Three platform aspect-ratio frames — 9:16, 1:1, and 16:9 — each with a dashed safe-area inset and a green PASS badge, showing how Crop Check validates layouts across Reels, Instagram, and YouTube" loading="lazy" decoding="async" />
+                </div>
+                <h3>Crop Check QA Utility</h3>
+                <p>
+                  Platform-safe area preview system with deterministic screenshot checks
+                  to catch layout breakage before publishing.
+                </p>
+                <div class="project-card__actions">
+                  <span class="project-card__muted">Source private</span>
+                </div>
+              </article>
+
+              <article class="project-card">
+                <div class="image-frame">
+                  <img src="images/cover-genera-reels.webp" alt="A grid of twelve 9:16 reel templates — CTA, INTRO, QUOTE, STAT, GUEST, OUTRO — visualizing one payload rendered as a full batch of branded reels" loading="lazy" decoding="async" />
+                </div>
+                <h3>Genera-Reels Engine</h3>
+                <p>
+                  Template-based short-form video rendering tool that consumes payload
+                  inputs and emits batch reels with repeatable output quality.
+                </p>
+                <span class="project-card__private">Private Repo</span>
+              </article>
+
+              <article class="project-card">
+                <div class="image-frame">
                   <img src="images/mediadeck-ui.webp" alt="MediaDeck Local desktop app interface — a dark-themed media library showing project Atlas with categories in the sidebar (Dashboard, Projects, Audio, Graphics, Sequences, Templates), a 4x3 grid of media thumbnails with filenames and dates, and cyan accents on the active state" loading="lazy" decoding="async" />
                 </div>
                 <h3>MediaDeck Local</h3>
@@ -284,17 +191,148 @@
                   <span class="project-card__private">Personal Project</span>
                 </div>
               </article>
+
+              <article class="project-card">
+                <div class="image-frame">
+                  <img src="images/cover-retention-dashboard.webp" alt="Concept dashboard cover: a declining audience-retention curve with decision flags and KPI tiles — concept art for the High Functioning Analytics OS dashboard" loading="lazy" decoding="async" />
+                </div>
+                <h3>High Functioning Analytics OS</h3>
+                <p>
+                  Private, meeting-ready analytics dashboard for the High Functioning /
+                  Good Feels team — a decision-ready brief for the host and a deep,
+                  verifiable view for production: KPIs, platform breakdowns, trend watch,
+                  and keyword search across all 80 episode transcripts. React + Recharts,
+                  fully local (no backend, no live APIs).
+                </p>
+                <div class="project-card__actions">
+                  <span class="project-card__muted">Private · internal dashboard</span>
+                </div>
+              </article>
             </div>
           </section>
 
-          <!-- ── Utilities & Experiments ────────────────────── -->
-          <section class="project-group" aria-labelledby="group-utilities">
+          <!-- ── Useful web tools ── -->
+          <section class="project-group" aria-labelledby="group-web-tools">
             <div class="project-group__header">
-              <span class="project-group__type">Side Builds</span>
-              <h2 id="group-utilities" class="project-group__title">Utilities &amp; Experiments</h2>
+              <span class="project-group__type">Web Tools</span>
+              <h2 id="group-web-tools" class="project-group__title">Useful web tools</h2>
             </div>
+            <p class="project-group__intro">Small, focused tools built around clear user problems, search intent, and practical decisions.</p>
 
-            <div class="project-grid" aria-label="Utilities and experiments">
+            <div class="project-grid" aria-label="Useful web tools">
+              <article class="project-card">
+                <div class="image-frame image-frame--code">
+                  <img src="images/code-quotecheck.png" alt="TypeScript: analyzeQuotes pure function computing bid spread percentage, scope-gap detection, and deterministic risk flags across contractor quotes" loading="lazy" decoding="async" />
+                </div>
+                <h3>QuoteCheck Home</h3>
+                <p>
+                  Helps homeowners compare contractor bids side by side, spot scope items
+                  one quote quietly left out, and generate the exact follow-up questions to
+                  ask each contractor before signing.
+                </p>
+                <details class="project-detail">
+                  <summary class="project-detail__summary">
+                    <span class="project-detail__label-more">What it does</span>
+                    <span class="project-detail__label-less">Show less</span>
+                    <svg class="project-detail__chevron" width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </summary>
+                  <div class="project-detail__body">
+                    <ul class="project-detail__list">
+                      <li><strong>Side-by-side comparison</strong> — line up 2 to 5 contractors' totals, deposits, timelines, and scope in one view.</li>
+                      <li><strong>Scope-gap detection</strong> — flags line items present in one bid but missing or unclear in another (labor, materials, permits, cleanup, warranty).</li>
+                      <li><strong>Risk flags</strong> — surfaces high deposits, very short timelines, wide-spread outliers, and unspecified material quality.</li>
+                      <li><strong>Question generator</strong> — produces a per-contractor list of clarifying questions from the gaps it finds.</li>
+                      <li><strong>Printable report</strong> — a clean print layout to take into a meeting.</li>
+                    </ul>
+                    <p>
+                      Deliberately no AI — every flag is a pure function of the structured
+                      input, so a homeowner can trust the arithmetic. Runs entirely
+                      client-side; nothing leaves the browser. Ships with security headers,
+                      an origin-locked API, and a privacy page.
+                    </p>
+                    <p class="project-detail__tech">Vite · React 19 · TypeScript · Zustand · Zod · Vercel</p>
+                  </div>
+                </details>
+                <div class="project-card__actions">
+                  <a href="https://quotecheck.homes" target="_blank" rel="noopener noreferrer" class="project-card__live">Live Site ↗</a>
+                  <a href="https://github.com/fuzmaster/quotecheck-home" target="_blank" rel="noopener noreferrer">View Source</a>
+                </div>
+              </article>
+
+              <article class="project-card">
+                <div class="image-frame image-frame--code">
+                  <img src="images/code-deposit-letter.png" alt="JavaScript: buildLetter function summing deposit deductions, computing the refund due, and exporting through the browser print engine" loading="lazy" decoding="async" />
+                </div>
+                <h3>DepositLetter</h3>
+                <p>
+                  Helps self-managing landlords generate a professional, itemized security-
+                  deposit deduction letter with the math done correctly — the #1 way landlords
+                  lose small-claims disputes is getting this wrong.
+                </p>
+                <details class="project-detail">
+                  <summary class="project-detail__summary">
+                    <span class="project-detail__label-more">What it does</span>
+                    <span class="project-detail__label-less">Show less</span>
+                    <svg class="project-detail__chevron" width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </summary>
+                  <div class="project-detail__body">
+                    <ul class="project-detail__list">
+                      <li><strong>Itemized deductions</strong> — a dynamic repeater for each damage line item.</li>
+                      <li><strong>Live balance math</strong> — total deducted and refund due update as you type.</li>
+                      <li><strong>Print to PDF</strong> — uses the browser's native print engine via @media print, so there's zero PDF-library weight.</li>
+                      <li><strong>Privacy by design</strong> — letter contents never leave the browser; no accounts, no database.</li>
+                    </ul>
+                    <p>
+                      A deliberately zero-backend build with edge security headers, a strict
+                      CSP, and a published privacy policy. Live at depositletter.com.
+                    </p>
+                    <p class="project-detail__tech">React 19 · Vite · @media print · Vercel</p>
+                  </div>
+                </details>
+                <div class="project-card__actions">
+                  <a href="https://depositletter.com" target="_blank" rel="noopener noreferrer" class="project-card__live">Live Site ↗</a>
+                  <a href="https://github.com/fuzmaster/deposit-letter" target="_blank" rel="noopener noreferrer">View Source</a>
+                </div>
+              </article>
+
+              <article class="project-card">
+                <div class="image-frame image-frame--code">
+                  <img src="images/code-artist-alley.png" alt="TypeScript: calculateBreakEven pure function computing profit per item, break-even units, and required sales per day and hour for an artist alley table" loading="lazy" decoding="async" />
+                </div>
+                <h3>Artist Alley Break-Even Calculator</h3>
+                <p>
+                  Tells anime convention vendors how many prints, charms, stickers, or
+                  commissions they need to sell to cover their table before they profit —
+                  with live sales-per-day and sales-per-hour targets.
+                </p>
+                <details class="project-detail">
+                  <summary class="project-detail__summary">
+                    <span class="project-detail__label-more">What it figures out</span>
+                    <span class="project-detail__label-less">Show less</span>
+                    <svg class="project-detail__chevron" width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </summary>
+                  <div class="project-detail__body">
+                    <ul class="project-detail__list">
+                      <li><strong>Break-even units</strong> — fixed costs divided by profit per item, rounded up.</li>
+                      <li><strong>Pace targets</strong> — the sales per day and per hour that target requires.</li>
+                      <li><strong>Product presets</strong> — Sticker, Charm, Print, and Commission, each editable after selection.</li>
+                      <li><strong>Reality checks</strong> — warns on zero/negative margin and on an unrealistic sales pace.</li>
+                      <li><strong>Share &amp; reuse</strong> — Copy Summary button, large screenshot-friendly result card, and localStorage persistence.</li>
+                    </ul>
+                    <p>
+                      Mobile-first one-page dashboard with a sticky desktop result panel.
+                      All math is client-side with divide-by-zero guards — no backend,
+                      no account, no tracking.
+                    </p>
+                    <p class="project-detail__tech">Vite · React · TypeScript · Tailwind CSS · Vercel</p>
+                  </div>
+                </details>
+                <div class="project-card__actions">
+                  <a href="https://artist-alley-break-even.vercel.app" target="_blank" rel="noopener noreferrer" class="project-card__live">Live Site ↗</a>
+                  <a href="https://github.com/fuzmaster/artist-alley-break-even" target="_blank" rel="noopener noreferrer">View Source</a>
+                </div>
+              </article>
+
               <article class="project-card project-card--feature">
                 <div class="image-frame image-frame--code">
                   <img src="images/code-helix.png" alt="TypeScript: calculateHelix pure function computing effective grade, curve drag, and a plain-English build-risk verdict across model railroad scales" loading="lazy" decoding="async" />
@@ -376,83 +414,6 @@
 
               <article class="project-card">
                 <div class="image-frame image-frame--code">
-                  <img src="images/code-artist-alley.png" alt="TypeScript: calculateBreakEven pure function computing profit per item, break-even units, and required sales per day and hour for an artist alley table" loading="lazy" decoding="async" />
-                </div>
-                <h3>Artist Alley Break-Even Calculator</h3>
-                <p>
-                  Tells anime convention vendors how many prints, charms, stickers, or
-                  commissions they need to sell to cover their table before they profit —
-                  with live sales-per-day and sales-per-hour targets.
-                </p>
-                <details class="project-detail">
-                  <summary class="project-detail__summary">
-                    <span class="project-detail__label-more">What it figures out</span>
-                    <span class="project-detail__label-less">Show less</span>
-                    <svg class="project-detail__chevron" width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  </summary>
-                  <div class="project-detail__body">
-                    <ul class="project-detail__list">
-                      <li><strong>Break-even units</strong> — fixed costs divided by profit per item, rounded up.</li>
-                      <li><strong>Pace targets</strong> — the sales per day and per hour that target requires.</li>
-                      <li><strong>Product presets</strong> — Sticker, Charm, Print, and Commission, each editable after selection.</li>
-                      <li><strong>Reality checks</strong> — warns on zero/negative margin and on an unrealistic sales pace.</li>
-                      <li><strong>Share &amp; reuse</strong> — Copy Summary button, large screenshot-friendly result card, and localStorage persistence.</li>
-                    </ul>
-                    <p>
-                      Mobile-first one-page dashboard with a sticky desktop result panel.
-                      All math is client-side with divide-by-zero guards — no backend,
-                      no account, no tracking.
-                    </p>
-                    <p class="project-detail__tech">Vite · React · TypeScript · Tailwind CSS · Vercel</p>
-                  </div>
-                </details>
-                <div class="project-card__actions">
-                  <a href="https://artist-alley-break-even.vercel.app" target="_blank" rel="noopener noreferrer" class="project-card__live">Live Site ↗</a>
-                  <a href="https://github.com/fuzmaster/artist-alley-break-even" target="_blank" rel="noopener noreferrer">View Source</a>
-                </div>
-              </article>
-
-              <article class="project-card">
-                <div class="image-frame image-frame--code">
-                  <img src="images/code-quotecheck.png" alt="TypeScript: analyzeQuotes pure function computing bid spread percentage, scope-gap detection, and deterministic risk flags across contractor quotes" loading="lazy" decoding="async" />
-                </div>
-                <h3>QuoteCheck Home</h3>
-                <p>
-                  Helps homeowners compare contractor bids side by side, spot scope items
-                  one quote quietly left out, and generate the exact follow-up questions to
-                  ask each contractor before signing.
-                </p>
-                <details class="project-detail">
-                  <summary class="project-detail__summary">
-                    <span class="project-detail__label-more">What it does</span>
-                    <span class="project-detail__label-less">Show less</span>
-                    <svg class="project-detail__chevron" width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  </summary>
-                  <div class="project-detail__body">
-                    <ul class="project-detail__list">
-                      <li><strong>Side-by-side comparison</strong> — line up 2 to 5 contractors' totals, deposits, timelines, and scope in one view.</li>
-                      <li><strong>Scope-gap detection</strong> — flags line items present in one bid but missing or unclear in another (labor, materials, permits, cleanup, warranty).</li>
-                      <li><strong>Risk flags</strong> — surfaces high deposits, very short timelines, wide-spread outliers, and unspecified material quality.</li>
-                      <li><strong>Question generator</strong> — produces a per-contractor list of clarifying questions from the gaps it finds.</li>
-                      <li><strong>Printable report</strong> — a clean print layout to take into a meeting.</li>
-                    </ul>
-                    <p>
-                      Deliberately no AI — every flag is a pure function of the structured
-                      input, so a homeowner can trust the arithmetic. Runs entirely
-                      client-side; nothing leaves the browser. Ships with security headers,
-                      an origin-locked API, and a privacy page.
-                    </p>
-                    <p class="project-detail__tech">Vite · React 19 · TypeScript · Zustand · Zod · Vercel</p>
-                  </div>
-                </details>
-                <div class="project-card__actions">
-                  <a href="https://quotecheck.homes" target="_blank" rel="noopener noreferrer" class="project-card__live">Live Site ↗</a>
-                  <a href="https://github.com/fuzmaster/quotecheck-home" target="_blank" rel="noopener noreferrer">View Source</a>
-                </div>
-              </article>
-
-              <article class="project-card">
-                <div class="image-frame image-frame--code">
                   <img src="images/code-paint-planner.png" alt="TypeScript: planSupplies function computing per-color paint volume, cost, and a total from a project's mini count" loading="lazy" decoding="async" />
                 </div>
                 <h3>Paint Supply Planner</h3>
@@ -483,42 +444,6 @@
                 </details>
                 <div class="project-card__actions">
                   <a href="https://paint-supply-planner.vercel.app" target="_blank" rel="noopener noreferrer" class="project-card__live">Live Site ↗</a>
-                </div>
-              </article>
-
-              <article class="project-card">
-                <div class="image-frame image-frame--code">
-                  <img src="images/code-deposit-letter.png" alt="JavaScript: buildLetter function summing deposit deductions, computing the refund due, and exporting through the browser print engine" loading="lazy" decoding="async" />
-                </div>
-                <h3>DepositLetter</h3>
-                <p>
-                  Helps self-managing landlords generate a professional, itemized security-
-                  deposit deduction letter with the math done correctly — the #1 way landlords
-                  lose small-claims disputes is getting this wrong.
-                </p>
-                <details class="project-detail">
-                  <summary class="project-detail__summary">
-                    <span class="project-detail__label-more">What it does</span>
-                    <span class="project-detail__label-less">Show less</span>
-                    <svg class="project-detail__chevron" width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  </summary>
-                  <div class="project-detail__body">
-                    <ul class="project-detail__list">
-                      <li><strong>Itemized deductions</strong> — a dynamic repeater for each damage line item.</li>
-                      <li><strong>Live balance math</strong> — total deducted and refund due update as you type.</li>
-                      <li><strong>Print to PDF</strong> — uses the browser's native print engine via @media print, so there's zero PDF-library weight.</li>
-                      <li><strong>Privacy by design</strong> — letter contents never leave the browser; no accounts, no database.</li>
-                    </ul>
-                    <p>
-                      A deliberately zero-backend build with edge security headers, a strict
-                      CSP, and a published privacy policy. Live at depositletter.com.
-                    </p>
-                    <p class="project-detail__tech">React 19 · Vite · @media print · Vercel</p>
-                  </div>
-                </details>
-                <div class="project-card__actions">
-                  <a href="https://depositletter.com" target="_blank" rel="noopener noreferrer" class="project-card__live">Live Site ↗</a>
-                  <a href="https://github.com/fuzmaster/deposit-letter" target="_blank" rel="noopener noreferrer">View Source</a>
                 </div>
               </article>
 
@@ -560,6 +485,57 @@
               </article>
 
               <article class="project-card">
+                <div class="image-frame">
+                  <img src="images/cover-twitch-assets.webp" alt="A Twitch scene mockup: large STARTING SOON wordmark with the crashdontfall channel name, plus a follower-alert preview in the corner — the kind of broadcast-ready output the Remotion asset pack renders" loading="lazy" decoding="async" />
+                </div>
+                <h3>Twitch Stream Asset Pack</h3>
+                <p>
+                  A Remotion render pipeline that programmatically generates a full broadcast
+                  kit for a Twitch channel — starting-soon and intermission scenes, animated
+                  follower / sub / raid alerts, a stinger transition, and info panels.
+                </p>
+                <details class="project-detail">
+                  <summary class="project-detail__summary">
+                    <span class="project-detail__label-more">What it renders</span>
+                    <span class="project-detail__label-less">Show less</span>
+                    <svg class="project-detail__chevron" width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </summary>
+                  <div class="project-detail__body">
+                    <ul class="project-detail__list">
+                      <li><strong>Scenes</strong> — Starting Soon, Intermission, and Offline screens at 1080p.</li>
+                      <li><strong>Alerts</strong> — follower, donation, sub, and raid animations exported with an alpha channel (VP9 / WebM) so they layer cleanly in OBS.</li>
+                      <li><strong>Stinger transition</strong> — a branded wipe between scenes.</li>
+                      <li><strong>Panels</strong> — About, Schedule, Socials, Donate, and Rules stills rendered to PNG.</li>
+                    </ul>
+                    <p>
+                      Every asset is defined as code, so the whole pack re-renders on a single
+                      command when the brand changes. Built for the "crashdontfall" stream as a
+                      personal project — no public site, it outputs video and image files.
+                    </p>
+                    <p class="project-detail__tech">Remotion · React · TypeScript</p>
+                  </div>
+                </details>
+                <div class="project-card__actions">
+                  <span class="project-card__private">Personal Project</span>
+                </div>
+              </article>
+
+              <article class="project-card">
+                <div class="image-frame">
+                  <img src="images/cover-gutcheck.webp" alt="Gut Check concept cover: a stack of swipe cards with a true/false claim and green-check / red-x swipe affordances and a countdown ring" loading="lazy" decoding="async" />
+                </div>
+                <h3>Gut Check</h3>
+                <p>
+                  A fast, mobile-first swipe-trivia game — read a claim, spot the scam,
+                  and swipe before the timer runs out. Local profiles, streaks, and
+                  achievements, all in the browser with no backend. React, built for fun.
+                </p>
+                <div class="project-card__actions">
+                  <span class="project-card__muted">Local build</span>
+                </div>
+              </article>
+
+              <article class="project-card">
                 <div class="image-frame image-frame--code">
                   <img src="images/code-keep7.png" alt="TypeScript code: normalizeCards function parsing MTG deck list text into typed Card objects" loading="lazy" decoding="async" />
                 </div>
@@ -586,23 +562,61 @@
                   <span class="project-card__muted">Source private</span>
                 </div>
               </article>
+            </div>
+          </section>
 
+          <!-- ── Older media and brand work ── -->
+          <section class="project-group" aria-labelledby="group-earlier-work">
+            <div class="project-group__header">
+              <span class="project-group__type">Earlier Work</span>
+              <h2 id="group-earlier-work" class="project-group__title">Older media and brand work</h2>
+            </div>
+            <p class="project-group__intro">Drone, real estate, brand, and client work that shaped the production skills behind the current media systems.</p>
+
+            <div class="project-grid" aria-label="Older media and brand work">
               <article class="project-card">
                 <div class="image-frame">
-                  <img src="images/cover-gutcheck.webp" alt="Gut Check concept cover: a stack of swipe cards with a true/false claim and green-check / red-x swipe affordances and a countdown ring" loading="lazy" decoding="async" />
+                  <img src="images/bas-aerial.webp" alt="Aerial real-estate photograph of a contemporary New England home with white trim, gray shingle roof, and a double garage on a wooded lot — captured for Britten Aerial Services" loading="lazy" decoding="async" />
                 </div>
-                <h3>Gut Check</h3>
+                <h3>Britten Aerial Services</h3>
                 <p>
-                  A fast, mobile-first swipe-trivia game — read a claim, spot the scam,
-                  and swipe before the timer runs out. Local profiles, streaks, and
-                  achievements, all in the browser with no backend. React, built for fun.
+                  FAA-licensed drone photography and real-estate media for clients in
+                  Massachusetts — aerial stills, listing videos, and the full Next.js
+                  site that delivers them. Fast turnaround, repeatable workflow.
                 </p>
+                <div class="aerial-strip" aria-label="Sample aerial work">
+                  <img src="images/aerial-home.webp" alt="Aerial drone photo of a New England home with a gray shingle roof and double garage on a wooded autumn lot" loading="lazy" decoding="async" />
+                  <img src="images/aerial-longview.webp" alt="Aerial drone photo of a Massachusetts property captured for a real-estate listing" loading="lazy" decoding="async" />
+                  <img src="images/aerial-solar.webp" alt="Aerial drone photo of a commercial solar installation captured for marketing and site documentation" loading="lazy" decoding="async" />
+                </div>
+                <details class="project-detail">
+                  <summary class="project-detail__summary">
+                    <span class="project-detail__label-more">What I deliver</span>
+                    <span class="project-detail__label-less">Show less</span>
+                    <svg class="project-detail__chevron" width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </summary>
+                  <div class="project-detail__body">
+                    <ul class="project-detail__list">
+                      <li><strong>Aerial real-estate photography</strong> — listing stills shot with an FAA-licensed drone, color-corrected and listing-ready the same day.</li>
+                      <li><strong>Development &amp; progress media</strong> — repeat-visit aerials for new construction, solar installs, and large-lot land surveys.</li>
+                      <li><strong>Listing video</strong> — short-form aerial tours edited for MLS and social distribution.</li>
+                      <li><strong>The full client site</strong> — a Next.js 14 site (showreel, portfolio, contact) built around the production work so leads land directly on the deliverables.</li>
+                    </ul>
+                    <p>
+                      Real production credit, real clients, real turnaround. Based in
+                      Peabody, MA — built for the brokers and developers who need
+                      media yesterday, not next week.
+                    </p>
+                    <p class="project-detail__tech">FAA Part 107 · Next.js 14 · Vercel</p>
+                  </div>
+                </details>
                 <div class="project-card__actions">
-                  <span class="project-card__muted">Local build</span>
+                  <a href="https://britten-aerial-services.vercel.app" target="_blank" rel="noopener noreferrer" class="project-card__live">Live Site ↗</a>
                 </div>
               </article>
             </div>
           </section>
+
           <div class="project-support-cta">
             <p class="project-support-cta__copy">Need someone to run, fix, or scale your media production?</p>
             <div class="project-support-cta__links">
