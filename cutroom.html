@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CUTROOM — a local AI-assisted multicam podcast editor | Jacob Britten</title>
+    <meta
+      name="description"
+      content="CUTROOM is a local, AI-assisted multicam podcast editor I'm building — a Python audio engine and FFmpeg render pipeline that turn raw multicam footage and separate audio tracks into an editable cut-decision timeline and captioned vertical reels. Electron + React + TypeScript, fully on-device."
+    />
+    <link rel="canonical" href="https://jacobbritten.com/cutroom.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://jacobbritten.com/cutroom.html" />
+    <meta property="og:site_name" content="Jacob Britten" />
+    <meta property="og:title" content="CUTROOM — a local AI-assisted multicam podcast editor | Jacob Britten" />
+    <meta property="og:description" content="A local podcast editing cockpit: audio analysis to an editable cut-decision timeline to captioned vertical reels. Electron + React + Python + FFmpeg, no cloud." />
+    <meta property="og:image" content="https://jacobbritten.com/images/cover-cutroom.webp" />
+    <meta property="og:image:alt" content="CUTROOM concept cover — a multicam editing timeline with HOST, GUEST, and WIDE camera lanes, cut markers, and an audio waveform" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="CUTROOM — a local AI-assisted multicam podcast editor" />
+    <meta name="twitter:description" content="Audio analysis to an editable cut-decision timeline to captioned vertical reels. Electron + React + Python + FFmpeg, no cloud." />
+    <meta name="twitter:image" content="https://jacobbritten.com/images/cover-cutroom.webp" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/dmsans/v17/rP2Hp2ywxg089UriCZOIHTWEBlw.woff2" />
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPxDcwgknk-4.woff2" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="redesign.css" />
+
+    <!-- JSON-LD: CreativeWork — build write-up metadata -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": "CUTROOM — a local AI-assisted multicam podcast editor",
+      "headline": "Building CUTROOM: a local podcast editing cockpit that turns multicam footage and separate audio into an editable cut-decision timeline and captioned reels",
+      "url": "https://jacobbritten.com/cutroom.html",
+      "image": "https://jacobbritten.com/images/cover-cutroom.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Jacob Britten",
+        "url": "https://jacobbritten.com/"
+      },
+      "keywords": [
+        "podcast production",
+        "multicam editing",
+        "audio analysis",
+        "Remotion",
+        "FFmpeg",
+        "Electron",
+        "captions",
+        "creative technology"
+      ]
+    }
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.svg" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <site-nav current="projects"></site-nav>
+
+    <main id="main" class="case-main">
+      <article class="case">
+        <div class="container">
+          <a class="case-back" href="projects.html">&larr; All work</a>
+
+          <header class="case-head">
+            <p class="case-eyebrow">Build · Creative Technology</p>
+            <h1 class="case-title">
+              CUTROOM — a multicam podcast editor <em>that runs on your machine.</em>
+            </h1>
+            <p class="case-deck">
+              A local editing cockpit that turns prepared multicam footage, separate audio
+              tracks, and a transcript into a reviewable, editable cut-decision timeline —
+              then renders rough-cuts and captioned vertical reels. No cloud upload, no API
+              calls. Built from producing the High Functioning Podcast.
+            </p>
+
+            <ul class="case-meta">
+              <li><span>Role</span><strong>Designer &amp; Builder</strong></li>
+              <li><span>Status</span><strong>In development — first vertical slice working</strong></li>
+              <li><span>Stack</span><strong>Electron · React · TypeScript · Zod · Python · FFmpeg</strong></li>
+              <li><span>Runs</span><strong>Fully on-device · local files</strong></li>
+            </ul>
+          </header>
+
+          <figure class="case-figure">
+            <img
+              src="images/cover-cutroom.webp"
+              alt="CUTROOM's multicam decision timeline — HOST, GUEST, and WIDE camera lanes with active-camera segments, cut markers, and an audio waveform underneath"
+              width="1280" height="800"
+              loading="eager" decoding="async"
+            />
+            <figcaption>The decision timeline — active camera per segment, cut markers, and the speaker waveform that drives them.</figcaption>
+          </figure>
+
+          <section class="case-section">
+            <h2 class="case-h2">The problem</h2>
+            <p class="case-lead">
+              Multicam podcast editing is the same manual work, every episode — and it's
+              the part that doesn't scale.
+            </p>
+            <p>
+              A single long-form episode means cutting between host, guest, and wide cameras
+              by hand, syncing separate audio, finding the moments worth clipping, and then
+              re-cutting and captioning each vertical reel from scratch. The creative
+              decisions are worth a human; the mechanical ones — who's talking, which camera
+              is live, where a clip starts — are not. CUTROOM is the tool that takes the
+              mechanical layer off the editor so the judgment stays with the editor.
+            </p>
+          </section>
+
+          <section class="case-section">
+            <h2 class="case-h2">How it works</h2>
+            <p class="case-lead">
+              A local pipeline: analyze the audio, propose a cut, let a human review it,
+              then render. Every step is editable.
+            </p>
+            <ol class="case-steps">
+              <li>
+                <span class="case-step-n">01</span>
+                <div>
+                  <h3>Assign local media</h3>
+                  <p>Point CUTROOM at the host/guest/wide cameras, the separate host/guest/mix audio tracks, the transcript, and notes. Paths are stored in a local <code>project.json</code> — large files are never copied or uploaded.</p>
+                </div>
+              </li>
+              <li>
+                <span class="case-step-n">02</span>
+                <div>
+                  <h3>Analyze the audio</h3>
+                  <p>A Python engine reads the isolated host and guest tracks and computes who is speaking when — windowed RMS with smoothing — into a structured <code>speaker_activity.json</code>, visualized as a colored speaker timeline.</p>
+                </div>
+              </li>
+              <li>
+                <span class="case-step-n">03</span>
+                <div>
+                  <h3>Build the cut-decision timeline</h3>
+                  <p>Speaker activity becomes a first-pass <code>edit_decisions.json</code> — a segment-by-segment timeline of which camera is live, with review flags. One click runs save → analyze → decide and opens it for editing.</p>
+                </div>
+              </li>
+              <li>
+                <span class="case-step-n">04</span>
+                <div>
+                  <h3>Refine with a recipe &amp; review</h3>
+                  <p>An AI Recipe screen builds a real prompt from the project and validates a typed <code>cutroom.recipe.v2</code> response (Zod-checked) before applying it. A Multicam Review screen scrubs each segment, reassigns cameras, flags review, and shows the transcript alongside the timeline.</p>
+                </div>
+              </li>
+              <li>
+                <span class="case-step-n">05</span>
+                <div>
+                  <h3>Render rough-cuts &amp; captioned reels</h3>
+                  <p>A render queue produces a low-res rough-cut preview with FFmpeg. Reel timelines derive clip candidates from the same data, caption them with real transcript words, and batch-render vertical 1080×1920 reels — caption style (font, color, position, ALL CAPS) edited with a live preview and burned in.</p>
+                </div>
+              </li>
+            </ol>
+          </section>
+
+          <section class="case-section">
+            <h2 class="case-h2">Where it is now</h2>
+            <p class="case-lead">
+              The first vertical slice runs end to end. It's a working tool, not a finished
+              product — and it's honest about that.
+            </p>
+            <div class="case-results">
+              <div class="case-result">
+                <span class="case-result__v">Local</span>
+                <span class="case-result__l">No cloud, no API calls</span>
+                <span class="case-result__d">Footage and audio never leave the machine; projects are plain JSON.</span>
+              </div>
+              <div class="case-result">
+                <span class="case-result__v">Typed</span>
+                <span class="case-result__l">Zod-validated contracts</span>
+                <span class="case-result__d">Every decision and recipe payload is schema-checked before it's applied or rendered.</span>
+              </div>
+              <div class="case-result">
+                <span class="case-result__v">Reels</span>
+                <span class="case-result__l">Captioned 1080×1920 output</span>
+                <span class="case-result__d">Vertical reels rendered with FFmpeg from transcript-accurate captions, batch-ready.</span>
+              </div>
+              <div class="case-result">
+                <span class="case-result__v">WIP</span>
+                <span class="case-result__l">Actively building</span>
+                <span class="case-result__d">A local app in development — the pipeline above is real and runnable today.</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="case-section">
+            <h2 class="case-h2">Why I'm building it</h2>
+            <p>
+              CUTROOM is the producer side and the systems side of my work in one place. It
+              came directly out of editing the High Functioning Podcast — the same
+              repeatable-workflow thinking behind that show, turned into a tool. It's the
+              clearest answer to what a media producer who also builds can do for a team:
+              keep a real human on the taste, and build the system that takes the repetitive
+              work off their plate.
+            </p>
+          </section>
+
+          <div class="case-cta">
+            <a class="btn btn-primary" href="index.html#contact">Hire me</a>
+            <a class="btn btn-secondary" href="projects.html">See all the work</a>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>Jacob Britten — Media Producer &amp; Creative Technologist · Boston area</p>
+        <div class="footer-links">
+          <a href="projects.html">Work</a>
+          <a href="lab.html">Tools</a>
+          <a href="about.html">About</a>
+          <a href="index.html#contact">Contact</a>
+          <a href="support.html">Support</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="components.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
