@@ -173,6 +173,6 @@ function initVideoModal() {
   });
 }
 
-// Contact form removed intentionally. The previous endpoint returned fake success
+// Contact form removed intentionally. The previous endpoint returned success
 // without sending email, so contact is now a direct mailto link to
 // jacobbritten@outlook.com. See CONTACT_SETUP.md.
