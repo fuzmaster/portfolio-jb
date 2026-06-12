@@ -12,3 +12,6 @@ _*.js
 reel/node_modules/
 reel/out/
 reel/.remotion/
+
+# Raw media staging library (1.4GB) — never commit; selected exports live in images/
+images/new images/
