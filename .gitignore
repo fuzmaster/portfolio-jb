@@ -15,3 +15,6 @@ reel/.remotion/
 
 # Raw media staging library (1.4GB) — never commit; selected exports live in images/
 images/new images/
+
+# Personal job-search files (never deploy)
+job-search/
