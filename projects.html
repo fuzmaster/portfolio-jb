@@ -150,9 +150,57 @@
                 <h3>Genera-Reels Engine</h3>
                 <p>
                   Template-based short-form video rendering tool that consumes payload
-                  inputs and emits batch reels with repeatable output quality.
+                  inputs and emits batch reels with repeatable output quality. Now packaged
+                  as a standalone Tauri desktop app — a Rust shell and Python backend that
+                  drive Remotion — so anyone can run it without a terminal or browser tab.
                 </p>
                 <span class="project-card__private">Private Repo</span>
+              </article>
+
+              <article class="project-card">
+                <div class="image-frame">
+                  <img src="images/cover-hf-reels.webp" alt="HF Reels Wizard concept cover: a four-step flow labeled Trend, Match, Reels, Export above a row of vertical 9:16 reel frames" loading="lazy" decoding="async" />
+                </div>
+                <h3>HF Reels Wizard</h3>
+                <p>
+                  A no-API, copy-paste wizard that turns filmed High Functioning episodes
+                  into short-form reels. A four-step flow — trend, match, reels, export —
+                  hands a chatbot the right context at each step: it matches on a small
+                  episode index first, then loads the full transcript only for the picks,
+                  so a prompt never blows past the limit.
+                </p>
+                <span class="project-card__private">Private Repo</span>
+              </article>
+
+              <article class="project-card">
+                <div class="image-frame">
+                  <img src="images/cover-reel-foundry.webp" alt="Reel Prompt Foundry concept cover: a 16:9 source video with a play button and an arrow pointing to four vertical 9:16 reel frames" loading="lazy" decoding="async" />
+                </div>
+                <h3>YouTube Reel Prompt Foundry</h3>
+                <p>
+                  A Tauri + Python desktop app that turns long-form video — town meetings,
+                  lectures, sermons, podcasts — into a batch of captioned vertical reels,
+                  with no paid AI keys.
+                </p>
+                <details class="project-detail">
+                  <summary class="project-detail__summary">
+                    <span class="project-detail__label-more">What it does</span>
+                    <span class="project-detail__label-less">Show less</span>
+                    <svg class="project-detail__chevron" width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </summary>
+                  <div class="project-detail__body">
+                    <ul class="project-detail__list">
+                      <li><strong>Local transcript chunking</strong> — auto-detects topic shifts and silence gaps to propose 25–180s reel candidates, or hands a ranking prompt to any chatbot.</li>
+                      <li><strong>Prompt foundry</strong> — emits perfectly formatted content-brief and thumbnail prompts; you paste the response back and it stores against the right reel.</li>
+                      <li><strong>Real exports</strong> — a posting schedule (CSV for Metricool/Buffer, ICS for calendars), YouTube title/description/tag sidecars, and an FFmpeg script that cuts every reel to 9:16 with burnt-in captions.</li>
+                      <li><strong>No API keys</strong> — the mechanical work runs on your machine; you bring whatever chatbot you already have.</li>
+                    </ul>
+                    <p class="project-detail__tech">Tauri · Rust · Python · React · TypeScript · FFmpeg</p>
+                  </div>
+                </details>
+                <div class="project-card__actions">
+                  <span class="project-card__private">Personal Project</span>
+                </div>
               </article>
 
               <article class="project-card">
@@ -529,6 +577,21 @@
                   A fast, mobile-first swipe-trivia game — read a claim, spot the scam,
                   and swipe before the timer runs out. Local profiles, streaks, and
                   achievements, all in the browser with no backend. React, built for fun.
+                </p>
+                <div class="project-card__actions">
+                  <span class="project-card__muted">Local build</span>
+                </div>
+              </article>
+
+              <article class="project-card">
+                <div class="image-frame">
+                  <img src="images/cover-goblin-poker.webp" alt="Goblin Draw Poker concept cover: five playing cards — Ace, King, Queen, Jack, Ten — fanned across a dark background" loading="lazy" decoding="async" />
+                </div>
+                <h3>Goblin Draw Poker</h3>
+                <p>
+                  A retro tavern-themed video-poker mini-game — hold and draw for the best
+                  hand, with confetti payouts and a hand-evaluation test suite. React, built
+                  for fun.
                 </p>
                 <div class="project-card__actions">
                   <span class="project-card__muted">Local build</span>
