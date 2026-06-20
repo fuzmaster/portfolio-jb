@@ -599,6 +599,49 @@ img, svg { display: block; max-width: 100%; }
 .resume-edu-note { margin-top: 16px; color: var(--dim); font-size: 14px; }
 .resume-edu-note a { color: var(--cyan); }
 
+/* ─── Local Business Content Systems (service page) ─────────── */
+.svc-support { margin: 18px 0 0; color: var(--dim); font-size: 14px; line-height: 1.55; max-width: 66ch; }
+.svc-hero-cta { margin-top: 20px; }
+.svc-grid { display: grid; gap: 14px; margin-top: 22px; }
+.svc-grid--4 { grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+.svc-grid--5 { grid-template-columns: repeat(auto-fit, minmax(175px, 1fr)); }
+.svc-mini { background: var(--bg-soft); border: 1px solid var(--line); border-radius: 14px; padding: 18px; }
+.svc-mini p { margin: 0; color: var(--text); font-size: 14.5px; line-height: 1.5; }
+.svc-num { display: block; font-family: var(--mono); font-size: 13px; color: var(--cyan); margin-bottom: 10px; }
+.svc-mini--example { display: flex; align-items: center; min-height: 84px; border-style: dashed; }
+.svc-mini--example p { color: var(--dim); }
+
+.svc-flow { list-style: none; padding: 0; margin: 24px 0 4px; display: block; max-width: 580px; }
+.svc-flow li { position: relative; background: var(--bg-soft); border: 1px solid var(--line); border-radius: 12px; padding: 13px 16px; font-size: 14px; color: var(--text); }
+.svc-flow li:not(:last-child) { margin-bottom: 30px; }
+.svc-flow li:not(:last-child)::after { content: "↓"; position: absolute; left: 50%; bottom: -25px; transform: translateX(-50%); color: var(--cyan-dim); font-size: 17px; }
+.svc-flow li.is-end { background: var(--cyan-soft); border-color: var(--cyan-dim); font-weight: 600; }
+
+.svc-pack { border: 1px solid var(--cyan-dim); border-radius: 18px; background: linear-gradient(180deg, var(--cyan-soft), transparent 60%), var(--bg-soft); padding: 26px 28px; }
+.svc-pack__head { display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
+.svc-pack__title { font-size: 24px; }
+.svc-pack__sub { color: var(--dim); margin-top: 6px; max-width: 52ch; line-height: 1.5; }
+.svc-pack__price { font-family: var(--mono); font-size: 38px; font-weight: 700; color: var(--cyan); white-space: nowrap; }
+.svc-includes { list-style: none; padding: 0; margin: 20px 0 0; display: grid; gap: 9px; }
+.svc-includes li { position: relative; padding-left: 26px; color: var(--dim); font-size: 14px; line-height: 1.5; }
+.svc-includes li::before { content: "\2713"; position: absolute; left: 0; top: 0; color: var(--cyan); font-weight: 700; }
+.svc-clarify { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--dim); font-size: 14px; line-height: 1.55; }
+
+.svc-tiers { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin-top: 26px; align-items: start; }
+.svc-tier { position: relative; border: 1px solid var(--line); border-radius: 16px; background: var(--bg-soft); padding: 22px 22px 24px; }
+.svc-tier--featured { border-color: var(--cyan-dim); box-shadow: 0 0 0 1px var(--cyan-dim); }
+.svc-tier__flag { position: absolute; top: -11px; left: 22px; font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--bg); background: var(--cyan); border-radius: 999px; padding: 3px 10px; }
+.svc-tier h3 { font-size: 17px; margin-top: 4px; }
+.svc-tier__price { font-family: var(--mono); font-size: 26px; font-weight: 700; color: var(--cyan); margin: 6px 0 10px; }
+.svc-tier__price span { font-size: 14px; color: var(--dim); }
+.svc-tier__blurb { color: var(--dim); font-size: 14px; line-height: 1.55; }
+.svc-tier .svc-includes { margin-top: 14px; }
+
+.svc-for { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 20px 0 0; }
+.svc-for li { font-family: var(--mono); font-size: 12px; color: var(--dim); border: 1px solid var(--line); border-radius: 999px; padding: 5px 12px; background: var(--bg-soft); }
+.svc-for--skills li { color: var(--cyan); border-color: var(--cyan-dim); background: var(--cyan-soft); }
+.svc-note { margin-top: 16px; color: var(--faint); font-size: 13.5px; line-height: 1.55; max-width: 66ch; }
+
 /* Print: clean, light, all roles visible */
 @media print {
   site-nav, .footer, .resume-filters, .resume-print, .case-back, .case-cta, .skip-link { display: none !important; }

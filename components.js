@@ -5,6 +5,7 @@ class SiteNav extends HTMLElement {
     const links = [
       { href: 'projects.html', label: 'Work', key: 'projects' },
       { href: 'lab.html', label: 'Tools', key: 'lab' },
+      { href: 'local-business-content-system.html', label: 'Services', key: 'services' },
       { href: 'about.html', label: 'About', key: 'about' },
       { href: 'background.html', label: 'Background', key: 'background' },
       { href: 'now.html', label: 'Now', key: 'now' },
