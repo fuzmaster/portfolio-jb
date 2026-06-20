@@ -527,6 +527,15 @@ img, svg { display: block; max-width: 100%; }
   content: "→"; position: absolute; right: -22px; top: 50%; transform: translateY(-50%); color: var(--cyan-dim);
 }
 .stack-flow li.is-now { color: var(--bg); background: var(--cyan); border-color: var(--cyan); font-weight: 600; }
+.stack-payoff {
+  margin: 24px 0 0; max-width: 62ch; font-size: 16px; line-height: 1.55; color: var(--text);
+  border-left: 3px solid var(--cyan); padding-left: 15px;
+}
+.now-tag {
+  display: inline-block; margin: 10px 22px 0; font-family: var(--mono); font-size: 11px;
+  letter-spacing: 0.03em; color: var(--cyan); background: var(--cyan-soft);
+  border: 1px solid var(--cyan-dim); border-radius: 999px; padding: 3px 11px;
+}
 .degree-card, .school-card, .system-card { padding-bottom: 22px; }
 .degree-card__layer, .school-card .course-tag {
   display: block; margin: 20px 22px 0; font-family: var(--mono); font-size: 11px;
