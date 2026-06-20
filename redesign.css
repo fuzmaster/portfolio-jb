@@ -601,7 +601,21 @@ img, svg { display: block; max-width: 100%; }
 
 /* ─── Local Business Content Systems (service page) ─────────── */
 .svc-support { margin: 18px 0 0; color: var(--dim); font-size: 14px; line-height: 1.55; max-width: 66ch; }
-.svc-hero-cta { margin-top: 20px; }
+.svc-hero-price { margin: 18px 0 0; font-size: 17px; color: var(--text); }
+.svc-hero-price strong { font-family: var(--mono); color: var(--cyan); font-weight: 700; }
+.svc-hero-cta { margin-top: 18px; }
+
+/* Send / get two-up + anti-hype list */
+.svc-sendget { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-top: 22px; align-items: start; }
+.svc-not { list-style: none; padding: 0; margin: 18px 0 0; display: grid; gap: 10px; max-width: 60ch; }
+.svc-not li { position: relative; padding-left: 26px; color: var(--dim); font-size: 14.5px; line-height: 1.5; }
+.svc-not li::before { content: "\00D7"; position: absolute; left: 0; top: -1px; color: var(--cyan); font-weight: 700; font-size: 16px; }
+.svc-not-end { margin-top: 16px; color: var(--text); font-size: 14.5px; line-height: 1.6; max-width: 60ch; }
+
+/* Homepage service band extras */
+.stack-band__copy .svc-includes { margin-top: 12px; }
+.svc-home-price { margin-top: 14px; font-family: var(--mono); font-weight: 700; color: var(--cyan); font-size: 16px; }
+.svc-home-cta { display: flex; flex-wrap: wrap; gap: 10px; }
 .svc-grid { display: grid; gap: 14px; margin-top: 22px; }
 .svc-grid--4 { grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
 .svc-grid--5 { grid-template-columns: repeat(auto-fit, minmax(175px, 1fr)); }
