@@ -516,6 +516,40 @@ img, svg { display: block; max-width: 100%; }
 }
 .project-card > p { font-size: 14px; color: var(--dim); line-height: 1.6; margin: 8px 22px 0; }
 
+/* ─── Background / "The Stack Behind the Work" page ──────────── */
+.stack-flow { list-style: none; display: flex; flex-wrap: wrap; gap: 28px; margin: 28px 0 0; padding: 0; }
+.stack-flow li {
+  position: relative; font-family: var(--mono); font-size: 12px; letter-spacing: 0.03em;
+  color: var(--dim); background: var(--bg-soft); border: 1px solid var(--line);
+  border-radius: 9px; padding: 9px 14px;
+}
+.stack-flow li:not(:last-child)::after {
+  content: "→"; position: absolute; right: -22px; top: 50%; transform: translateY(-50%); color: var(--cyan-dim);
+}
+.stack-flow li.is-now { color: var(--bg); background: var(--cyan); border-color: var(--cyan); font-weight: 600; }
+.degree-card, .school-card, .system-card { padding-bottom: 22px; }
+.degree-card__layer, .school-card .course-tag {
+  display: block; margin: 20px 22px 0; font-family: var(--mono); font-size: 11px;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--cyan);
+}
+.degree-card__sub { margin: 6px 22px 4px; color: var(--text); font-weight: 600; font-size: 14px; }
+.degree-skills { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; margin: 16px 22px 0; padding: 0; }
+.degree-skills li {
+  font-family: var(--mono); font-size: 11px; color: var(--dim);
+  border: 1px solid var(--line); border-radius: 999px; padding: 3px 10px; background: rgba(255,255,255,0.02);
+}
+.connect-line { margin: 14px 22px 0; padding-top: 12px; border-top: 1px solid var(--line); font-size: 13px; color: var(--dim); line-height: 1.55; }
+.connect-line span { font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cyan-dim); margin-right: 6px; }
+
+/* Homepage stack band */
+.stack-band__inner {
+  border: 1px solid var(--line-2); border-radius: 16px; background: var(--bg-soft);
+  padding: 26px 30px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px;
+}
+.stack-band__copy { max-width: 62ch; }
+.stack-band__copy strong { color: var(--text); }
+.stack-band__copy p { color: var(--dim); margin-top: 8px; font-size: 14.5px; line-height: 1.6; }
+
 /* expander */
 .project-detail { margin: 14px 22px 0; border-top: 1px solid var(--line); padding-top: 12px; }
 .project-detail__summary {

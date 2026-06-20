@@ -6,6 +6,7 @@ class SiteNav extends HTMLElement {
       { href: 'projects.html', label: 'Work', key: 'projects' },
       { href: 'lab.html', label: 'Tools', key: 'lab' },
       { href: 'about.html', label: 'About', key: 'about' },
+      { href: 'background.html', label: 'Background', key: 'background' },
       { href: 'now.html', label: 'Now', key: 'now' },
       { href: 'index.html#contact', label: 'Contact', key: 'contact' },
       { href: 'support.html', label: 'Support', key: 'support' },
