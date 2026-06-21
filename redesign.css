@@ -689,6 +689,18 @@ img, svg { display: block; max-width: 100%; }
 .wd-captions { list-style: none; padding: 0; margin: 24px 0 0; display: grid; gap: 11px; grid-template-columns: repeat(auto-fit, minmax(285px, 1fr)); }
 .wd-captions li { background: var(--bg-soft); border: 1px solid var(--line); border-left: 2px solid var(--cyan); border-radius: 0 10px 10px 0; padding: 12px 16px; font-size: 13.5px; line-height: 1.5; color: var(--dim); }
 
+/* real client reviews (woodworking demo) */
+.wd-rating-line { margin-top: 4px; font-size: 14px; color: var(--dim); }
+.wd-rating-line .wd-stars { color: var(--cyan); letter-spacing: 2px; }
+.wd-rating-line strong { color: var(--text); }
+.wd-quotes { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(265px, 1fr)); margin-top: 22px; }
+.wd-quote { margin: 0; background: var(--bg-soft); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+.wd-quote--feature { grid-column: 1 / -1; border-color: var(--cyan-dim); background: linear-gradient(180deg, var(--cyan-soft), transparent 72%), var(--bg-soft); }
+.wd-quote blockquote { margin: 0; font-size: 14.5px; line-height: 1.6; color: var(--text); }
+.wd-quote--feature blockquote { font-size: 16px; }
+.wd-quote figcaption { margin-top: 14px; font-size: 13px; color: var(--text); font-weight: 600; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.wd-quote figcaption span { font-family: var(--mono); font-size: 10.5px; font-weight: 400; text-transform: uppercase; letter-spacing: 0.05em; color: var(--cyan); }
+
 .svc-flow { list-style: none; padding: 0; margin: 24px 0 4px; display: block; max-width: 580px; }
 .svc-flow li { position: relative; background: var(--bg-soft); border: 1px solid var(--line); border-radius: 12px; padding: 13px 16px; font-size: 14px; color: var(--text); }
 .svc-flow li:not(:last-child) { margin-bottom: 30px; }
@@ -704,6 +716,8 @@ img, svg { display: block; max-width: 100%; }
 .svc-includes li { position: relative; padding-left: 26px; color: var(--dim); font-size: 14px; line-height: 1.5; }
 .svc-includes li::before { content: "\2713"; position: absolute; left: 0; top: 0; color: var(--cyan); font-weight: 700; }
 .svc-clarify { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--dim); font-size: 14px; line-height: 1.55; }
+.svc-guarantee { border-top: 0; margin-top: 10px; padding-top: 0; }
+.svc-guarantee strong { color: var(--cyan); }
 .svc-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(155px, 1fr)); gap: 14px 18px; margin: 22px 0 0; padding-top: 18px; border-top: 1px solid var(--line); }
 .svc-facts div { display: flex; flex-direction: column; gap: 4px; }
 .svc-facts dt { font-family: var(--mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--faint); }
