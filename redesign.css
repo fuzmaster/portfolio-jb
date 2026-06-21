@@ -603,6 +603,7 @@ img, svg { display: block; max-width: 100%; }
 .svc-support { margin: 18px 0 0; color: var(--dim); font-size: 14px; line-height: 1.55; max-width: 66ch; }
 .svc-hero-price { margin: 18px 0 0; font-size: 17px; color: var(--text); }
 .svc-hero-price strong { font-family: var(--mono); color: var(--cyan); font-weight: 700; }
+.svc-hero-note { font-family: var(--mono); font-size: 12.5px; font-weight: 400; color: var(--dim); }
 .svc-hero-cta { margin-top: 18px; }
 
 /* Send / get two-up + anti-hype list */
@@ -703,6 +704,10 @@ img, svg { display: block; max-width: 100%; }
 .svc-includes li { position: relative; padding-left: 26px; color: var(--dim); font-size: 14px; line-height: 1.5; }
 .svc-includes li::before { content: "\2713"; position: absolute; left: 0; top: 0; color: var(--cyan); font-weight: 700; }
 .svc-clarify { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--dim); font-size: 14px; line-height: 1.55; }
+.svc-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(155px, 1fr)); gap: 14px 18px; margin: 22px 0 0; padding-top: 18px; border-top: 1px solid var(--line); }
+.svc-facts div { display: flex; flex-direction: column; gap: 4px; }
+.svc-facts dt { font-family: var(--mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--faint); }
+.svc-facts dd { margin: 0; font-size: 14px; color: var(--text); line-height: 1.4; }
 
 .svc-tiers { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin-top: 26px; align-items: start; }
 .svc-tier { position: relative; border: 1px solid var(--line); border-radius: 16px; background: var(--bg-soft); padding: 22px 22px 24px; }
