@@ -636,7 +636,22 @@ img, svg { display: block; max-width: 100%; }
 .svc-shot__tag { display: inline-block; font-family: var(--mono); font-size: 11px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--cyan); margin-right: 8px; }
 @media (max-width: 600px) { .svc-shots { grid-template-columns: 1fr; } }
 
+/* ============ Homepage hiring/client path split ============ */
+.path-split__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.path-card { background: var(--bg-soft); border: 1px solid var(--line); border-radius: 16px; padding: 26px 28px; display: flex; flex-direction: column; }
+.path-card h2 { font-size: 20px; margin: 0 0 10px; }
+.path-card > p { color: var(--dim); font-size: 14.5px; line-height: 1.55; margin: 0 0 16px; }
+.path-card__price { font-family: var(--mono); font-weight: 700; color: var(--cyan); font-size: 16px; margin: 0 0 16px; }
+.path-card__cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto; }
+@media (max-width: 680px) { .path-split__grid { grid-template-columns: 1fr; } }
+
 /* ============ Woodworking demo case study (wd-*) ============ */
+.wd-proves { background: var(--bg-soft); border: 1px solid var(--cyan-dim); border-radius: 16px; padding: 24px 26px; }
+.wd-proves h2 { font-size: 20px; margin: 0 0 12px; }
+.wd-proves p { color: var(--dim); line-height: 1.6; margin: 0 0 12px; }
+.wd-proves p:last-child { margin-bottom: 0; }
+.wd-proves__note { font-size: 14px; }
+.wd-proves__note strong { color: var(--cyan); }
 .wd-callout { background: var(--cyan-soft); border: 1px solid var(--cyan-dim); border-radius: 12px; padding: 13px 17px; color: var(--dim); font-size: 13.5px; line-height: 1.55; margin-top: 18px; max-width: 70ch; }
 .wd-disclaimer { color: var(--faint); font-size: 12.5px; line-height: 1.55; font-style: italic; margin-top: 14px; max-width: 70ch; }
 
